@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        canvas {
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+<canvas width="800" height="600"></canvas>
+</body>
+<script>
+    function Clock(opt) {
+
+        for (var key in opt) {
+            this[key] = opt[key];
+        }
+
+        this.init();
+    }
+    Clock.prototype = {
+        init: function () {
+            var self = this;
+            var ctx = this.ctx;
+            this.timer = setInterval(function(){
+                ctx.clearRect(0,0,ctx.canvas.width,ctx.canvas.height);
+                self.drawDial();
+                self.drawDegreeScale();
+                self.drawNumber();
+                self.drawPointers();
+            },1000);
+        },
+        drawDial: function () {
+            var ctx = this.ctx;
+            ctx.save();
+            ctx.beginPath();
+            ctx.lineWidth = this.clockDialW;
+            ctx.strokeStyle = this.clockDialColor;
+            ctx.arc(this.clockX, this.clockY, this.clockRadius, 0, 2 * Math.PI);
+            ctx.stroke();
+            ctx.restore();
+        },
+        drawDegreeScale: function () {
+            var ctx = this.ctx;
+            var clockRadius = this.clockRadius;
+            var clockX = this.clockX;
+            var clockY = this.clockY;
+            var bigDegreeScaleL = this.bigDegreeScaleL;
+            var smallDegreeScale = this.smallDegreeScale;
+
+            var startX, startY, endX, endY, radian;
+
+            ctx.save();
+            for (var i = 0; i < 12; i++) {
+                radian = i * Math.PI / 6;
+                endX = clockX + clockRadius * Math.cos(radian);
+                endY = clockY + clockRadius * Math.sin(radian);
+                if (radian % (Math.PI / 2) == 0) {
+                    startX = clockX + (clockRadius - bigDegreeScaleL) * Math.cos(radian);
+                    startY = clockY + (clockRadius - bigDegreeScaleL) * Math.sin(radian);
+                    ctx.lineWidth = this.bigDCWidth;
+                } else {
+                    startX = clockX + (clockRadius - smallDegreeScale) * Math.cos(radian);
+                    startY = clockY + (clockRadius - smallDegreeScale) * Math.sin(radian);
+                    ctx.lineWidth = this.smallDCWidth;
+                }
+
+                ctx.beginPath();
+                ctx.moveTo(startX, startY);
+                ctx.lineTo(endX, endY);
+                ctx.stroke();
+                ctx.restore();
+            }
+        },
+        drawNumber: function () {
+            var ctx = this.ctx;
+            var textX, textY, textRadian;
+            var clockX = this.clockX;
+            var clockY = this.clockY;
+            var clockRadius = this.clockRadius;
+            ctx.font = '20px 微软雅黑';
+            ctx.fillStyle = 'red';
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            ctx.save();
+            for (var i = 0; i < 12; i++) {
+                textRadian = i * Math.PI / 6 - Math.PI/3;
+                textX = clockX + (clockRadius - 40) * Math.cos(textRadian);
+                textY = clockY + (clockRadius - 40) * Math.sin(textRadian);
+                ctx.beginPath();
+                ctx.fillText(i + 1, textX, textY);
+            }
+            ctx.restore();
+        },
+        drawPointers: function () {
+            var date = new Date();
+            var h = date.getHours();
+            var m = date.getMinutes();
+            var s = date.getSeconds();
+
+            h = h % 12;
+            var hRadian = 2 * Math.PI / 12 * h - Math.PI / 2;
+            this.drawPoint(hRadian,30,'red',8);
+
+            var mRadian = 2 * Math.PI / 60 * m - Math.PI / 2;
+            this.drawPoint(mRadian,50,'blue',6);
+
+            var sRadian = 2 * Math.PI / 60 * s - Math.PI / 2;
+            this.drawPoint(sRadian,70,'green',2);
+        },
+        drawPoint: function (radian, length,color,lineWidth) {
+            var x = this.clockX + Math.cos(radian) * length;
+            var y = this.clockY + Math.sin(radian) *　length;
+            var ctx = this.ctx;
+            ctx.save();
+            ctx.beginPath();
+            ctx.strokeStyle = color;
+            ctx.lineWidth = lineWidth;
+            ctx.moveTo(this.clockX,this.clockY);
+            ctx.lineTo(x,y);
+            ctx.stroke();
+            ctx.restore();
+        }
+    };
+</script>
+<script>
+    var canvas = document.querySelector('canvas');
+    var ctx = canvas.getContext('2d');
+
+
+    var clock = new Clock({
+        ctx: this.ctx,
+        clockRadius: 150,
+        clockX: 300,
+        clockY: 300,
+        clockDialW: 6,
+        clockDialColor: 'blue',
+        bigDegreeScaleL: 20,
+        bigDCWidth: 6,
+        smallDegreeScale: 10,
+        smallDCWidth: 4
+    });
+</script>
+</html>
