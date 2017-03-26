@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script src="./angular.js">
+    
+  </script>
+</head>
+<body ng-app="app" ng-controller="myCon as scope">
+   <div>
+     {{scope}}
+   </div>
+  <script>
+   var app=angular.module('app',[])
+   var foo=function(){
+      this.name=1;
+   }
+  
+   app.controller('myCon',foo)
+   </script>
+</body>
+</html>

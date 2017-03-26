@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+
+<body ng-app="myApp" >
+  <div ng-controller="myCon1">
+    <input type="" ng-model="val" name="" value="">
+    <p>{{val}}</p>
+  </div>
+  <div ng-controller="myCon2">
+    <input type="" ng-model="val" name="" value="">
+    <p>{{val}}</p>
+  </div>
+  <script src="./angular.js"></script>
+  <script>
+    var app = angular.module('myApp', []);
+    //通过不同的controller的名字，构建了两个不同的作用域
+    //每个controller都有唯一的一个$scope
+    //逻辑的切分谁都不影响谁
+    //$scope不可以改名字
+    app.controller('myCon1', function ($scope) {
+      $scope.val = 1;
+    })
+    app.controller('myCon2', function ($scope) {
+      $scope.val = 1;
+    })
+  </script>
+</body>
+
+</html>

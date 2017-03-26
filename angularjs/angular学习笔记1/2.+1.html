@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <!--<script src="./angular.js">
+  </script>-->
+
+</head>
+<!--使用angular的指令去控制body这个标签-->
+<!--凡是ng-打头的都是angular的指令-->
+<body ng-app>
+
+  <!--ng-model绑定一个变量值给input输入框的value-->
+  <!--ng-model绑定文本-->
+  <input ng-model="val" type="text" name="" >
+   <!--绑定click事件给button-->
+   <!--可以通过写表达式的形式进行具体的业务操作-->
+   <!--ng-click绑定事件-->
+  <button  ng-click="val=(val-0)+1" type=""></button>
+ <script>
+  //用原生的js取操作dom
+    // var bar=document.getElementById('bar');
+    // bar.onclick=function(){
+    //      var foo=document.getElementById('foo');
+    //     foo.value=(foo.value-0)+1;
+    // }
+    
+  </script>
+ <script src="http://apps.bdimg.com/libs/angular.js/1.5.0-beta.0/angular.js">
+  </script>
+</body>
+</html>

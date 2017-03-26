@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+  .red{
+    background:red;
+  }
+   .blue{
+    background:blue;
+  }
+  .pink{
+    background:pink;
+  }
+  
+  </style>
+</head>
+<body ng-app="app" ng-controller="myCon">
+   <div>
+     <ul>
+       <!--list对应$scope里面的值-->
+       <!--item是循环出来的一个元素-->
+       <!--循环list一次次取出里面元素-->
+       <li ng-repeat="i in list" ng-class="{'A':'red','B':'blue','C':'pink'}[item.val]">{{item.name}},{{item.sex}}</li>
+     </ul>
+      <ul>
+       <li ng-repeat="item in list" ng-class="{'red':isOk}">{{item.name}},{{item.sex}}</li>
+     </ul>
+   </div>
+    <script src="./angular.js">
+  </script>
+  <script>
+   var app=angular.module('app',[])
+   app.controller('myCon',['$scope',function($scope){
+      $scope.isOk=true;
+      $scope.list=[
+        {name:"cxc",sex:"nv",val:"A"},
+        {name:"fj",sex:"未知",val:"B"},
+        {name:"klt",sex:"未知",val:"C"}];
+   }])
+  </script>
+</body>
+</html>

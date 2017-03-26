@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body ng-app="app" ng-controller="myCon">
+   <div ng-bind-html="name">
+   </div>
+    <script src="./angular.js">
+  </script>
+  <!--引入插件，angular模块-->
+  <script src="./angular-sanitize.js"></script>
+  <script>
+  //将ngSanitize放入module,module引入了一个module
+   var app=angular.module('app',['ngSanitize'])
+   //防止压缩版的写法
+   app.controller('myCon',['$scope',function($scope){
+      $scope.name="<div>123</div>";
+   }])
+  </script>
+</body>
+</html>

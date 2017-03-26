@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body ng-app="myApp" ng-controller="myCon">
+  <input type="" ng-model="val" name="" value="">
+  <p>{{val}}</p>
+  <script src="./angular.js"></script>
+  <script>
+     //第一个参数指向了ng-app指令的值
+     //第二个属性是一个数组，用来引入别的模块
+     var app=angular.module('myApp',[]);
+     //第二个参数如果没有，就使用[]，不写代表去上面找已经存在了的module
+     var app2=angular.module('myApp');
+    console.log(app===app2);
+     //构建一个控制器，去执行具体的业务逻辑的操作
+     //第一个参数是上面ng-controller控制器的名字
+     //第一个参数是上面ng-controller控制器的名字
+     //第二个是callback，具体些业务逻辑的地方
+     //通过$scope对angular绑定的值进行修改
+     app.controller('myCon',function($scope){
+         $scope.val=1;
+     })
+  </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+
+</head>
+<!--ng-init初始化val值-->
+<body ng-app ng-init="val.name='abc';val1='abc'">
+  <!--我们通过修改val的值，进而修改p标签里面val的值相应的修改了-->
+  <!--ng-model会滞空input里面原有value-->
+  
+  <input type="text" ng-model="val1"  name="" value="">
+  <!--如何我们想要初始化input里面的值使用ng-init指令-->
+  <input type="text" ng-model="val.name"  name="" value="">
+  <!--表达式,使用表达式代替字符串-->
+  <p>{{val}}</p>
+  <p>{{"呵呵"+val}}</p>
+  <p>{{1+1}}</p>
+  <p>{{[1,2,3]}}</p>
+  <!--不可以直接输出对象,但是可以使用变量的形式代替-->
+   <!--<p>{{{name:"cxc",age:81}}}</p>-->
+    <script src="./angular.js">
+    
+  </script>
+</body>
+</html>

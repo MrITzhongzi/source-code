@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script src="./angular.js">
+    
+  </script>
+</head>
+<body ng-app="app" >
+   <div ng-controller="parent">
+        <div ng-controller="child">
+        </div>
+   </div>
+  <script>
+   var app=angular.module('app',[])
+   //控制器父子调用
+   app.controller('parent',function($scope){
+     //父级定义方法
+      $scope.log=function(){
+         console.log(123);
+      };
+      $scope.name="klt"
+   })
+   app.controller('child',function($scope){
+     //子调用其方法
+      $scope.log();
+      console.log($scope.name);
+   })
+  </script>
+  
+</body>
+</html>

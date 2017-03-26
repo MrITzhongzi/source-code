@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+<style>
+   .ng-cloak{
+            display: none;
+        }
+</style>
+</head>
+<body ng-app="app" ng-controller="myCon">
+   <div class="ng-cloak">
+      {{name}}
+   </div>
+    <script src="./angular.js">
+  </script>
+  <script>
+   var app=angular.module('app',[])
+   //防止压缩版的写法
+   app.controller('myCon',['$scope',function($scope){
+      $scope.name=1;
+   }])
+  </script>
+</body>
+</html>

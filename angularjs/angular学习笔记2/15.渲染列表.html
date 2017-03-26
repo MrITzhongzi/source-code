@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+  .red{
+    background:red;
+  }
+   .blue{
+    background:blue;
+  }
+  
+  </style>
+</head>
+<body ng-app="app" ng-controller="myCon">
+   <div>
+     <ul>
+       <!--list对应$scope里面的值-->
+       <!--item是循环出来的一个元素-->
+       <li ng-repeat="item in list" class="{{$odd?'red':'blue'}}">{{item.name}},{{item.sex}}</li>
+     </ul>
+   </div>
+    <script src="./angular.js">
+  </script>
+  <script>
+   var app=angular.module('app',[])
+   app.controller('myCon',['$scope',function($scope){
+      $scope.list=[{name:"cxc",sex:"nv"},{name:"fj",sex:"未知"}];
+   }])
+  </script>
+</body>
+</html>

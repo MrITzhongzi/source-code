@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script src="./angular.js">
+    
+  </script>
+</head>
+<body ng-app="app" >
+   <div ng-controller="parent">
+        <div ng-controller="child">
+           <button ng-click="click()">呵呵</button>
+        </div>
+   </div>
+  <script>
+   var app=angular.module('app',[])
+   //控制器父子调用
+   app.controller('parent',function($scope){
+     //父亲去接受
+        $scope.$on('to-parent',function(event,data){
+           console.log(data);
+        })
+   })
+   app.controller('child',function($scope){
+      $scope.click=function(){
+        //事件向上发送
+         $scope.$emit('to-parent','呵呵哒~~~');
+      };
+   })
+  </script>
+  
+</body>
+</html>

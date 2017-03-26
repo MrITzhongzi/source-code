@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body ng-app="app" ng-controller="myCon">
+   <div >
+     <div ng-bind="time1"></div>
+     <div ng-bind="time2"></div>
+   </div>
+    <script src="./angular.js">
+  </script>
+  <script>
+  //angular在控制带$的参数和方法
+  //如果使用setInterval这方法，方法里面的$scope的变化触发不了angular里面的脏检查
+  //带$的方法$interval是可以控制方法里面的$scope的变化触发了angular里面的脏检查
+  //脏检查全部变量一遍$scope($scope的树形)
+   var app=angular.module('app',[])
+   app.controller('myCon',['$scope','$interval',function($scope,$interval){
+       $scope.time1=new Date();
+       $scope.time2=new Date();
+      //  $interval(function(){
+      //     $scope.time1=new Date();
+
+      //  },1000);
+       //一秒循环一次
+       setInterval(function(){
+          $scope.time2=new Date();
+          //手动触发脏检查
+          $scope.$apply();
+       },1000);
+   }])
+  </script>
+</body>
+</html>

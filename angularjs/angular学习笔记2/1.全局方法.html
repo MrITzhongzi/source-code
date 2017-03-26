@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  
+  <script src="./angular.js">
+    
+  </script>
+</head>
+<body>
+  <script>
+  //校验数组的
+  console.log(angular.isArray([1,2]));
+  console.log(angular.isDate(new Date()));
+  var obj={name:"cxc",age:18}
+  //遍历对象
+  angular.forEach(obj,function(v,k){
+    console.log(v);
+    console.log(k);
+  })
+  var foo=[1,2];
+  //遍历数组
+  angular.forEach(foo,function(v,i){
+    console.log(v);
+    console.log(i);
+  })
+  </script>
+</body>
+</html>

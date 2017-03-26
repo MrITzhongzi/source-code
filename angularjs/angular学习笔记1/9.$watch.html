@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <!--控制所在的dom节点作为根节点,ng-app这个指令只能存在一个-->
+  <div  ng-app="app" ng-controller="myController">
+    <input type="text" ng-model="val" name="" value="">
+    <p>{{val}}</p>
+  </div>
+  <script src="./angular.js">
+    
+  </script>
+  <script>
+    var app=angular.module('app',[]);
+    app.controller('myController',function($scope){
+      //使用$watch去监听$scope里面的val,
+      //第一参数是$scope的属性名
+      //第二个回调函数
+      //回调函数 第一是新值， 第二个是旧值
+      //注意$watch不要写成死循环
+      //$scope.val=1;
+      $scope.$watch('val',function(newValue,oldValue){
+         //  $scope.val++;
+           console.log(newValue);
+            console.log(oldValue);
+      })
+
+    })
+  
+  </script>
+</body>
+
+</html>

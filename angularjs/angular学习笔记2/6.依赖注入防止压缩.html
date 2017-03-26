@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script src="./angular.js">
+    
+  </script>
+</head>
+<body ng-app="app" ng-controller="myCon">
+   <div>
+     {{val}}
+   </div>
+  <script>
+   var app=angular.module('app',[])
+   var foo=function($scope){
+      $scope.val=1;
+   };
+   //依赖注入的方法
+   foo.$inject=['$scope'];
+   //压缩有问题
+   app.controller('myCon',foo)
+
+    </script>
+  
+</body>
+</html>

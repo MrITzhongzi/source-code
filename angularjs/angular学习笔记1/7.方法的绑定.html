@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body ng-app="myApp" ng-controller="myCon">
+  <input type="" ng-model="val" name="" value="">
+  <button ng-click="add()">+1</button>
+  <p>{{val}}</p>
+  <script src="./angular.js"></script>
+  <script>
+     var app=angular.module('myApp',[]);
+     app.controller('myCon',function($scope,$timeout){
+         $scope.val=1;
+         //这种写法不可以，这里是angular控制之外
+          // $timeout(function() {
+            
+          //   $scope.val=1;
+          // }, 1000);
+         //定义方法
+         //$scope是个对象，定义值就是给$scope定义属性，定义方法就是$scope定义方法
+         $scope.add=function(){
+             $scope.val++;
+         }
+     })
+  </script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>+1</title>
+</head>
+<body>
+  <input type="text" name="" value="" id="foo">
+  <button type="" id="bar">+1</button>
+  <script>
+  //用原生的js取操作dom
+    var bar=document.getElementById('bar');
+    bar.onclick=function(){
+         var foo=document.getElementById('foo');
+        foo.value=(foo.value-0)+1;
+    }
+  </script>
+</body>
+</html>

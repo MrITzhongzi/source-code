@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script src="./angular.js">
+    
+  </script>
+</head>
+<body ng-app="app" >
+   <div ng-controller="parent">
+     
+        <button ng-click="click()"></button>
+        <div ng-controller="child">
+        </div>
+   </div>
+  <script>
+   var app=angular.module('app',[])
+   //控制器父子调用
+   app.controller('parent',function($scope){
+     //父级定义方法
+      $scope.click=function(){
+        //广播
+        //自定义事件，$broadcast传播出去
+         $scope.$broadcast('to-chlid','呵呵哒~~~');
+      };
+   })
+   app.controller('child',function($scope){
+     //儿子接收父亲的传的值
+        $scope.$on('to-chlid',function(event,data){
+           console.log(data);
+        })
+   })
+  </script>
+  
+</body>
+</html>
