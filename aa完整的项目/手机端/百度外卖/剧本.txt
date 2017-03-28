@@ -1,0 +1,32 @@
+1、加载页面：
+	背景：#ffebeb
+	load-logo  top ：25%     416*121
+	logo   154*121
+	progress-box     416*20     border: 2px solid #373838;     #ff2d4b
+	progress-txt  220*28  margin-top:40px;
+
+	footer    640*158
+	 product-logo  162*39
+	 product-logo-desc  	 #ff8797    font-size:12px;     margin:0.75rem auto 2rem;
+
+2、第一屏
+	云clouds    		640*673px
+	草地grass	  	640*396
+	树林trees   		599*71  left:24px;  bottom:352px;
+	草地2grass2 		320*228
+	标题bear-title:		397*224  top:4.6%  left: 112px;
+	骑手rider :				167*279 left:256  bottom:346px
+  开始按钮start-btn:	208*208  bottom  2.7rem  left 7.2rem;
+	文字start-btn-desc :640*31
+	hello：	 75*70   top 20px  right  8px  #617421   bottom:1.2rem;
+
+	circle：w208*208
+
+
+3、第二屏
+	标题  pl:20px  ml，mt:32px;
+	竖线： 5*116px;
+	标题字体：64px;
+
+
+	 
