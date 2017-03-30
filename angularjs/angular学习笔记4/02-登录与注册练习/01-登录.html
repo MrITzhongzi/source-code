@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .waring {
+            color: red;
+        }
+
+        .failed {
+            color: red;
+        }
+        .success {
+            color: green;
+        }
+    </style>
+    <script src="../angular.js"></script>
+</head>
+<body ng-app="mainApp">
+    <div ng-controller="loginController">
+        用户名: <input type="text" ng-model="uid"> <br>
+        密码: <input type="text" ng-model="pwd"> <br>
+        <div class="waring">{{ waringText }}</div>
+        <div class="{{ message }}">{{ messageText }}</div>
+        <input type="button" ng-click="login()" value="登录">
+    </div>
+</body>
+<script>
+    (function () {
+
+        function isEmptyOrWhiteSpace( scope, key ) {
+            return scope[ key ] == undefined || scope[ key ].trim().length == 0;
+        }
+
+        angular.module( 'mainApp', [] )
+            .controller( 'loginController', [ '$scope', function ( $scope ) {
+
+                // 初始化
+                $scope.login = function () {
+
+                    $scope.waringText = '';
+                    $scope.messageText = '';
+                    $scope.message = '';
+
+
+                    // 在点击按钮的时候进行执行
+                    // 登录验证操作就在这里
+
+                    // 先验证输入没有
+
+                    // 1> 判断用户输入
+                    // if ( $scope.uid == undefined || $scope.uid.trim().length == 0 ) {
+                    //     // 用户名输入有误
+                    //     return;
+                    // }
+                    // // 2> 判断用户输入的密码
+                    // if ( $scope.pwd == undefined || $scope.pwd.trim().length == 0 ) {
+                    //     // 用户名输入有误
+                    //     return;
+                    // }
+
+
+                    if ( isEmptyOrWhiteSpace( $scope, 'uid' ) || isEmptyOrWhiteSpace( $scope, 'pwd' ) ) {
+                        // 是否为输入有误
+                        $scope.waringText = '您输入的用户名或密码有误,请重新输入';
+                        return;
+                    }
+
+
+
+                    // 验证登录是否成功
+                    // 应该发送 ajax 请求然后等待验证, 但是此时模拟
+                    if ( $scope.uid == 'admin' && $scope.pwd == '888888' ) {
+                        $scope.messageText = '登录成功';
+                        $scope.message = 'success';
+                    } else {
+                        $scope.messageText = '登录失败';
+                        $scope.message = 'failed';
+                    }
+
+                };
+
+            }] );
+
+
+    })();
+
+</script>
+</html>

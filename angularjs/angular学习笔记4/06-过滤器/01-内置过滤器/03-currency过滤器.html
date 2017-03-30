@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../../angular.js"></script>
+    <script src="./angular-locale_zh-cn.js"></script>
+</head>
+<body ng-app="mainApp">
+    {{ money1 | currency }}
+    <br>
+    {{ money2 | currency }}
+    <br>
+    {{ money3 }}
+</body>
+<script>
+    angular.module( 'mainApp', [] )
+    
+        .run( [ '$rootScope', '$filter', function ( $rootScope, $filter ) {
+        
+            $rootScope.money1 = 1234.56;
+
+            $rootScope.money2 = 1234;
+
+            $rootScope.money3 = $filter( 'currency' )( 123456789 );
+
+        }]);
+</script>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../../angular-1.5.8/angular.js"></script>
+    <!-- 引入 ng 的库, 支持功能 -->
+</head>
+<body ng-app>
+    <!-- 
+        提供 ng-app 的属性说明让 ng 来维护该标签以及其后代的所有标签 
+        
+        ng 是一个 mvvm 的框架, ng-app 表示这个 app 的 view
+        在 提供 ng-app 以后, ng 会在代码的背后创建一个与之对应的 对象. 称为 $rootScope
+
+        如果想要访问这个 $rootScope, 就需要申请一下
+            .run( [ '$rootScope', function ( $rootScope ) {
+            }]) 
+        
+        
+        此时, ng 提供了双向数据绑定的功能( 一大特点 )
+        双向数据绑定: 界面 View 与 视图模型 ViewModel 之间的数据同步行为.
+
+        此时 ViewModel 就是 $rootScope, View 就是整个 body 标签
+
+        一旦界面中含有数据的改变, 就会同步到 背后的 这个 $rootScope 上属性的改变.
+        同时 背后的 对象 $rootScope 的属性发生改变, 也会同步到界面中.
+
+        在界面中凡是使用表达式( expression, 此时指 {{}}  中的名字与 ng-model 中的名字 )
+        含有的名字都会在背后的 $rootScope 中被创建出来.
+    -->
+    <input type="text" ng-model="txt">
+    <!-- 
+        此时 ng-model="txt" 和 {{ txt }} 说明了背后 $rootScope 中含有属性 txt 
+        当用户在 输入框中输入文本的时候, 此时发生了:
+        1> 文本框中数据发生变化
+        2> 通知背后的 $rootScope 修改 对应属性 txt 的值
+        3> 背后 $rootScope 中属性的值发生了变化
+        4> 通知界面修改属性. ng 会"遍历" 界面中有多少地方使用了该名字, 然后依次同步
+        5> 在此例中有两个 txt, 因此依次通知
+        6> 通知 input 标签, 发现值一样, ok 忽略
+        7> 通知 {{ }}, 原来没有数据, 和现在的数据不一样, 更新数据
+        8> 通知背后的 $rootScope 改变. 发现值一样, 结束循环检查的过程
+    -->
+    <div>你好, {{ txt }}</div>
+</body>
+</html>

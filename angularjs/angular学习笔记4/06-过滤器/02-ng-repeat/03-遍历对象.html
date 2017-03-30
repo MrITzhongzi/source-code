@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../../angular.js"></script>
+</head>
+<body ng-app="mainApp">
+    <ul>
+        <li ng-repeat="( key, value ) in obj">{{ key + ',' + value }}</li>
+    </ul>
+</body>
+<script>
+    angular.module( 'mainApp', [] )
+        .run( function ( $rootScope ) {
+            $rootScope.obj = {
+                name: 'jack',
+                age: 19,
+                gender: '男'
+            }
+        });
+</script>
+</html>

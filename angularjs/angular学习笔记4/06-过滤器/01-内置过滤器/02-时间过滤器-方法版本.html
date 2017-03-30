@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../../angular.js"></script>
+    <script src="./angular-locale_zh-cn.js"></script>
+</head>
+<body ng-app="mainApp">
+    {{ now }}
+</body>
+<script>
+    angular.module( 'mainApp', [] )
+                                                                // 1, 注入 $filter
+        .run( [ '$rootScope', '$filter', function ( $rootScope, $filter ) {
+            var curr = new Date();
+
+            // 2, 利用 $filter 拿到 date 过滤器
+            var dateFn = $filter( 'date' );
+
+            // 此时 dateFn 就是一个用于过滤时间对象的函数
+            // 该函数有两个参数, 第一个参数是需要过滤的数据
+            // 第二个参数是 过滤使用的格式
+
+            $rootScope.now = dateFn( curr, 'yyyy-MM-dd HH:mm:ss EEEE 哈哈哈哈' );
+        }]);
+</script>
+</html>

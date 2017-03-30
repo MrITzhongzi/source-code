@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../../angular.js"></script>
+</head>
+<body ng-app="mainApp">
+    <table border="1" width="800">
+        <thead>
+            <!--<th>name</th>
+            <th>age</th>
+            <th>gender</th>-->
+            <th>索引</th>
+            <th ng-repeat="(k,v) in list[ 0 ]">{{ k }}</th>
+            <th>是不是第一个</th>
+            <th>是不是中间的</th>
+            <th>是不是最后</th>
+        </thead>
+        <tbody>
+            <tr ng-repeat="item in list">
+                <td>{{ $index }}</td>
+                <!--<td>{{ item.name }}</td>
+                <td>{{ item.age }}</td>
+                <td>{{ item.gender }}</td>-->
+
+                <td ng-repeat="( k,v ) in item">{{v}}</td>
+                <td>first: {{ $first }}</td>
+                <td>middle: {{ $middle }}</td>
+                <td>last: {{ $last }}</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+<script>
+    var data = [
+        { name: 'jim', age: 89, gender: '男' },
+        { name: 'tom', age: 29, gender: '女' },
+        { name: 'jack', age: 39, gender: '男' },
+        { name: 'jerry', age: 49, gender: '女' },
+        { name: 'rose', age: 59, gender: '男' },
+        { name: 'bob', age: 69, gender: '女' },
+        { name: 'deve', age: 79, gender: '男' },
+        { name: 'hanmeimei', age: 19, gender: '女' }
+    ];
+    angular.module( 'mainApp', [] )
+        .run( function ( $rootScope ) {
+            $rootScope.list = data;
+        });
+</script>
+</html>

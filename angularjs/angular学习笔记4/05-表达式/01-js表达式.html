@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+    // !function func() { alert( 123 ); }()
+
+    // func();
+
+    // // 早期 谷歌浏览器允许将函数声明写在 if, while, for 等逻辑的花括号内
+    // if ( 1 ) {
+    //     function f() {
+    //         console.log( true );
+    //     }
+    // } else {
+    //     function f() {
+    //         console.log( false );
+    //     }
+    // }
+
+    // f() // => false  firefox: true
+
+
+
+    if ( 1 ) {
+        function f() {
+            console.log( true );
+        }
+    } else {
+        function f() {
+            console.log( false );
+        }
+    }
+
+    f() ;
+
+</script>
+</html>

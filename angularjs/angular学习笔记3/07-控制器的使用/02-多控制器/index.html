@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../../angular-1.5.8/angular.js"></script>
+</head>
+<body ng-app="mainApp">
+    
+    <div ng-controller="controller1">
+        <input type="text" ng-model="txt"><br>
+        <input type="text" ng-model="txt"><br>
+        <input type="text" ng-model="txt"><br>
+        <input type="button" value="点击显示" ng-click="click()">
+    </div>
+    <div ng-controller="controller2">
+        <input type="text" ng-model="txt"><br>
+        <input type="text" ng-model="txt"><br>
+        <input type="text" ng-model="txt"><br>
+        <input type="button" value="点击显示" ng-click="click()">
+    </div>
+    <div ng-controller="controller3">
+        <input type="text" ng-model="txt"><br>
+        <input type="text" ng-model="txt"><br>
+        <input type="text" ng-model="txt"><br>
+        <input type="button" value="点击显示" ng-click="click()">
+    </div>
+    <div ng-controller="controller4">
+        <input type="text" ng-model="txt"><br>
+        <input type="text" ng-model="txt"><br>
+        <input type="text" ng-model="txt"><br>
+        <input type="button" value="点击显示" ng-click="click()">
+    </div>
+
+</body>
+<script>
+
+    angular
+        .module( 'mainApp', [] )
+        .controller( 'controller1', [ '$scope', function ( $scope ) {
+            $scope.click = function () {
+                console.log( 'controller1: ' + $scope.txt );
+            };
+        }] )
+        .controller( 'controller2', [ '$scope', function ( $scope ) {
+            $scope.click = function () {
+                console.log( 'controller2: ' + $scope.txt );
+            };
+        }] )
+        .controller( 'controller3', [ '$scope', function ( $scope ) {
+            $scope.click = function () {
+                console.log( 'controller3: ' + $scope.txt );
+            };
+        }] )
+        .controller( 'controller4', [ '$scope', function ( $scope ) {
+            $scope.click = function () {
+                console.log( 'controller4: ' + $scope.txt );
+            };
+        }] );
+
+
+</script>
+</html>

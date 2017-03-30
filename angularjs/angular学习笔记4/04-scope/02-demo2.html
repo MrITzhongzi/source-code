@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../angular.js"></script>
+</head>
+ <body ng-app="mainApp">
+    <div ng-controller="controllerA">
+        <div ng-controller="controllerC"></div>
+    </div>
+    <div ng-controller="controllerB"></div>
+</body> 
+<script>
+
+    angular.module( 'mainApp', [] )
+        .run( function ( $rootScope ) {
+            window.rootScope = $rootScope; // 映射到全局对象中
+        })
+        .controller( 'controllerA', function ( $scope ) {
+            window.scopeA = $scope;
+        })
+        .controller( 'controllerB', function ( $scope ) {
+            window.scopeB = $scope;
+        })
+        .controller( 'controllerC', function ( $scope ) {
+            window.scopeC = $scope;
+        });
+
+</script>
+</html>

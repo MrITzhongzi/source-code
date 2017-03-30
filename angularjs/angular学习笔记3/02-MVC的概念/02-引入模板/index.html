@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./template-native.js"></script>
+    <script type="text/template" id="tpl">
+    
+        <table border="1" width="600">
+            <thead>
+                <% for ( var k in list[ 0 ] ) { %>
+                <th><%= k %></th>
+                <% } %>
+            </thead>
+            <tbody>
+                <% for( var i = 0; i < list.length; i++ ) { %>
+                <tr>
+                    <% for ( var k in list[ i ] ) { %>
+                    <td><%= list[ i ][ k ] %></td>
+                    <% } %>
+                </tr>
+                <% } %>
+            </tbody>
+        </table>
+    
+    </script>
+    <script type="text/template" id="tpl2">
+
+        <ul>
+            <% for ( var i = 0; i < list.length; i++ ) { %>
+            <li><div><%= list[ i ].name %></div></li>
+            <% } %>
+        </ul>
+
+    </script>
+</head>
+<body>
+    <div id="container"></div>
+</body>
+<script>
+    var data = [
+        { name: 'jim1', age: 19, gender: '男' },
+        { name: 'jim2', age: 9, gender: '女' },
+        { name: 'jim3', age: 29, gender: '男' },
+        { name: 'jim4', age: 39, gender: '女' },
+        { name: 'jim5', age: 49, gender: '女' }
+    ];
+
+    // 使用模板引擎有一个特点, 对应的 模板背后有一个对象, 该对象中每一个属性都是可以直接在 模板中使用的
+    var obj = {
+        list: data
+    };
+
+    var html = template( 'tpl', obj );
+
+    document.getElementById( 'container' ).innerHTML = html;
+
+</script>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container"></div>
+</body>
+<script>
+    var data = [
+        { name: 'jim1', age: 19, gender: '男' },
+        { name: 'jim2', age: 9, gender: '女' },
+        { name: 'jim3', age: 29, gender: '男' },
+        { name: 'jim4', age: 39, gender: '女' },
+        { name: 'jim5', age: 49, gender: '女' }
+    ];
+
+    // 使用标准的 DOM 方法
+    function tag( tagName )  {
+        return document.createElement( tagName );
+    }
+
+
+    // 1, 创建 table 标签 与 tbody 标签
+    var table = tag( 'table' );
+    var tbody = tag( 'tbody' );
+    table.appendChild( tbody );
+
+    // 2, 遍历数组, 创建 tr 标签
+    // 3, 遍历每一个数组元素, 生成 td 标签
+    for ( var i = 0; i < data.length; i++ ) {
+        var tr = tag( 'tr' );
+        for ( var k in data[ i ] ) {
+            var td = tag( 'td' );
+            // 文本放置到 td 中
+            var txtNode = document.createTextNode( data[ i ][ k ] + '' )
+            td.appendChild( txtNode );
+            tr.appendChild( td );
+        }
+        tbody.appendChild( tr );
+    }
+    // 4, 加到页面中
+    table.width = 600;
+    table.border = 1;
+
+    document.getElementById( 'container' ).appendChild( table );
+
+</script>
+</html>

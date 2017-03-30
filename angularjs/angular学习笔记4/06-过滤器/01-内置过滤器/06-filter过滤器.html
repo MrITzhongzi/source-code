@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../../angular.js"></script>
+    <script src="./angular-locale_zh-cn.js"></script>
+</head>
+<body ng-app="mainApp">
+  
+</body>
+<script>
+    angular.module( 'mainApp', [] )
+    
+        .run( [ '$rootScope', '$filter', function ( $rootScope, $filter ) {
+            // filter 过滤器的使用
+            // 语法: 表达式 | filter: 参数
+            // 在一个数组或对象或字符串中利用 filter 过滤, 取出符合过滤项的数据
+
+            // filter 的参数就是过滤的条件
+            // 参数可以是
+            // 1> 字符串( 遍历每一个数据中的 每一个数据 如果匹配到了就保留下来 )
+            // 2> 对象( 提供键值, 在过滤的时候会根据键来寻找 )
+            // 3> 函数( 根据每一个数据都会调用一次函数, 根据函数的返回值来确定是否需要保留数据 )
+
+
+        }]);
+</script>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../../angular.js"></script>
+    <style>
+        .clickable {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body ng-app="mainApp">
+    <input type="button" value="按照年龄排序" ng-click="txt= txt=='age' ? '-age': 'age'" > <br>
+    <table border="1" width="800">
+        <thead>
+            <th>编号</th>
+            <th class="clickable" ng-click="txt= txt=='name' ? '-name': 'name'">name</th>
+            <th class="clickable" ng-click="txt= txt=='age' ? '-age': 'age'">age</th>
+            <th class="clickable" ng-click="txt= txt=='gender' ? '-gender': 'gender'">gender</th>
+        </thead>
+        <tbody>
+            <tr ng-repeat="item in list | orderBy:txt">
+                <td>{{ $index }}</td>
+                <td>{{ item.name }}</td>
+                <td>{{ item.age }}</td>
+                <td>{{ item.gender }}</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+<script>
+    var data = [
+        { name: 'jim', age: 89, gender: 'man' },
+        { name: 'tom', age: 29, gender: 'female' },
+        { name: 'jack', age: 39, gender: 'man' },
+        { name: 'jerry', age: 49, gender: 'female' },
+        { name: 'rose', age: 59, gender: 'man' },
+        { name: 'bob', age: 69, gender: 'female' },
+        { name: 'deve', age: 79, gender: 'man' },
+        { name: 'hanmeimei', age: 19, gender: 'female' }
+    ];
+    angular.module( 'mainApp', [] )
+        .run( function ( $rootScope ) {
+            $rootScope.list = data;
+
+            // $rootScope.txt = 'age'; // 按照 'age' 这个属性升序排序
+            // $rootScope.txt = '-age';
+        });
+</script>
+</html>

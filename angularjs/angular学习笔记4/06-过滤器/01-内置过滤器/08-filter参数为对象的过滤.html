@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../../angular.js"></script>
+</head>
+<body ng-app="mainApp">
+    <input type="text" ng-model="txt"> <br>
+    <table border="1" width="800">
+        <thead>
+            <th>编号</th>
+            <th>name</th>
+            <th>age</th>
+            <th>gender</th>
+        </thead>
+        <tbody>
+            <tr ng-repeat="item in list | filter: { name: txt }">
+                <td>{{ $index }}</td>
+                <td>{{ item.name }}</td>
+                <td>{{ item.age }}</td>
+                <td>{{ item.gender }}</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+<script>
+    var data = [
+        { name: 'jim', age: 89, gender: 'man' },
+        { name: 'tom', age: 29, gender: 'female' },
+        { name: 'jack', age: 39, gender: 'man' },
+        { name: 'jerry', age: 49, gender: 'female' },
+        { name: 'rose', age: 59, gender: 'man' },
+        { name: 'bob', age: 69, gender: 'female' },
+        { name: 'deve', age: 79, gender: 'man' },
+        { name: 'hanmeimei', age: 19, gender: 'female' }
+    ];
+    angular.module( 'mainApp', [] )
+        .run( function ( $rootScope ) {
+            $rootScope.list = data;
+        });
+</script>
+</html>

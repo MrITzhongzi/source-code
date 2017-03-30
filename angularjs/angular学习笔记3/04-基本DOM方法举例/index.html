@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="dv"></div>
+
+    <input type="checkbox">
+</body>
+<script>
+    // 1, 元素节点
+    var elem = document.createElement( 'div' );
+    // var dv = document.getElementById( 'dv' );
+    // 在 HTML 中凡是有 id 的标签, 即在全局作用域中含有该属性
+    dv.appendChild( elem );
+
+    // 2, 增加文本节点
+    var txtNode = document.createTextNode( '我是一段创建的文本' );
+    elem.appendChild( txtNode );
+
+
+    // 3, 创建属性节点
+    var attrNode = document.createAttribute( 'itcast' );
+    attrNode.nodeValue = '传智播客';
+    elem.attributes.setNamedItem( attrNode );
+
+
+
+    // checkbox
+    var input = document.querySelector( 'input' );
+    // input.checked = true;
+
+    input.setAttribute( 'checked', 'checked' );
+    input.setAttribute( 'checked', '' );
+
+    input.removeAttribute( 'checked' );
+
+    // 自检
+    // 1, 要求能够对元素, 属性, 文本, 样式进行修改, 增加, 移除的操作
+    // 2, 对节点可以使用 任意位置进行插入
+    // 3, 节点的亲属节点3级的访问
+    
+
+
+</script>
+</html>

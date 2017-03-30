@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 凡是改变文本框的数据就通知我 -->
+    <input type="text" id="txt">
+    <br>
+    <input type="text" id="txt2"><input type="button" value="修改文本框的数据" id="btn">
+</body>
+<script>
+    var txt = document.getElementById( 'txt' );
+    var txt2 = document.getElementById( 'txt2' );
+    var btn = document.getElementById( 'btn' );
+
+    btn.onclick = function() {
+        // 将 txt2 中的 内容赋值给 txt
+        // txt.value = txt2.value;
+        setValue( txt2.value );
+    };
+
+    function setValue( value ) {
+        txt.value = value;
+
+        // 通知的机制
+        if ( typeof myEvent != 'undefined' && typeof myEvent == 'function' ) {
+            myEvent( txt ); // 通知
+        }
+    }
+
+
+    var myEvent = function ( txt ) {
+        alert( txt.value );
+    }
+    
+</script>
+</html>

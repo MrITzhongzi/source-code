@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container"></div>
+</body>
+<script>
+    var data = [
+        { name: 'jim1', age: 19, gender: '男' },
+        { name: 'jim2', age: 9, gender: '女' },
+        { name: 'jim3', age: 29, gender: '男' },
+        { name: 'jim4', age: 39, gender: '女' },
+        { name: 'jim5', age: 49, gender: '女' }
+    ];
+
+    var tmp = [];
+
+    tmp.push( '<table border="1" width="600"><tbody>' );
+
+    // tmp.push( data.map( function ( v, i ) {
+    //     return '<tr>' + 
+    //             '<td>' + v.name + '</td>' +
+    //             '<td>' + v.age + '</td>' +
+    //             '<td>' + v.gender + '</td>' +
+    //             '</tr>';
+    // }).join( '' ) );
+
+    tmp.push( data.map( function ( v, i ) {
+        return '<tr><td>' + 
+                
+                Object.values( v ).join( '</td><td>' ) +
+
+                '</td></tr>';
+    }).join( '' ) );
+
+
+    // 解释
+    // [ 'jim', '19', '男' ]
+    // .join( '</td><td>' )
+    // 
+    // 'jim</td><td>19</td><td>男'
+
+
+
+
+    tmp.push( '</tbody></table>' );
+
+    document.getElementById( 'container' ).innerHTML = tmp.join( '' );
+</script>
+</html>
