@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./angular.163.js"></script>
+</head>
+<body ng-app="mainApp">
+    <button ng-click="get()"> click </button>
+</body>
+<script>
+    angular.module( 'mainApp', [] )
+        .config(['$sceDelegateProvider', function($sceDelegateProvider) {
+            $sceDelegateProvider.resourceUrlWhitelist([
+                '**'
+                // 在 node 平台下引入了 全局通配符
+                // 使用 * 表示一个目录下任意的文件或文件夹
+                // 使用 ** 表示任意目录结构下多个文件夹结构
+                //      /index/index/index.html
+                //      /*/*/*.html
+                //      /**/*.html
+            ]);
+        }])
+        .run( function ( $rootScope, $http ) {
+            $rootScope.get = function () {
+
+                $http.jsonp( 'http://jklib.org/ele/citiesjsonp.ashx')
+                    .then( function ( data ) {
+                        console.log( data );
+                    } );
+
+            };
+        });
+</script>
+</html>

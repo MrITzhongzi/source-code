@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../../angular.js"></script>
+</head>
+<body ng-app="app">
+    <div ng-controller="controller">
+        <button ng-click="getData()"> click </button>
+        <select ng-change="getSelect()" ng-model="alphabet">
+            <option ng-repeat="item in cities.alphabets" value="{{item}}">{{ item }}</option>
+        </select>
+        <select >
+            <option ng-repeat="item in cities.cities[ alphabet ]" value="">{{item.name}}</option>
+        </select>
+    </div>
+   
+</body>
+<script>
+    angular.module( 'app', [] )
+        .controller( 'controller', function ( $scope, $http ) {
+            $scope.getData = function () {
+
+                $http({
+                    url: 'http://jklib.org/ele/cities.ashx',
+                    method: 'get'
+                })
+                .success( function ( data ) {
+                    // console.log( data );
+                    // 我们的 scope 需要提供 abcd 的城市首字母表
+                    // 同时还需要具体的 城市信息
+                    // 有两个选择. 
+                    // 1> 给 $scope 增加两个属性
+                    // 2> 给 $scoep 增加一个对象属性, 里面存储所有的数据
+                    $scope.cities = {
+                        alphabets: Object.keys( data ),   // 首字母数组
+                        cities: data                      // 城市键值对
+                    };
+                });
+
+            };
+
+
+            $scope.getSelect = function () {
+                console.log( $scope.alphabet );
+
+                console.table( $scope.cities.cities[ $scope.alphabet ] );
+            }
+        });
+</script>
+</html>

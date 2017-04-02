@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!--<script src="../angular.js"></script>-->
+    <script src="../angular.163.js"></script>
+    <script src="http://jklib.org/ele/cdn/encode.js"></script>
+</head>
+
+<body ng-app="mainApp" ng-controller="mainCon">
+    <button type="" ng-click="getData()" value="click">getData</button>
+    <select ng-model="alphabet">
+        <option ng-repeat="item in cities.alphabets" value="{{item}}">{{ item }}</option>
+    </select>
+    <select ng-change="show()" ng-model="cityId">
+        <option ng-repeat="item in cities.cities[alphabet]" value="{{ item.id }}">{{ item.name }}</option>
+    </select>
+    <br>
+    <input type="text" ng-keyup="keyup()" ng-model="search" value="">
+    <br>
+    <div>
+        <ul>
+            <li ng-repeat="item in positions">
+                <div ng-click="getRestaurant( item )">{{ item.name }}</div>
+            </li>
+        </ul>
+    </div>
+
+    <table>
+        <tr ng-repeat="item in shops">
+            <td>{{ item.name }}</td>
+            <td>{{ item.phone }}</td>
+            <td><img ng-src="{{ item.image_path | getImageUrl  }}" alt=""></td>
+        </tr>
+    </table>
+
+
+    <script>
+        var global_data;
+        var geohash;
+
+        angular.module('mainApp', [])
+            .filter('getImageUrl', function () {
+                var r1 = /^(.)(..)/,
+                    r2 = /(jpg|jpeg|gif|png|bmp)$/;
+                return function (urlPart) {
+                    // image_path: "d289a05927d7ab2f48a4e35da5fea0d9jpeg"
+                    // https://fuss10.elemecdn.com/7/d3/48a777a6b444dc317cc24d101220cjpeg.jpeg
+                    // https://fuss10.elemecdn.com/7/d3/48a777a6b444dc317cc24d101220cjpeg.jpeg?imageMogr2/thumbnail/70x70/format/webp/quality/85
+
+                    // jpg, jpeg, png, bmp, ... gif
+                    return ' https://fuss10.elemecdn.com/' + urlPart
+                        // "d289a05927d7ab2f48a4e35da5fea0d9jpeg"
+                        // (.)(..)
+                        // d/28/ 替换 "d/28/9a05927d7ab2f48a4e35da5fea0d9jpeg"
+                        .replace(r1, '$1/$2/')
+                        // "d/28/9a05927d7ab2f48a4e35da5fea0d9jpeg"
+                        // (jpeg)
+                        // jpeg.jpeg
+                        // "d/28/9a05927d7ab2f48a4e35da5fea0d9jpeg.jpeg"
+                        .replace(r2, '$1.$1')
+                        + '?imageMogr2/thumbnail/70x70/format/webp/quality/85';
+
+                };
+            })
+            .controller('mainCon', ['$scope', '$http', function ($scope, $http) {
+                $scope.getData = function () {
+                    $http({
+                        url: 'http://jklib.org/ele/cities.ashx',
+                        method: 'get'
+                    }).then(
+                        function (info) {
+
+                            $scope.cities = {
+                                alphabets: Object.keys(info.data),
+                                cities: info.data
+                            };
+                            global_data = info.data;
+                        }
+                        )
+                }
+
+                $scope.show = function () {
+                    var city,
+                        cities = global_data[$scope.alphabet];
+                    for (var i = 0; i < cities.length; i++) {
+                        if (cities[i].id + '' == $scope.cityId + '') {
+                            city = cities[i];
+                            break;
+                        }
+                    }
+                    geohash = geohashObj.encode(city.latitude, city.longitude);
+                };
+
+                $scope.keyup = function () {
+
+                    if (!$scope.search) return;
+                    console.log(geohash);
+                    console.log($scope.search);
+                    $http({
+                        url: ' http://jklib.org/ele/pois.ashx?geohash=' + geohash + '&keyword=' + $scope.search,
+                        method: 'get'
+                    })
+                        .then(function (info) {
+                            console.log(info.data);
+                            $scope.positions = info.data;
+                        });
+                }
+
+                $scope.getRestaurant = function (item) {
+
+                    var url = 'http://jklib.org/ele/restaurants.ashx?geohash=' + item.geohash + '&latitude=' + item.latitude
+                        + '&longitude=' + item.longitude;
+                    // console.log(item);
+                    $http.get(url)
+                        .then(function (info) {
+                            // console.log(info);
+                            $scope.shops = info.data;
+                        })
+                }
+
+            }])
+    </script>
+</body>
+
+</html>

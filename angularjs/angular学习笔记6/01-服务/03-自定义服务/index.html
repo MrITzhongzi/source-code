@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../../angular.js"></script>
+</head>
+<body ng-app="mainApp">
+    <input type="text" ng-model="k"> <br>
+    <input type="text" ng-model="v"> <br>
+    <button ng-click="save()"> 保存 </button> <br>
+    <button ng-click="read()"> 打印 </button> <br>
+</body>
+<script>
+    angular.module( 'mainApp', [] )
+        .factory( 'myStorage', [ '$window', function ( $window ) {
+            // 需要一个对象 可存可取
+
+            // $window.localStorage.setItem( k, v )
+            var storage = {
+                data: function ( key, value ) {
+                    if ( value ) { // 不严谨
+                        // 传入了 value 要设置
+                        $window.localStorage.setItem( key, value );
+                    } else {
+                        // 没有传入要获取
+                        return $window.localStorage.getItem( key );
+                    }
+                }
+            };
+
+            return storage;
+        }])
+        .run( [ '$rootScope', 'myStorage', function ( $rootScope, myStorage ) {
+            $rootScope.save = function () {
+                myStorage.data( $rootScope.k, $rootScope.v );
+            };
+
+            $rootScope.read = function () {
+                alert( myStorage.data( $rootScope.k ) );
+            } ;
+        }]);
+
+</script>
+</html>

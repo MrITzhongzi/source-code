@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../../angular.js"></script>
+</head>
+<body ng-app="app">
+    <div ng-controller="controller">
+        <button ng-click="getData()"> click </button>
+        <select ng-model="alphabet">
+            <option ng-repeat="item in cities.alphabets" value="{{item}}">{{ item }}</option>
+        </select>
+        <select >
+            <option ng-repeat="item in cities.cities[ alphabet ]" value="">{{item.name}}</option>
+        </select>
+    </div>
+   
+</body>
+<script>
+    angular.module( 'app', [] )
+        .controller( 'controller', function ( $scope, $http ) {
+            $scope.getData = function () {
+
+                $http({
+                    url: 'http://jklib.org/ele/cities.ashx',
+                    method: 'get'
+                })
+                .success( function ( data ) {
+                    $scope.cities = {
+                        alphabets: Object.keys( data ),   // 首字母数组
+                        cities: data                      // 城市键值对
+                    };
+                });
+
+            };
+        });
+</script>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../angular.js"></script>
+    <script src="http://jklib.org/ele/cdn/encode.js"></script>
+</head>
+
+<body ng-app="mainApp" ng-controller="mainCon">
+    <button type="" ng-click="getData()" value="click">getData</button>
+    <select ng-model="alphabet">
+        <option ng-repeat="item in cities.alphabets" value="{{item}}">{{ item }}</option>
+    </select>
+    <select ng-change="show()" ng-model="cityId">
+        <option ng-repeat="item in cities.cities[alphabet]" value="{{ item.id }}">{{ item.name }}</option>
+    </select>
+    <br>
+    <input type="text" ng-keyup="keyup()" ng-model="search" value="">
+    <br>
+    <div>
+        <ul>
+            <li ng-repeat="item in positions">
+                <span>{{item.name}}</span><sub>{{item.geohash}}</sub>
+            </li>
+        </ul>
+    </div>
+
+
+    <script>
+        var global_data;
+        var geohash;
+
+        angular.module('mainApp', [])
+            .controller('mainCon', ['$scope', '$http', function ($scope, $http) {
+                $scope.getData = function () {
+                    $http({
+                        url: 'http://jklib.org/ele/cities.ashx',
+                        method: 'get'
+                    }).success(function (data) {
+
+                        $scope.cities = {
+                            alphabets: Object.keys(data),
+                            cities: data
+                        };
+                        global_data = data;
+                    }).error(function () {
+                        console.log('请求失败')
+                    });
+                }
+
+                $scope.show = function () {
+                    var city,
+                        cities = global_data[$scope.alphabet];
+                    for (var i = 0; i < cities.length; i++) {
+                        if (cities[i].id + '' == $scope.cityId + '') {
+                            city = cities[i];
+                            break;
+                        }
+                    }
+                    geohash = geohashObj.encode(city.latitude, city.longitude);
+                };
+
+                $scope.keyup = function () {
+                    
+                    if(!$scope.search) return;
+                    console.log(geohash);
+                    console.log($scope.search);
+                    $http({
+                        url: ' http://jklib.org/ele/pois.ashx?geohash=' + geohash + '&keyword=' + $scope.search,
+                        method: 'get'
+                    })
+                        .success(function (data) {
+                            console.log(data);
+                            $scope.positions = data;
+                        })
+                        .error(function () {
+                            console.log('请求失败')
+                        });
+                }
+            }])
+    </script>
+</body>
+
+</html>

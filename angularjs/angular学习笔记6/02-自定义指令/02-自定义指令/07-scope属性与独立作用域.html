@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../../angular.js"></script>
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+<body ng-app="app">
+    <it-panel title="第一个标题">
+        <p>1ppppppppppppppppppppppppppppppppppppp</p>
+        <p>2ppppppppppppppppppppppppppppppppppppp</p>
+        <p>3ppppppppppppppppppppppppppppppppppppp</p>
+        <p>4ppppppppppppppppppppppppppppppppppppp</p>
+        <p>5ppppppppppppppppppppppppppppppppppppp</p>
+        <p>6ppppppppppppppppppppppppppppppppppppp</p>
+    </it-panel>
+    <br>
+    <br>
+    <br>
+    <it-panel title="第二标题">
+        <p>1ppppppppppppppppppppppppppppppppppppp</p>
+        <p>2ppppppppppppppppppppppppppppppppppppp</p>
+    </it-panel>
+</body>
+<script>
+    var i = 0;
+    
+    angular.module( 'app', [] )
+        .directive( 'itPanel', function () {
+
+            return {
+                restrict: 'EA',
+                templateUrl: './it-panel-1.html'
+                // 指令默认不会创建 作用域( $scope )
+                , scope: {
+                    title: '@' // 将容器中同名的 属性值取过来
+                },
+                transclude: true
+            };
+        });
+</script>
+</html>

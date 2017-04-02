@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!--<script src="../../angular.js"></script>-->
+    <script src="../../angular.163.js"></script>
+    <script src="http://jklib.org/ele/cdn/encode.js"></script>
+</head>
+<body ng-app="app">
+    <div ng-controller="controller">
+        <button ng-click="getData()"> click </button>
+        <select ng-model="alphabet">
+            <option ng-repeat="item in cities.alphabets" value="{{item}}">{{ item }}</option>
+        </select>
+        <select ng-model="cityId" ng-change="show()">
+            <option ng-repeat="item in cities.cities[ alphabet ]" value="{{item.id}}">{{item.name}}</option>
+        </select>
+
+        <br>
+        <input type="text" ng-keyup="keyup()" ng-model="search">
+        <br>
+        <div>
+            <ul>
+                <li ng-repeat="item in positions">
+                    <span>{{item.name}}</span><sub>{{item.geohash}}</sub>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+</body>
+<script>
+    var global_data;
+    var geohash;
+
+    angular.module( 'app', [] )
+        .controller( 'controller', function ( $scope, $http ) {
+            $scope.getData = function () {
+
+                $http({
+                    url: 'http://jklib.org/ele/cities.ashx',
+                    method: 'get'
+                })
+                .then( function ( info ) {
+                    
+                    // console.log( data );
+                    global_data = info.data; // 将数据映射到全局, 以便后面的方法所使用, 注意是实际开发中不应该这么处理
+
+                    $scope.cities = {
+                        alphabets: Object.keys( info.data ),   // 首字母数组
+                        cities: info.data                      // 城市键值对
+                    };
+                }, function () {
+
+                });
+            };
+
+            $scope.show = function () {
+                // $scope.alphabet  是 首字母
+                // $scope.cityId 是城市 id
+                // global_data[ $scope.alphabet ]  // 首字母一致的城市数组
+                var city,
+                    cities = global_data[ $scope.alphabet ];
+                for ( var i = 0; i < cities.length; i++ ) {
+                    if ( cities[ i ].id + '' == $scope.cityId + '' ) {
+                        city = cities[ i ];
+                        break;
+                    }
+                }
+                // [].filter( ... )
+
+                // console.log( city );
+
+                // 计算出地理哈希值
+                geohash = geohashObj.encode( city.latitude, city.longitude )
+                // console.log( geohash );
+            };
+
+
+            $scope.keyup = function () {
+                if ( !$scope.search ) return;
+
+                $http({
+                    url: 'http://jklib.org/ele/pois.ashx?geohash=' + geohash + '&keyword=' + $scope.search,
+                    method: 'get'
+                })
+                .then( function ( info ) {
+                    console.table( info.data );
+                    $scope.positions = info.data; // 数组
+                });
+            };
+        });
+</script>
+</html>

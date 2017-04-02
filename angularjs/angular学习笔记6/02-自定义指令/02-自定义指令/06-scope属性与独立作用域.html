@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../../angular.js"></script>
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+<body ng-app="app">
+    <it-panel></it-panel>
+    <br>
+    <br>
+    <br>
+    <it-panel></it-panel>
+</body>
+<script>
+    var i = 0;
+    // angular.module( 'app', [] )
+    //     .directive( 'itPanel', function () {
+
+    //         return {
+    //             restrict: 'EA',
+    //             templateUrl: './it-panel.html'
+    //             // 指令默认不会创建 作用域( $scope )
+    //             , scope: true,
+    //             controller: function ( $scope ) {
+    //                 window[ 'scope_' + i ] = $scope;
+    //                 i++;
+    //             }
+
+    //         };
+    //     } )
+
+
+
+
+
+
+    // 方法二
+    // angular.module( 'app', [] )
+    //     .controller( 'panelController', [ '$scope', function ( $scope ) {
+    //         $scope.title = '标题';
+    //     }])
+    //     .directive( 'itPanel', function () {
+
+    //         return {
+    //             restrict: 'EA',
+    //             templateUrl: './it-panel.html'
+    //             // 指令默认不会创建 作用域( $scope )
+    //             , scope: true,
+    //             controller: 'panelController'
+
+    //         };
+    //     } )
+
+
+
+    // 方法 三
+    angular.module( 'app', [] )
+        .run( function ( $rootScope ) {
+            window.rootScope = $rootScope;
+        })
+        .controller( 'panelController', [ '$scope', function ( $scope ) {
+            window[  'scope_' + i ] = $scope;
+            i++;
+        }])
+        .directive( 'itPanel', function () {
+
+            return {
+                restrict: 'EA',
+                templateUrl: './it-panel.html'
+                // 指令默认不会创建 作用域( $scope )
+                , scope: {},
+                controller: 'panelController'
+
+            };
+        } )
+</script>
+</html>

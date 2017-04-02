@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../../angular.js"></script>
+</head>
+<body ng-app="app">
+    <div my-directive></div>
+    <!-- 这个指令代表一个 table 标签 -->
+</body>
+<script>
+
+    angular.module( 'app', [] )
+        .directive( 'myDirective', function () {
+            return {
+                templateUrl: './02-tmp.html' // 该方法必须在 http 服务器下使用
+            };
+        });
+
+</script>
+</html>

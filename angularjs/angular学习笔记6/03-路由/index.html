@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./angular.163.js"></script>
+    <script src="./angular-route.163.js"></script>
+</head>
+<body ng-app="mainApp">
+    <div>
+        <a href="#!/a">aaaaaaaaaaaaa</a><br>
+        <a href="#!/b">bbbbbbbbbbbbbbbbbbbbbbb</a><br>
+        <a href="#!/c">cccccccccccccccccccccccccc</a><br>
+    </div>
+    <ng-view></ng-view>
+    <hr>
+    <!--<div ng-view></div>-->
+</body>
+<script>
+    angular.module( 'mainApp', [ 'ngRoute' ] )
+        .config( [ '$routeProvider' , '$locationProvider', function ( $routeProvider, $locationProvider ) {
+
+            // $locationProvider.hashPrefix('');
+
+
+
+            $routeProvider
+                .when( '/a', {
+                    templateUrl: './aaaa.html'
+                } )
+                .when( '/b', {
+                    templateUrl: './bbbb.html'
+                } )
+                .when( '/c', {
+                    templateUrl: './cccc.html'
+                } )
+                .otherwise( {
+                    redirectTo: '/a'
+                } )
+
+                
+        }] )
+</script>
+</html>
