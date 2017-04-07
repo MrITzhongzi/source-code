@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>音乐播放网站</title>
+  <link rel="stylesheet" type="text/css" href="/statics/css/site.css">
+  <script type="text/javascript" src="/statics/js/jquery.min.js"></script>
+</head>
+<body>
+      <table border="1">
+          <tr>
+              <th>序号</th>
+              <th>文件名称</th>
+              <th>操作</th>
+          </tr>
+
+          {{#each(musics)}}
+              <tr>
+                    <td>{{xindex}}</td>
+                    <td>{{this.name}}</td>
+                    <td><a href="#" onclick="play('{{this.name}}')">播放</a></td>
+              </tr>
+          {{/each}}
+      </table>
+
+      <audio id="audioId" src="" autoplay></audio>
+</body>
+<script type="text/javascript">
+    function play(musicName){
+        var url = '/statics/musics/'+musicName;
+
+        //更改src属性就是发送请求
+        $("#audioId").attr('src',url);
+    }
+</script>
+</html>

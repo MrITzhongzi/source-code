@@ -1,0 +1,19 @@
+table{
+  width: 400px;
+  margin : 0 auto;
+  border-collapse: collapse;
+}
+
+th{
+  margin: 5px;
+  background-color: #0094ff;
+  color:white;
+  font-size: 18px;
+  font-weight: bold;;
+  text-align: center;
+}
+
+td{
+  margin:5px;
+  text-align: center;
+}
