@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>过滤器</title>
+</head>
+<body>
+  <div id="box">
+    
+    <!-- 过滤器 
+    用法 ，在我们要展示的数据后加上|线-->
+    {{msg|limit}}... <br>
+    {{msg|limit}}...<br>
+    {{msg|limit}}...<br>
+    {{msg|limit}}***<br>
+
+  </div>
+</body>
+</html>
+<script src="./node_modules/vue/dist/vue.js"></script>
+<script>
+  var vm = new Vue({
+    el:'#box',
+    data:{
+      msg: '我是中国人，我爱自己的祖国!'
+    },
+    // filters属性，用来定义过滤器
+    filters:{
+      // 页面上使用了几次这个limit过滤器，就会执行几次这个方法
+      // limit是我们自己起的名字
+      limit: function (val) {
+        // 参数就是|线前面的数据
+        // console.log(123456)
+        //  console.log(val)
+        // // 返回值就是最终要在页面呈现的数据
+        // return '22期是最棒的!'
+        // 只显示5个长度,大于5个就追加...
+        return val.slice(0,5)
+      }
+    }
+  })
+</script>

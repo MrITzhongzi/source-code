@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .red{
+            background: #eb4848;
+            color: #fff;
+        }
+        .green{
+            background: green;
+            /*color: ;*/
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <ul>
+            <li
+            @click="showInForm(item)"
+            v-bind:class="{red:item.sex ==0,green:item.sex == 1}"
+            v-for="item in list">
+                <div>{{ item.id }}</div>
+                <div>{{ item.name }}</div>
+                <div>{{ item.age }}</div>
+
+                <div v-if=" item.sex == 0 ">sex:男</div>
+                <div v-else>sex:女</div>
+                <div>爱好：{{ item.hobby.join(';') }}</div>
+                <div>薪资：{{ item.slary }}</div>
+                <div v-html="item.motto"></div>
+            </li>
+        </ul>
+
+        <form action="">
+            <div>id:{{nowItem.id}}</div>
+            <div>name: <input type="text" v-model="nowItem.name"></div>
+            <div>age: <input type="text" v-model="nowItem.age"></div>
+            <div>
+                姓别: v-model="nowItem.sex" ,0,1 <br>
+                <!-- 当绑定的数据与自身的value相同时，当前radio就先中，否则不选中 -->
+                男<input type="radio" value="0"  v-model="nowItem.sex">
+                女<input type="radio" value="1"  v-model="nowItem.sex">
+            </div>
+            <div>
+
+                爱好: 与一个数组进行绑定,当绑定的数据中包含当前value值是，被选中<br>
+                吃饭:<input type="checkbox"  value="吃饭" v-model="nowItem.hobby">
+                睡觉:<input type="checkbox"  value="睡觉" v-model="nowItem.hobby">
+                打豆豆<input type="checkbox" value="打豆豆" v-model="nowItem.hobby">
+                健身<input type="checkbox"   value="健身" v-model="nowItem.hobby">
+                看别人打豆豆<input type="checkbox"   value="看别人打豆豆" v-model="nowItem.hobby">
+                做饭<input type="checkbox"   value="做饭" v-model="nowItem.hobby">
+                做菜<input type="checkbox"   value="做菜" v-model="nowItem.hobby">
+            </div>
+            <button @click.prevent="sub">提交</button>
+        </form>
+    </div>
+
+
+
+<script src="../node_modules/vue/dist/vue.js"></script>
+<script>
+    var list = [
+        {id:1,name:'小明',age:18,sex:0,hobby:['吃饭','睡觉','打豆豆'],slary:999000,motto:'<div>人生自古谁无死，留取丹心照汗青</div>'},
+        {id:2,name:'小蒙',age:16,sex:1,hobby:['健身','睡觉','看别人打豆豆'],slary:99900,motto:'<div>移来此种非人简，曾识成年觞底月</div>'}
+    ]
+    var vue = new Vue({
+        el : '#app',
+        data:{
+            list,
+            nowItem:{}
+        },
+        methods:{
+            showInForm : function (item) {
+                this.nowItem = item;
+            },
+            sub : function () {
+                localStorage.setItem('lhw',JSON.stringify(this.list));
+            }
+        }
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div id="app">
+    <span v-bind:title="msg">
+        鼠标悬停查看创建日期
+    </span>
+</div>
+
+<script src="./node_modules/vue/dist/vue.js"></script>
+<script>
+    var vue = new Vue({
+        el : '#app',
+        data:{
+            msg : '页面加载于' + new Date()
+        }
+    });
+</script>
+</body>
+</html>

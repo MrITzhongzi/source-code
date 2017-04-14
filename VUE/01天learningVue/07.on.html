@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div id="app">
+    <p v-on:click=" msg = '小明明' ">{{ msg }}</p>
+    <p v-on:click=" changeMsg('你好' + '你不好') ">{{ msg2 }}</p>
+    <p v-on:click="changeMsg2">没有括号，{{ msg3 }}</p>
+    <!--绑定事件的简写-->
+    <p @click="changeMsg4">简写的函数指令，点我有惊喜，{{msg4}}</p>
+</div>
+
+<script src="./node_modules/vue/dist/vue.js"></script>
+<script>
+    var vue = new Vue({
+        el : '#app',
+        data:{
+            msg : '我是中国人，我爱自己的祖国',
+            msg2: '点我',
+            msg3: '',
+            msg4 : ''
+        },
+        methods: {
+            changeMsg : function (msg) {
+                this.msg2 = msg;
+            },
+            changeMsg2 : function () {
+                console.log(arguments[0]);
+                this.msg3 = 'msg3';
+            },
+            changeMsg4 : function () {
+                this.msg4 = 'good good study,day day up'
+            }
+        }
+    });
+</script>
+</body>
+</html>

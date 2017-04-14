@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div id="app">
+    <!-- v-if和v-else所在元素只能同时显示一个 -->
+    <!-- 注意: 这两个元素必需挨着 -->
+   <p v-if="isShow">我捡了100块钱</p>
+    <p v-else>我捡了10000块钱</p>
+     <!--v-else要和v-if一起使用才能-->
+</div>
+
+<script src="./node_modules/vue/dist/vue.js"></script>
+<script>
+    var vue = new Vue({
+        el : '#app',
+        data:{
+            isShow : false
+        }
+    });
+</script>
+</body>
+</html>

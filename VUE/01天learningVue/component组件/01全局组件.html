@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="app">
+        <mybtn></mybtn>
+    </div>
+
+<script src="../node_modules/vue/dist/vue.js"></script>
+<script>
+    Vue.component('myp',{
+        template : '<p>我是一个全局的自定义p组件</p>'
+    });
+    Vue.component('mybtn',{
+       template : '<div><button style="background:#fb3c3c">哈哈，我是按钮mybtn,我怕谁!</button></div>'
+    });
+    var vue = new Vue({
+        el : '#app',
+        template : '<div><mybtn></mybtn>我是vue对象中的template<myp></myp></div>'
+    });
+</script>
+</body>
+</html>

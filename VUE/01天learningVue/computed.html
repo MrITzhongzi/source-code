@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>计算属性</title>
+</head>
+<body>
+// data, el, methods
+<div id="app">
+    我是{{name}},我今年{{age}}岁了, <br>
+    我的生日是:{{birth}} <br>
+    我的生日是:{{getBirth()}} <br>
+
+    <!-- 如果使用的是computed时的方法不用加括号(也不能加) -->
+    我的生日是computed 2: {{getBirth2}}
+    我的生日是computed 3: {{getBirth3}}
+
+    // 只要在页面上给getBirth3写赋值的代码时，vue就会调用compueted里getBirth3中的set方法
+    {{getBirth3 = 18}}
+    <br>
+
+    // 当我们在文件框中改变值时就会调用getBirth3中的set方法,并且把修改后的值做为参数传递过去
+    <input type="text" v-model="getBirth3">
+</div>
+</body>
+</html>
+<script src="./node_modules/vue/dist/vue.js"></script>
+<script>
+    var vm = new Vue({
+        el: '#app',
+        data:{
+            name: '小明明',
+            age: 2,
+            sex: 1,
+            birth: 1449832382930 // 年月时
+        },
+        methods:{
+            getBirth: function () {
+                var dt = new Date(this.birth)
+                return  dt.getFullYear()+'年'+(dt.getMonth() +1)+'月'+dt.getDate()+'日'
+            }
+        },
+        computed:{
+            getBirth2:function () {
+                var dt = new Date(this.birth)
+                return  dt.getFullYear()+'年'+(dt.getMonth() +1)+'月'+dt.getDate()+'日'
+            },
+            // 一个对象,这个对象有两个属性，get,一个set
+            getBirth3:{
+                // get 方法是当我们在html页面使用了getBirth3时执行
+                get:function () {
+                    console.log(123)
+                    // 最终在html元素中使用这个getBirth3时，vue内部会调用get方法，并把返回值放到页面指定位置。
+                    var dt = new Date(this.birth)
+                    return  dt.getFullYear()+'年'+(dt.getMonth() +1)+'月'+dt.getDate()+'日'
+                },
+                // set 方法,当我们要修改getBirth3时会执行这个set方法,会把修改后的值作为参数传递过来
+                set:function (val) {
+                    // 把年月日改成毫秒值!
+                    console.log(val)
+                    // console.log('haha')
+                }
+            }
+        }
+    })
+</script>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div id="app">
+    <input type="text" v-model="data.name">
+    <p>{{ data.name }}</p>
+
+    <textarea v-model="data.age" cols="30" rows="10"></textarea>
+    <p>{{ data.age }}</p>
+
+    <label>
+        男：<input type="checkbox" value="男" v-model="sexArr">
+    </label>
+    <label>
+        女：<input type="checkbox" value="女" v-model="sexArr">
+    </label>
+    <p>{{ sexArr }}</p>
+
+    <select v-model="hobby">
+        <option value="lq">篮球</option>
+        <option value="zq">足球</option>
+        <option value="ppq">乒乓球</option>
+        <option value="dyx">打游戏</option>
+    </select>
+    <p>{{ hobby }}</p>
+
+    <br>
+    男：<input type="radio" value="男" v-model="sex" >
+    女：<input type="radio" value="女" v-model="sex">
+    <p>{{ sex }}</p>
+</div>
+
+<script src="./node_modules/vue/dist/vue.js"></script>
+<script>
+    var data = {
+        name:'小明',
+        age: '18',
+        sex: '男',
+        nickname:'小明明',
+
+    }
+    var vue = new Vue({
+        el : '#app',
+        data:{
+           data,
+           isCheck : true,
+           sexArr:[],
+            sex:'男',
+            hobby:'ppq'
+        }
+    });
+</script>
+</body>
+</html>
