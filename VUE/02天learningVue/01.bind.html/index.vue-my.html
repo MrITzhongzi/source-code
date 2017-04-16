@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Object.defineProperty</h1>
+  <p>这个方法能够让我们知道什么时候对一个属性做了修改</p>
+  <input type="text" v-model="hello">
+</body>
+</html>
+<script>
+  // 用来更新input的值
+  function update() {
+    document.querySelector('[v-model]').value = data.hello
+  }
+
+  var data = {hello:'我是中国人'}
+  var vm = {}  //假设这个vue是new出来的
+
+  // xp
+  // 目的: 改变obj.hello值时，能够alert一句话
+
+  // 能够监视某个对象的某个属性发生的改变
+  // 参数1，想要监视的对象
+  // 参数2. 想要监视对象的属性
+  // 参数3
+  // ie8不支持
+  Object.defineProperty(vm,'hello',{
+    // 使用vm.hello时调用 
+    get:function () {
+      console.log('你用我们了')
+    },
+    // 只要我们对obj.hello进行的赋值操作，内部就会自动调用这个set方法
+    set: function (val) {
+      // 这个val是我们给vm.hello赋的值!
+      data.hello = val
+      update()
+      alert(val)
+    }
+  })
+
+  vm.hello = '我爱自己的祖国!'
+</script>
+
+
+<script>
+  // var vm = new Vue({
+  //     el: '#app',
+  //     data:{
+  //       name:'小明'
+  //     }
+  //   })
+    
+    // vm.name = '小黑黑'
+</script>

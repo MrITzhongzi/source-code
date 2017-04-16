@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>路由</title>
+</head>
+<body>
+  <div id="app">
+    fdfaf
+  </div>
+</body>
+</html>
+<script src="../node_modules/vue/dist/vue.js"></script>
+<script src="../node_modules/vue-router/dist/vue-router.js"></script>
+<script>
+
+  // 1.定义要用到的组件
+  const Home = {template:'<div>哈哈，我是Home</div>'}
+  const Cart = {template:'<div>哈哈，我是Cart</div>'}
+  const Center = {template:'<div>哈哈，我是Center</div>'}
+
+  
+  // 2.配置路由
+  const routes = [
+    // 当url中锚点值为#/home/xx/yy时, 
+    // 会在dom显示component对应的组件的template的值
+    // <router-view></router-view>
+    // name属性就是给当前路由规则起个别名,别名不能重复
+   {name:'app',path:'/',component:Home}, // Home.template
+   {name:'home',path:'/home/xx',component:Home},
+   {name:'cart',path:'/cart/110/119/120dd/122',component:Cart},
+   {name:'center',path:'/center',component:Center},
+  ]
+
+  // 3.创建路由实例
+  const router = new VueRouter({
+    // 这里的routes就是路由规则
+    // routes:routes
+    routes
+  })
+  
+  // 4.创建vue的实例
+const vm =  new Vue({
+    el: '#app',
+     // 添加一个router属性,router属性指向路由的实例
+    router:router,
+    template: `
+    <div>
+    <a href="#/home/xx/yy">home</a> <br />
+    <a href="#/home/xx/yy">home</a> <br />
+    <a href="#/home/xx/yy">home</a> <br />
+    <a href="#/home/xx/yy">home</a> <br />
+    <a href="#/home/xx/yy">home</a> <br />
+    <a href="#/home/xx/yy">home</a> <br />
+    <router-link to="/home/xx/yy">Home(router-link)</router-link> <br />
+    // 可以使用v-bind的的方式来使用:to属性
+    // 给to属性一个对象
+    <router-link :to="{path:'/home/xx/yy'}">Home（to:obj)</router-link>
+    // 5添加一个router-view
+    <router-view></router-view>
+    <router-link :to="{name:'home'}">Home(obj:name)</router-link>
+    <router-link :to="{name:'cart'}">Cart(obj:name)</router-link>
+    <router-link :to="{name:'cart'}">Cart(obj:name)</router-link>
+    <router-link :to="{name:'cart'}">Cart(obj:name)</router-link>
+    <router-link :to="{name:'cart'}">Cart(obj:name)</router-link>
+    <router-link :to="{name:'cart'}">Cart(obj:name)</router-link>
+    <router-link :to="{name:'cart'}">Cart(obj:name)</router-link>
+    <router-link :to="{name:'cart'}">Cart(obj:name)</router-link>
+    <router-link :to="{name:'cart'}">Cart(obj:name)</router-link>
+    <router-link :to="{name:'cart'}">Cart(obj:name)</router-link>
+    <router-link :to="{name:'cart'}">Cart(obj:name)</router-link>
+    <router-link :to="{name:'cart'}">Cart(obj:name)</router-link>
+    嘻嘻<br /></div>`,
+   
+  })
+
+
+</script>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>computed</title>
+</head>
+<body>
+  <div id="app">
+    <form action="">
+     用户名: <input type="text" v-model="user.name"><br>
+      密码: <input type="text" v-model="user.pwd"> <br>
+      账号有效时间: 
+      数字:
+      <select v-model="time_num">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+      </select>
+
+      单位:
+      <select v-model="time_unit">
+        <option value="年">年</option>
+        <option value="月">月</option>
+        <option value="日">日</option>
+      </select>
+    </form>
+  </div>
+  <script src="../node_modules/vue/dist/vue.js"></script>
+  <script>
+    var user = {
+      id: 1,
+      name :'小明',
+      pwd: '1234567890',
+      // time表明当前账号只能使用多久
+      time: '1年'
+    }
+    var vm = new Vue({
+      el: '#app',
+      data: {
+        user: user
+      },
+      // 只是改变展示数据的形式，不能够更改
+      filters:{},
+
+      // 改变展示数据的形式，
+      // 用户也可以对数据进行更改
+      computed:{
+        // 数字部分
+        time_num:{
+          get:function () {
+            // console.log('获取了')
+            // return 3
+            return this.user.time.slice(0,this.user.time.length-1)
+          },
+          set:function (val) {
+            // 当我们修改time_num时，就会执行set方法
+            // console.log(val)
+            // 让user.time = val
+            // this.user.time = val
+            
+            this.user.time  = val + this.time_unit
+          }
+        },
+
+        // 单位部分
+        time_unit:{
+          get:function () {
+            return  this.user.time.slice(this.user.time.length-1,this.user.time.length)
+          },
+          set:function (val) {
+            this.user.time = this.time_num + val
+          }
+        }
+      }
+    })
+  </script>
+</body>
+</html>

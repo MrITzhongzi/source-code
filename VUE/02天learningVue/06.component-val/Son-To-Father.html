@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>子组件给父组件传</title>
+</head>
+<body>
+  <div id="app"></div>
+  <script src="../node_modules/vue/dist/vue.js"></script>
+  <script>
+
+
+  var Son = {
+    template:'<div><button @click="test">嘻嘻</button></div>',
+    data:function () {
+      return {}
+    },
+    
+    methods:{
+      test:function () {
+
+        // 这是$emit是组件实例的文件
+        // 要配合v-on来使用
+
+        // 参数1,要要触发的事件名
+        // 参数2,是要传递的数据:字符串，数字，数组，对象
+        this.$emit('sansan',{name:'夺夺'})
+      }
+    }
+  }
+
+  var Father = {
+    // 1.给我们的子给组件注册一个事件,事件名自己随便起
+    // 自己写的这个erer事件，是当调用Son组件实例的$emit方法时触发
+
+    template:'<div>{{name}},我是Father <Son v-on:erer="getdata2" v-on:sansan="getdata3"></Son></div>',
+    data:function () {
+      return {name:'!夺夺'}
+    },
+    methods:{
+        getdata2:function () {
+          // this
+          console.log(2)
+        },
+        getdata3:function (arg) {
+          console.log(arg)
+          this.name = arg.name
+          console.log(3)
+        }
+      },
+      components:{
+        Son
+      },
+  }
+
+    var vm = new Vue({
+      el: '#app',
+      template:'<div><Father></Father></div>',
+      components:{
+        Father
+      }
+    })
+  </script>
+</body>
+</html>
+
+<!-- 组件传值, 路由 -->

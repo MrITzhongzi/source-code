@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body ng-app="hello" ng-controller="testCtrl">
+  <p>{{name}}</p>
+</body>
+</html>
+<script src="../node_modules/angular/angular.js"></script>
+<script>
+  const obj = {};
+angular.module('hello', [])
+  .controller('testCtrl',function ($scope) {
+    window.$scope = $scope
+    $scope.name = 1
+  })
+
+</script>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>vue中进行dom操作</title>
+</head>
+<body>
+  <div id="app">
+    <p ref="myp">嘻嘻</p>
+    <h1 ref="myh1">哈哈</h1>
+    <button @click="changeP">哈哈</button>
+  </div>
+  <script src="../node_modules/vue/dist/vue.js"></script>
+  <script>
+    var vm = new Vue({
+      el: '#app',
+      methods:{
+        changeP:function () {
+          // 改变p的内容
+          // $('p').html('xxx')
+          // document.querySelector('p').innerHTML = 'xxx'
+          // G = ...........
+          // vue会把#app中所有有ref属性的元素全部获取到
+          // 把获取到的对象赋值给this.$refs,赋值的属性名和元素上ref的属性值一致
+          console.log(this.$refs)
+          this.$refs.myp.innerHTML = '我是中国人，我爱自己的祖国!'
+        }
+      }
+    })
+  </script>
+</body>
+</html>

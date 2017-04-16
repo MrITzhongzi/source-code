@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>mysap</title>
+</head>
+<body>
+  <h1>目的</h1>
+  <p>根据url中锚点的不同，在div中显示不同的内空</p>
+  <pre>
+    希望当url为 #man,box中显示，有18个男性
+    希望当url为 #woman,box中显示，有28个女性
+    希望当url为 #null,box中显示，有10未知
+  </pre>
+  <ul>
+    <li><a href="#/man">男性</a></li>
+    <li><a href="#/woman">女性</a></li>
+    <li><a href="#/null">未知</a></li>
+  </ul>
+  <div id="box">
+    
+  </div>
+</body>
+</html>
+<script>
+  // hashchange,url中锚点值改变事件
+  window.onhashchange = function () {
+    console.log('我变了')
+    var routes = [
+    // #/man 时box里显示content内容
+    {path:'/man',content:'<div>有18个男性</div>'},
+    {path:'/woman',content:'<div>有28个女性</div>'},
+    {path:'/null',content:'<div>有10未知</div>'}
+    ]
+
+    // 要判断，当前url中锚点值是什么
+    
+    var hash = location.hash;
+    // if('#/man')
+    for (var i = 0; i < routes.length; i++) {
+      var item = routes[i]
+      var str = ('#'+item.path)
+      console.log(str)
+      console.log(hash)
+      if(  str == hash){
+        // 就把item.content 内容加入到box中
+        document.getElementById('box').innerHTML = item.content
+      }
+    }
+  }
+</script>

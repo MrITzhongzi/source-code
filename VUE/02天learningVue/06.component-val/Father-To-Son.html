@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>父子组件之间传值</title>
+</head>
+<body>
+  <div id="app"></div>
+  <script src="../node_modules/vue/dist/vue.js"></script>
+  <script>
+// 参数是名字
+
+// 
+Vue.component('xixi',{
+  // 如果写了多个标签，都要用一个标签包裹
+  template:'<div><input type="text" /><button @click="test">测试</button></div>',
+  methods:{
+    test:function () {
+      console.log(this)
+    }
+  }
+});
+// 每个组件都会有自己的实例!
+
+
+
+var Son = {
+  template:'<div>我是Son <button @click="test">测试</button></div>',
+  // 这里写xxx表示只想要xxx这个属性，面不要id那个属性
+  // props这里的作用是限制!
+  props:['xxx'],
+  methods:{
+    test:function () {
+      console.log(this)
+      console.log(this.xxx)
+    }
+  }
+}
+
+
+// 父组件，vue会用这里的属性，在内部实例化一个vue对象
+// 这里的xxx对应的user其实被赋值给组件的实例的xxx属性:  
+// `Son实例.xxx = Father实例.user`
+var Father = {
+  template:`<div>
+  <Son :xxx="user" id="123"></Son>
+  <Son :xxx="user" id="223"></Son>
+  我是Father <button @click="test">测试</button></div>`,
+  data:function () {
+    return {user:{name:'小明',age:18}}
+  },
+  methods:{
+    test:function () {
+      console.log(this)
+    }
+  },
+  components:{
+    Son
+  }
+}
+
+
+    var vm = new Vue({
+      el: '#app',
+      template:'<div><Father></Father></div>',
+      data:{},
+      methods:{},
+      components:{
+        Father
+      }
+    })
+  </script>
+</body>
+</html>

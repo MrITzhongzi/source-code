@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>vue组件</title>
+</head>
+<body>
+  <div id="app">
+    
+  </div>
+  <script src="../node_modules/vue/dist/vue.js"></script>
+  <script>
+    // 全局组件
+    // xixi就是当前组件的名字
+    Vue.component('xixi', {
+      template:'<div>嘻嘻</div>'
+    })
+
+    var SonSon = {
+      template: '<div>我是SonSon</div>'
+    }
+    // 非全局组件
+    var Son = {
+      template: '<div>我是Son <SonSon></SonSon><xixi></xixi></div>',
+      components:{
+        SonSon
+      }
+    }
+    
+    var vm = new Vue({
+      el: '#app',
+      // template中的内容会覆盖#app
+      // template:'<div><xixi></xixi></div>'
+      template:'<div><Son></Son></div>',
+      components:{
+        Son
+      }
+    })
+  </script>
+</body>
+</html>

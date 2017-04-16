@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vue</title>
+</head>
+<body>
+  <div id="app">
+    
+  </div>
+  <script src="../node_modules/vue/dist/vue.js"></script>
+  <script src="../node_modules/vue-router/dist/vue-router.js"></script>
+  <script src="./Left.js"></script>
+  <script src="./Top.js"></script>
+  <script src="./Home.js"></script>
+  <script src="./Tec.js"></script>
+  <script>
+
+  // 1.定义要用到的组件
+  // 2.配置路由
+  const routes = [
+  // #/home   Home.template
+  {name:'app',path:'/',component:Home},
+  {name:'home',path:'/home',component:Home},
+  {name:'tec',path:'/tec',component:Tec},
+  ]
+
+  // 3.创建VueRouter的实例
+  const router = new VueRouter({routes})
+
+  // 4.
+    const vm = new Vue({
+      el: '#app',
+      router,
+      template:`
+      <div>
+         <Left></Left>
+         <Top></Top>
+         <div class="main" style="margin:45px 0 0 150px;">
+         <router-view></router-view>
+         </div>
+      </div>
+      `,
+      components:{
+        Left,
+        Top
+      }
+    })
+  </script>
+</body>
+</html>

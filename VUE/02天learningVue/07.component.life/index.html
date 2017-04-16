@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vue</title>
+</head>
+<body>
+  <div id="app">
+    
+  </div>
+  <script src="../node_modules/vue/dist/vue.js"></script>
+  <script>
+    var Father = {
+      template: `
+      <div id="box">嘻嘻 <input type="date" /></div>
+      `,
+
+      beforeCreate:function () {
+         console.log('我是beforeCreated')
+         console.log(this)
+      },
+      // created是个方法，
+       // onload,什么页面加载完成!
+      // created,每个组件都有这个created方法，当vue内容创建完当前组件实例之后
+      // 就会调用这个created方法
+      // 当created执行时，template中的内容没有被添加到dom中
+      created: function () {
+        // 如果有ajax请求，可以写在这个方法里
+        console.log('我是created....')
+        console.log(this)
+        console.log(document.getElementById('box'))
+      },
+      // 当template中的内容被添加到了dom中后,vue内部会自动执行这个mouted方法
+      mounted:function () {
+        // 如果在项目中用到了dom操作库!
+        console.log('我是中国人，我家自己的祖国!')
+        console.log(this)
+        console.log(document.getElementById('box'))
+      },
+
+      data:function () {
+        return {a:1}
+      },
+      // methods,
+      // filters,
+      // computed
+    }
+    var vm = new Vue({
+      
+      el: '#app',
+      template:'<div><Father></Father></div>',
+      components:{
+        Father
+      }
+    })
+  </script>
+</body>
+</html>
