@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <style>
+        table{
+            width: 800px;
+            border: 1px solid #000;
+            border-collapse: collapse;
+        }
+        td{
+            height: 25px;
+            text-align: center;
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+<!-- http://api.map.baidu.com/telematics/v3/weather?location=北京&output=json&ak=E4805d16520de693a3fe707cdc962045 -->
+<button>查询天气</button>
+<table>
+
+</table>
+<script src="../lib/jQuery/jquery.min.js"></script>
+<script>
+    //点击按钮获取天气信息，渲染在页面中
+    $('button').click(function(){
+        $.ajax({
+            type:'get',
+            url:'http://apis.haoservice.com/weather',
+            data:{
+                ak:'ovxzhP5jX4qRUboF86IOlRCnai0whIje',
+                location:'北京',
+                output:'json'
+            },
+            dataType:'jsonp',  //dataType: jsonp  可以实现跨域请求服务
+            success:function(info){
+               console.log(info);
+            }
+        });
+    })
+</script>
+
+
+
+</body>
+</html>

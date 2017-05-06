@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
+    <title>异步加载地图</title>
+    <link rel="stylesheet" href="http://cache.amap.com/lbs/static/main1119.css"/>
+</head>
+<body>
+<div id="container"></div>
+<script src="http://webapi.amap.com/maps?v=1.3&key=518f4668ca5f354185885be70c6cc731&callback=init"></script>
+<script>
+    function init(){
+        var map = new AMap.Map('container', {
+            center: [37.473420,121.458330],
+            zoom: 6
+        });
+        map.plugin(["AMap.ToolBar"], function() {
+            map.addControl(new AMap.ToolBar());
+        });
+    }
+</script>
+</body>
+</html>

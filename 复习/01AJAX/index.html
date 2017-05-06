@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table,td {
+            border: 1px solid red;
+        }
+        table {
+            width: 600px;
+            height: 400px;
+            border-collapse: collapse;
+            margin: 0 auto;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<p></p>
+<button>获取数据</button>
+<table></table>
+<script>
+    var pEle = document.getElementsByTagName('p')[0];
+    var table = document.getElementsByTagName('table')[0];
+    document.getElementsByTagName("button")[0].onclick = function () {
+        var xhr = new XMLHttpRequest();
+        xhr.open('get', './data.txt');
+        xhr.send(null);
+
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState == 4 && xhr.status == 200) {
+                var data = xhr.responseText;
+                var dataObj = JSON.parse(data);
+                console.log(dataObj);
+                setTable(dataObj,table);
+            }
+        }
+    }
+
+    function setTable(obj, Ele) {
+        var str = '';
+        for (var i = 0; i < obj.length; i++) {
+            str += '<tr>';
+            for (var k in obj[i]) {
+                   str += '<td>';
+                   str += obj[i][k];
+                   str += '</td>';
+            }
+            str += '</tr>';
+        }
+        Ele.innerHTML = str;
+    }
+
+</script>
+</body>
+</html>

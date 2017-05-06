@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text"> <button>查询天气</button>
+<table></table>
+<script src='../lib/jQuery/jquery.min.js'></script>
+<script>
+    $(function () {
+        $('button').click(function () {
+            var cityName = $('input').val();
+            $.ajax({
+                type : 'get',
+                url : 'http://v.juhe.cn/weather/index',
+                dataType : 'jsonp',
+                data : {
+                    cityname : cityName,
+                    dtype : 'json',
+                    format : '1',
+                    key :'52fea0d1df0f65cd98baffc9f3d1f475'
+                },
+                success : function (info) {
+                    console.log(info)
+                    var str = '';
+                    for(var i in info.result.today){
+                        str += '<tr>';
+                        str += '<td>';
+                        str += info.result.today[i];
+                        str += '</td>';
+                        str += '</tr>';
+                    }
+                    $('table').html(str);
+                }
+            })
+        });
+    })
+</script>
+<!--52fea0d1df0f65cd98baffc9f3d1f475-->
+</body>
+</html>

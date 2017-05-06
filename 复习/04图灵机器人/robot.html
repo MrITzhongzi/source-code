@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input type="text">
+    <button>发送信息</button>
+
+<script src="../lib/jQuery/jquery.min.js"></script>
+<script>
+    $(function () {
+        $('button').click(function () {
+            $.ajax({
+                type : 'get',
+                url : 'http://www.tuling123.com/openapi/api',
+                data : {
+                    key : '1c41059ccb484cda9841d4e5c8fc7468',
+                    info : '你好',
+                    userid : '123'
+                },
+                dataType : 'json',
+                success : function (info) {
+                    console.log(info)
+                }
+            })
+        });
+    });
+</script>
+</body>
+</html>

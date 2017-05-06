@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script src="lib/jQuery/jquery-3.1.1.min.js"></script>
+<script>
+    $.ajax({
+        url : './01AJAX/data.txt',
+        type : 'get',
+        dataType : 'json',
+        beforeSend : function () {
+            console.log('before');
+        },
+        success : function (data) {
+            console.log(data);
+        },
+        complete : function () {
+            console.log('complate');
+        }
+    })
+</script>
+</body>
+</html>

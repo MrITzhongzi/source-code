@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<input type="text"> <button>查询天气</button>
+<script src='../lib/jQuery/jquery.min.js'></script>
+<script>
+    $(function () {
+        $('button').click(function () {
+            $.ajax({
+                type : 'get',
+                url : 'http://apis.baidu.com/apistore/weatherservice/cityid',
+                dataType : 'jsonp',
+                data : {
+                    cityid : '烟台',
+                    apikey :'dad43b9b18d95f8a3add7d303cb561b9'
+                },
+                success : function (info) {
+                    console.log('成功');
+                    console.log(info)
+                }
+            })
+        });
+    })
+</script>
+<!--d579e2e6522446ca87c7cc3f3c837bf9-->
+</body>
+</html>

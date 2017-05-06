@@ -1,0 +1,27 @@
+[
+    {
+        "name":"zs1",
+        "age":18,
+        "sex":"男",
+        "hobby":"basketball"
+    },
+    {
+            "name":"zs2",
+            "age":18,
+            "sex":"男",
+            "hobby":"basketball"
+    },
+    {
+                "name":"zs3",
+                "age":18,
+                "sex":"男",
+                "hobby":"basketball"
+    },
+    {
+                      "name":"zs4",
+                      "age":18,
+                      "sex":"男",
+                      "hobby":"basketball"
+    }
+
+]
