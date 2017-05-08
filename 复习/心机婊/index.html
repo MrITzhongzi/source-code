@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .clock {
+            width: 650px;
+            height: 650px;
+            border: 1px solid #000;
+            margin: 80px auto;
+            position: relative;
+            background: url(./images/ji.png) no-repeat ;
+            background-size: ;
+        }
+        #h {
+            width: 100%;
+            height: 50%;
+            position: absolute;
+            left: 0px;
+            bottom: 0;
+            background: url(./images/hour.png) center no-repeat;
+        }
+        #m {
+            width: 100%;
+            height: 50%;
+            position: absolute;
+            left: 0px;
+            bottom: 0;
+            background: url(./images/minute.png) center no-repeat;
+        }
+        #s {
+            width: 100%;
+            height: 50%;
+            position: absolute;
+            left: 0px;
+            bottom: 0;
+            background: url(./images/second.png) center no-repeat;
+        }
+    </style>
+</head>
+<body>
+    <div class="clock">
+        <div id="h"></div>
+        <div id="m"></div>
+        <div id="s"></div>
+    </div>
+
+<script>
+    var hh = document.getElementById('h');
+    var mm = document.getElementById('m');
+    var ss = document.getElementById('s');
+    setInterval(clock,100);
+    function clock() {
+        var date = new Date();
+        var ms = date.getMilliseconds();
+        var s = date.getSeconds() + ms / 1000;
+        ss.style.transform = 'rotate('+ s *     6 +'deg)';
+        var m = date.getMinutes() + s / 60;
+        mm.style.transform = 'rotate('+ m * 6 +'deg)'
+        var h = date.getHours() + m / 60;
+        hh.style.transform = 'rotate('+ h * 30 +'deg)';
+
+    }
+</script>
+</body>
+</html>
