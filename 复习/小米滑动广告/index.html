@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .xiaomi {
+            width: 521px;
+            height: 400px;
+            position: relative;
+            margin: 100px auto;
+            overflow: hidden;
+        }
+        .xiaomi img {
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        .up {
+            width: 100%;
+            height: 50%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .down {
+            width: 100%;
+            height: 50%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="xiaomi">
+        <img src="images/mi.png" alt="">
+        <span class="up"></span>
+        <span class="down"></span>
+    </div>
+</body>
+<script>
+    var upSpan = document.getElementsByClassName('up')[0];
+    var downSpan = document.getElementsByClassName('down')[0];
+    var img = document.getElementsByTagName('img')[0];
+    var y = 0;
+    var timer = null;
+    upSpan.onmouseover = function () {
+        clearInterval(timer);
+        timer = setInterval(function () {
+            if(y <= -1070){
+                y = -1070;
+                img.style.top = y + 'px';
+                clearInterval(timer);
+            }else {
+                y -= 10;
+            }
+            img.style.top = y + 'px';
+            console.log(1);
+        },80);
+    }
+    upSpan.onmouseout = function () {
+        clearInterval(timer)
+    }
+    downSpan.onmouseover = function () {
+        clearInterval(timer);
+        timer = setInterval(function () {
+            if(y >= 0){
+                y = 0;
+                img.style.top = y + 'px';
+                clearInterval(timer);
+            }else {
+                y += 10;
+            }
+            img.style.top = y + 'px';
+            console.log(2);
+        },80);
+    }
+    downSpan.onmouseout = function () {
+        clearInterval(timer)
+    }
+
+</script>
+</html>
