@@ -1,0 +1,363 @@
+.l-container {
+    width: 1168px;
+    margin: 20px auto 0;
+}
+
+/* 头部 start*/
+.l-header {
+    font-size: 14px;
+    color: #333333;
+}
+
+.l-title {
+    width: 1168px;
+    margin: 0 auto;
+    line-height: 30px;
+}
+
+.l-header .l-title p {
+    float: left;
+}
+
+.l-header .l-tit-r {
+    float: right;
+}
+
+.l-tit-r a {
+    height: 15px;
+    line-height: 15px;
+    padding: 0 15px;
+    color: #999999;
+    font-size: 14px;
+}
+
+.icon-employee::before {
+    color: #ccc;
+}
+
+.icon-lock::before {
+    color: #cccccc;
+}
+
+a.l-logout {
+    border-left: 1px solid #999;
+}
+
+/*l-头部 end*/
+
+/*l-banner start*/
+.l-banner-out {
+    background-color: #e70012;
+}
+
+.l-banner {
+    height: 170px;
+    width: 1168px;
+    background: url("../images/index_banner.jpg") center center no-repeat;
+    background-size: auto 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.l-index-logo {
+    margin-top: 30px;
+}
+
+.l-index-lgtext {
+    margin: -80px 0 0 788px;
+    font-size: 27px;
+    color: white;
+}
+.l-index-lgtext .l-hexie {
+    margin-right: 30px;
+}
+/*l-banner end*/
+
+/*nav start*/
+
+.l-nav {
+    height: 50px;
+    background-color: #c30d23;
+    min-width: 1168px;
+}
+
+.l-nav-in {
+    width: 1168px;
+    margin: 0 auto;
+    padding-left: 131px;
+}
+
+.l-nav-in li {
+    float: left;
+}
+
+.l-nav-in li a {
+    width: 130px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-weight: 700;
+    font-size: 18px;
+    color: #fff;
+}
+
+/*nav end*/
+
+/* 内容小标题及内容的公共样式 开始*/
+.l-pub-title {
+    height: 30px;
+    background-color: #ebebeb;
+    line-height: 30px;
+    font-size: 16px;
+}
+
+.l-pub-title h5 {
+    height: 20px;
+    float: left;
+    font-weight: 700;
+    color: #c30d24;
+    margin-top: 5px;
+    line-height: 20px;
+    padding-left: 20px;
+    border-left: 4px solid #c30d24;
+}
+
+.l-pub-title li {
+
+}
+
+.l-pub-title a {
+    float: right;
+    margin-right: 15px;
+}
+
+.l-pub-content {
+
+}
+
+.l-pub-content li {
+    margin-top: 2px;
+    white-space: nowrap;
+}
+
+.l-pub-content li a {
+    width: 100%;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.l-pub-content li i {
+    margin-right: 16px;
+    margin-left: 16px;
+    font-style: normal;
+}
+
+.l-pub-content li p {
+    float: left;
+    width: 400px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.l-pub-content li span {
+    margin-right: 20px;
+    float: right;
+    color: #999999;
+}
+
+/* 内容小标题及内容的公共样式 结束*/
+
+/*内容右侧的图片开始*/
+
+.l-con-main-r {
+    width: 260px;
+    float: right;
+}
+
+.l-search {
+
+}
+
+.l-search input[type="text"] {
+    padding: 0 10px;
+    border: 1px solid #c30d23;
+    width: 164px;
+    height: 28px;
+}
+
+.l-search button {
+    width: 60px;
+    height: 30px;
+    background-color: #c30d23;
+    border: 1px solid #c30d23;
+    color: #ffffff;
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+.l-showimg {
+
+}
+
+.l-showimg li {
+    margin-top: 10px;
+    width: 258px;
+    height: 148px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid #d8d8d8;
+}
+
+.l-showimg li em {
+    position: absolute;
+    top: 42%;
+    left: 23%;
+    font-size: 18px;
+    font-weight: 700;
+    color: #c30d23;
+}
+
+.l-showimg li:last-child {
+    height: auto;
+}
+
+.l-showimg .l-intro-subcon {
+    padding: 10px;
+}
+
+.l-showimg .l-intro-subcon a {
+    font-size: 14px;
+    color: #333333;
+    line-height: 14px;
+    margin: 5px 0;
+}
+
+.l-showimg .l-intro-subcon a i {
+    font-style: normal;
+    margin-right: 10px;
+}
+
+.l-showimg .l-intro-subcon a:hover {
+    color: #fe0000;
+}
+
+/*内容右侧的图片结束*/
+
+/*友情链接 start*/
+
+.l-friendship-tip {
+    width: 1168px;
+    margin: 12px auto 0 auto;
+    /*margin-top: 12px;*/
+    border: 1px solid #d8d8d8;
+}
+
+.l-friendship-tip .l-friend-con {
+    height: 50px;
+}
+
+.l-friendship-tip .l-friend-con a {
+    color: #333333;
+    margin: 14px;
+    font-size: 14px;
+}
+
+/*友情链接 end*/
+
+/*introduce界面 start*/
+.l-intro {
+    /*float: left;*/
+    margin-right: 280px;
+    color: #333333;
+}
+
+.l-intro-title {
+    height: 30px;
+    background-color: #ebebeb;
+    line-height: 30px;
+    font-size: 14px;
+    padding: 0 20px;
+}
+
+.l-int-conh {
+    text-align: center;
+    border-bottom: 1px solid #d8d8d8;
+    margin: 0 20px;
+}
+
+.l-int-conh h3 {
+    font-size: 24px;
+    color: #333333;
+    margin: 30px 0 9px 0;
+}
+
+.l-int-conh p {
+    color: #999;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+/*introduce界面 end*/
+
+/*footer start*/
+
+.l-footer {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.l-footer-tip {
+    height: 50px;
+    background-color: #c30d23;
+}
+
+.l-footer-tip a {
+    margin-top: 19px;
+    height: 14px;
+    color: white;
+    cursor: pointer;
+    border-right: 1px solid #ffffff;
+    line-height: 14px;
+    padding: 0 12px 0 9px;
+    font-size: 14px;
+}
+
+.l-footer-tip a:last-child {
+    border: none;
+}
+
+.l-copyright {
+    padding: 50px 0 70px 0;
+    color: #666;
+    background-color: #ebebeb;
+    font-size: 14px;
+}
+
+/*footer end*/
+
+/*page spliter start*/
+.w-wrap-page-spliter {
+    height: 110px;
+    width: 40%;
+    min-width: 300px;
+    margin: 0 auto;
+    padding: 40px 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.w-page-spliter li {
+    height: 100%;
+    display: inline-block;
+    border: 1px solid #ccc;
+    text-align: center;
+    padding: 0.1em 0.5em;
+    margin: 0 0.2em;
+    cursor: pointer;
+}
+
+.w-page-spliter li.active {
+    background: #eee;
+}
+
+/*page spliter end*/

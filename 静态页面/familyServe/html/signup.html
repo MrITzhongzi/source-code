@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>烟台市家庭服务协会</title>
+    <link rel="stylesheet" href="../css/w-style.css">
+</head>
+<body>
+    <div class="l-box">
+        <div class="l-header">
+            <div class="l-title clearfix">
+                <p>2017年星期四，欢迎来到烟台市家庭服务业协会</p>
+                <div class="l-tit-r">
+                    <a href="#" class="l-login icon-employee">&nbsp;登录</a>
+                    <a href="#" class="l-logout icon-logout">&nbsp;退出</a>
+                </div>
+            </div>
+            <div class="l-banner-out">
+                <div class="l-banner">
+                    <a href="#" class="l-index-logo"><img src="../images/index_logo.png" alt=""></a>
+                    <div class="l-index-lgtext"><span class="l-hexie">和谐社会</span><span>有爱一家</span></div>
+                </div>
+            </div>
+        </div>
+        <div class="l-nav">
+            <ul class="l-nav-in clearfix">
+                <li><a href="#">首页</a></li>
+                <li><a href="#">协会简介</a></li>
+                <li><a href="#">协会要闻</a></li>
+                <li><a href="#">行业动态</a></li>
+                <li><a href="#">政策法规</a></li>
+                <li><a href="#">家政论坛</a></li>
+                <li><a href="#">家庭课堂</a></li>
+                <li><a href="#">下载专区</a></li>
+            </ul>
+        </div>
+        <div class="l-container w-wrap">
+            <!-- to be filled start -->
+            <div class="w-container">
+            	<h2 class="w-f24 w-bold w-dark-red">用户注册</h2>
+            	<div class="w-shadow w-shadow-signup">
+            		<div class="w-fields">
+            			<div class="w-left w-line-right short-tail">
+            				<div class="w-field w-field-signup no-padd-bottom">
+            					<div class="w-main">
+            						<label for="">用户名<span class="w-dark-red">*</span>：</label><input type="text">
+            					</div>
+            					<div class="w-note">2-20个字符，可由英文字母、数字及“_”、“-”组成。</div>
+            				</div>
+            				<div class="w-field w-field-signup">
+            					<div class="w-main">
+            						<label for="">手机号码<span class="w-dark-red">*</span>：</label><input type="text">
+            					</div>
+            				</div>
+            				<div class="w-field w-field-signup no-padd-bottom">
+            					<div class="w-main">
+            						<label for="">登录密码<span class="w-dark-red">*</span>：</label><input type="password">
+            					</div>
+            					<div class="w-note">6-16个字符，可由英文字母、数字及标点符号组成，区分大小写。</div>
+            				</div>
+            				<div class="w-field w-field-signup no-padd-bottom">
+            					<div class="w-main">
+            						<label for="">确认密码<span class="w-dark-red">*</span>：</label><input type="password">
+            					</div>
+            					<div class="w-note">请再次输入登录密码。</div>
+            				</div>
+            				<div class="w-field w-field-signup no-padd-bottom">
+            					<div class="w-main">
+            						<label for="">验证码<span class="w-dark-red">*</span>：</label><input name="verifycode" class="w-short-input" type="text">
+                                    <div id="verify-code-container"></div>
+            						<a href="javascript: void 0;" id="change-verifycode" class="w-dark-red">换一张</a>
+            					</div>
+            					<div class="w-note">请输入图片中的字符，不区分大小写。</div>
+            				</div>
+            				<div class="w-field w-field-signup no-padd-bottom">
+            					<div class="w-main">
+            						<label for="">家庭住址：</label><input type="text">
+            					</div>
+            					<div class="w-note">请输入您的家庭住址，以便上门服务。</div>
+            				</div>
+
+            				<div class="w-article w-marg-top-70">
+            					<button id="signup-btn" class="w-button w-button-red w-marg-left-90">同意用户协议并注册</button>
+            					<a class="w-orange w-marg-left-20" href="">《烟台家协用户协议》</a>
+            				</div>
+            			</div>
+            			<div class="w-right">
+            				<div class="w-warn w-dark-red">
+            					已经注册烟台家协用户？<br>
+            					赶快登录吧！
+            				</div>
+            				<button class="w-button w-button-orange">立即登录</button>
+            			</div>
+            		</div>
+            	</div>
+            </div>
+            <!-- to be filled end -->
+        </div>
+        <div class="l-footer">
+            <div class="l-footer-tip">
+                <a href="#">关于协会</a>
+                <a href="#">联系我们</a>
+                <a href="#">广告服务</a>
+                <a href="#">设为首页</a>
+                <a href="#">加入收藏夹</a>
+            </div>
+            <div class="l-copyright">
+                <p>版权所有©烟台市家庭服务业协会&nbsp;&nbsp;备案编号：鲁公安网17010200000</p>
+                <p>地址：烟台市芝罘区文化路17号&nbsp;&nbsp;电话：0535-123456</p>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="../lib/jquery.min.js"></script>
+<!--[if lte IE 8]>
+<script src="../lib/excanvas.js"></script>
+<![endif]-->
+<script src="../lib/gVerify.js"></script>
+<script>
+    var changeVerifyCode = $('#change-verifycode');
+    var signupBtn = $('#signup-btn');
+
+    var verifycode = new GVerify('verify-code-container');
+    changeVerifyCode.on('click', function () {
+        verifycode.refresh();
+    });
+    signupBtn.on('click', function () {
+        var userCodeInput = $('[name="verifycode"]'),
+        userCode = userCodeInput && userCodeInput.val();
+
+        if (!userCode || !verifycode.validate(userCode)) {
+            alert('验证码输入错误！')
+            return false;
+        }
+        return true;
+    });
+    setTimeout(function () {
+        verifycode.refresh();
+    }, 0);
+</script>
+</html>
