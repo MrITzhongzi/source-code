@@ -1,0 +1,16 @@
+#box {
+    width: 100px;
+    height: 200px;
+    margin: 100px auto;
+    border: 1px solid #000;
+    position: relative;
+    overflow: hidden
+}
+
+#box ul {
+    position: absolute;
+    top: -10px;
+}
+#box li {
+
+}
