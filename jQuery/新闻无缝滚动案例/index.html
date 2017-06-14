@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>新闻无缝滚动案例</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div id="box">
+
+    </div>
+    <script type="text/html" id="drawLi">
+        <ul>
+            {{each data as value i}}
+            <li>{{value.name}}</li>
+            {{/each}}
+            <!--样式渲染两份实现无缝衔接-->
+            {{each data as value i}}
+            <li>{{value.name}}</li>
+            {{/each}}
+        </ul>
+    </script>
+    <script src="./lib/node_modules/jquery/dist/jquery.js"></script>
+    <script src="./lib/node_modules/art-template/lib/template-web.js"></script>
+    <script>
+        var obj = [
+            { name: '苹果1' },
+            { name: '苹果2' },
+            { name: '苹果3' },
+            { name: '苹果4' },
+            { name: '苹果5' },
+            { name: '苹果6' },
+            { name: '苹果7' },
+            { name: '苹果7' },
+            { name: '苹果7' },
+            { name: '苹果7' },
+            { name: '苹果7' },
+            { name: '苹果7' },
+            { name: '苹果7' },
+            { name: '苹果7' },
+            { name: '苹果7' },
+            { name: '苹果7' },
+            { name: '苹果7' },
+            { name: '苹果7' },
+            { name: '苹果7' },
+            { name: '苹果7' },
+            { name: '苹果7' },
+            { name: '苹果8' }];
+
+        var drawObj = {
+            data: obj
+        }
+        //渲染页面
+        var html = template('drawLi', drawObj);
+        $('#box').html(html);
+
+        //ul的最大位移
+        var maxLength = $('ul').height() / 2;
+
+        
+        jqAnimate();
+        function jqAnimate() {
+            $('ul').animate({
+                top: -maxLength - 20 + 'px'
+            }, 4000, 'linear', jqCallback);
+        }
+
+        function jqCallback(){
+            var currentTopNum = Math.abs(parseInt($('ul').css('top')));
+            console.log(currentTopNum);
+            console.log(maxLength);
+            if(currentTopNum >= maxLength){
+                $('ul').css({
+                    top : -20 + 'px'
+                });
+                jqAnimate();
+            }
+        }
+    </script>
+</body>
+
+</html>

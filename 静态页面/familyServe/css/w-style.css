@@ -1,0 +1,203 @@
+@import url('./reset.css');
+@import url('./public.css');
+@import url('./font.css');
+/*
+ * tools
+ */
+.w-f24 {
+	font-size: 24px;
+}
+.w-bold {
+	font-weight: bold;
+}
+.w-dark-red {
+	color: rgb(195, 13, 35);
+}
+.w-orange {
+	color: #ea5514;
+}
+.w-hide-label {
+	text-indent: -9999px;
+	opacity: 0.0001;
+}
+.w-marg-left-15 {
+	margin-left: 15px;
+}
+.w-marg-left-20 {
+	margin-left: 20px;
+}
+.w-marg-left-90 {
+	margin-left: 90px;
+}
+.w-marg-left-220 {
+	margin-left: 220px;
+}
+.w-marg-top-35 {
+	margin-top: 35px;
+}
+.w-marg-top-70 {
+	margin-top: 70px;
+}
+
+
+.w-container {
+	max-width: 1204px;
+	margin: 23px auto 60px;
+}
+.w-container .w-shadow {
+	box-sizing: border-box;
+	box-shadow: 0 5px 7px 2px #bfbfbf;
+	behavior: url('../lib/PIE.htc');
+	background: #ebebeb;
+	margin-top: 24px;
+	padding: 52px 58px;
+	position: relative;
+}
+
+
+.w-container .w-shadow .w-left,
+.w-container .w-shadow .w-right {
+	padding-bottom: 48px;
+	width: 60%;
+	position: relative;
+	float: left;
+}
+.w-container .w-shadow .w-right {
+	width: 40%;
+}
+.w-line-right:after {
+	content: '';
+	position: absolute;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	width: 2px;
+	background: rgb(225, 225, 225);
+}
+.w-line-right.short-tail:after {
+	bottom: 48px;
+}
+.w-container .w-shadow {
+	font-size: 14px;
+}
+.w-container .w-shadow * {
+	font-size: inherit;
+}
+.w-fields.w-fields-signin {
+	height: 290px;
+}
+.w-field {
+	color: #333;
+	padding-bottom: 30px;
+}
+.w-field input[type="text"],
+.w-field input[type="password"] {
+	box-sizing: border-box;
+	width: 240px;
+	height: 30px;
+	border: 1px solid #cfcfcf;
+	padding: 3px 13px;
+}
+.w-field label {
+	display: inline-block;
+	width: 90px;
+	white-space: nowrap;
+	user-select: none;
+}
+.w-field input[type="checkbox"] {
+	width: 14px;
+	height: 14px;
+	vertical-align: -0.15em;
+	margin-right: 0.5em;
+}
+.w-container .w-shadow .w-right,
+.w-container .w-shadow .w-left {
+	height: 100%;
+}
+.w-container .w-shadow .w-right .mid-cen {
+	padding-top: 60px;
+	padding-left: 130px;
+}
+.w-container .w-shadow .w-right button {
+	position: absolute;
+	bottom: 90px;
+	margin-left: 130px;
+}
+
+
+/*
+ * button
+ */
+.w-button {
+	width: 200px;
+	text-align: center;
+	line-height: 40px;
+	height: 40px;
+	box-sizing: border-box;
+	padding: 0 38px;
+	border: none;
+	color: #fff;
+	outline: none;
+	border-radius: 4px;
+	white-space: nowrap;
+}
+.w-button.w-button-red {
+	background-color: rgb(195, 13, 35);
+}
+.w-button.w-button-orange {
+	background-color: #ea5514;
+}
+.w-button-red:hover {
+	background-color: #b70c21;
+}
+.w-button-orange:hover {
+	background-color: #de5113;
+}
+.w-button-red:active {
+	background-color: #ab0b1f;
+}
+.w-button-orange:active {
+	background-color: #d34c12;
+}
+
+.w-shadow-signup {
+	padding: 50px 0 100px 45px;
+	overflow: hidden;
+}
+.w-container .w-shadow-signup .w-note {
+	padding-left: 90px;
+	color: #666;
+	font-size: 12px;
+	white-space: nowrap;
+	line-height: 2.5;
+}
+.w-field-signup.no-padd-bottom {
+	padding-bottom: 0;
+}
+.w-field-signup input[type="text"],
+.w-field-signup input[type="password"] {
+	width: 281px;
+}
+.w-fields .w-field-signup .w-short-input {
+	width: 100px;
+}
+.w-container .w-shadow-signup .w-left {
+	width: 56%;
+}
+.w-container .w-shadow-signup .w-right {
+	width: 44%;
+}
+.w-container .w-shadow-signup .w-right button {
+	position: static;
+	margin-top: 100px;
+}
+.w-container .w-shadow-signup .w-right .w-warn {
+	padding: 60px 0 0 130px;
+}
+#verify-code-container {
+	display: inline-block;
+	width: 66px;
+	height: 30px;
+	vertical-align: bottom;
+	background: #fff;
+}

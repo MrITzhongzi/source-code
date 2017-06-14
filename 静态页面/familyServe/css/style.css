@@ -1,0 +1,577 @@
+
+.l-container-main {
+
+}
+
+.l-container-main .l-con-main-l,
+.l-container-main .l-con-main-m {
+    float: left;
+}
+
+.l-container-main .l-con-main-l {
+    width: 360px;
+    margin-right: 20px;
+}
+
+
+/*简单轮播图 开始*/
+
+.l-small-ban {
+    width: 358px;
+    height: 298px;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #ccc;
+}
+
+.l-small-ban .simbleScreen {
+    width: 360px;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+}
+
+.l-small-ban .simbleScreen ul li {
+    width: 360px;
+    height: 300px;
+    overflow: hidden;
+    float: left;
+}
+.l-small-ban .simbleScreen ul li img {
+    width: 360px;
+    height: 300px;
+}
+
+.l-small-ban .simbleScreen ul {
+    position: absolute;
+    left: 0;
+    top: 0px;
+    width: 3000px;
+    list-style: none;
+}
+
+.l-small-ban .all ol {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    line-height: 20px;
+    text-align: center;
+    list-style: none;
+}
+
+.l-small-ban .all ol li {
+    float: left;
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border: 1px solid #ccc;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.l-small-ban .all ol li.current {
+    background: yellow;
+}
+
+.l-small-ban #simbleArr {
+    display: none;
+}
+
+.l-small-ban #simbleArr span {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    margin-top: -20px;
+    background: #000;
+    cursor: pointer;
+    line-height: 40px;
+    text-align: center;
+    font-weight: bold;
+    font-family: '黑体';
+    font-size: 30px;
+    color: #fff;
+    opacity: 0.3;
+    border: 1px solid #fff;
+}
+
+.l-small-ban #simbleArr #simbleRight {
+    right: 5px;
+    left: auto;
+}
+/*简单轮播图 结束*/
+
+.l-con-main-l .l-small-ban p {
+    height: 30px;
+    background-color: #fe0000;
+    color: white;
+    padding: 0 20px;
+    font-size: 14px;
+    line-height: 30px;
+    position: absolute;
+    left: 5px;
+    bottom: 8px;
+    width: 85%;
+}
+
+.l-inform,
+.l-policy {
+    background-color: #fff;
+    height: 198px;
+    margin-top: 10px;
+    border: 1px solid #cccccc;
+}
+
+.l-policy {
+    margin-top: 12px;
+}
+
+.l-container-main .l-con-main-m {
+    width: 508px;
+}
+
+.l-con-main-m .l-importantnews {
+    border: 1px solid #d8d8d8;
+    height: 300px;
+}
+
+.l-con-main-m .l-dinamic {
+    margin-top: 10px;
+    border: 1px solid #d8d8d8;
+    height: 198px;
+}
+
+.l-con-main-m .l-advertisement {
+    margin-top: 10px;
+}
+
+/*l-container-main end*/
+
+/*l-container end*/
+
+/*优秀企业展播*/
+
+.l-container-excellent {
+    border: 2px solid #d8d8d8;
+    position: relative;
+    margin-top: 10px;
+    height: 191px;
+}
+
+/*优秀企业展播*/
+.all {
+    width: 1168px;
+    height: 159px;
+    position: relative;
+}
+
+.screen {
+    width: 1070px;
+    height: 159px;
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+}
+
+.screen ul li {
+    width: 1060px;
+    height: 159px;
+    overflow: hidden;
+    float: left;
+    padding-left: 10px;
+}
+
+.screen ul {
+    position: absolute;
+    left: 0;
+    top: 0px;
+    width: 6420px;
+}
+
+#arr span {
+    width: 20px;
+    height: 50px;
+    position: absolute;
+    left: 30px;
+    top: 50%;
+    margin-top: -25px;
+    background: #c30d23;
+    cursor: pointer;
+    line-height: 50px;
+    text-align: center;
+    font-weight: bold;
+    font-family: '黑体';
+    font-size: 30px;
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+#arr #right {
+    right: 30px;
+    left: auto;
+}
+.screen ul li .one-qiye {
+    width: 130px;
+    height: 100px;
+    float: left;
+    margin: 20px 10px;
+    font-size: 14px;
+    text-align: center;
+}
+
+
+/*l-home 开始*/
+
+.l-home {
+    margin-top: 10px;
+}
+
+.l-home .l-home-l {
+    width: 360px;
+    height: 272px;
+    border: 1px solid #d8d8d8;
+    float: left;
+}
+
+.l-home .l-home-m {
+    float: left;
+    width: 508px;
+    height: 272px;
+    border: 1px solid #d8d8d8;
+    margin-left: 17px;
+}
+
+.l-home .l-home-m .l-pub-title ul {
+    float: left;
+    margin-left: 20px;
+}
+
+.l-home .l-home-m .l-pub-title ul li {
+    float: left;
+    border-right: 1px solid #d8d8d8;
+    width: 55px;
+    height: 14px;
+    margin-top: 10px;
+    line-height: 14px;
+    text-align: center;
+}
+
+.l-home .l-home-m .l-pub-title ul .l-title-lastli {
+    border: none;
+}
+
+.l-home .l-home-m .l-pub-title ul li a {
+    margin-right: 12px;
+}
+
+.l-home .l-home-m .l-home-detail {
+    border-bottom: 1px solid #d8d8d8;
+}
+
+.l-home .l-home-m .l-home-detail .l-home-img {
+    width: 80px;
+    height: 80px;
+    float: left;
+    margin: 12px;
+    background: url("../images/1-01.png") center center no-repeat;
+}
+
+.l-home .l-home-m .l-home-content {
+    float: left;
+    width: 400px;
+    margin-top: 20px;
+}
+
+.l-home .l-home-content h5 {
+    font-size: 14px;
+    font-weight: 700;
+    color: red;
+    /*text-align: center;*/
+    margin-bottom: 5px;
+}
+
+.l-home .l-home-content p {
+
+}
+
+.l-home .l-home-content p a {
+    color: red;
+    cursor: pointer;
+}
+
+.l-home .l-home-r {
+    width: 260px;
+    height: 272px;
+    float: right;
+    border: 1px solid #d8d8d8;
+    overflow: hidden;
+}
+
+/*底部最后一个li的样式*/
+.l-showimg li:last-child.l-index-lastli {
+    height: 200px;
+    overflow: hidden;
+}
+
+.l-showimg li:last-child.l-index-lastli img {
+    height: 170px;
+}
+
+/*l-home 结束*/
+
+/*==============================================================================*/
+/*协会简介 start*/
+
+.l-intro-con {
+    border: 1px solid #d8d8d8;
+    overflow: hidden;
+}
+
+.l-int-conc {
+    height: 831px;
+    padding: 0 40px;
+}
+
+.l-int-conc p {
+    margin: 10px 0;
+    font-size: 14px;
+}
+
+.l-int-conc h4 {
+    font-size: 20px;
+    margin: 30px 0;
+}
+
+.l-int-conc ul {
+    padding-left: 20px;
+    list-style: disc;
+}
+
+/*...*/
+.l-showimg li:last-child {
+    height: auto;
+}
+
+.l-showimg .l-intro-subcon {
+    padding: 10px;
+}
+
+.l-showimg .l-intro-subcon a {
+    font-size: 14px;
+    color: #333333;
+    line-height: 14px;
+    margin: 5px 0;
+}
+
+.l-showimg .l-intro-subcon a i {
+    font-style: normal;
+    margin-right: 10px;
+}
+
+.l-showimg .l-intro-subcon a:hover {
+    color: #fe0000;
+}
+
+/*协会简介 end*/
+/*==============================================================================*/
+
+/*协会要闻界面 开始*/
+.l-main-newsCon {
+    margin-right: 280px;
+}
+
+.l-main-newsCon .l-int-conh {
+    border-bottom: 1px dashed #d8d8d8;
+    margin-right: 40px;
+}
+
+.l-main-newsCon .l-int-conh h3 {
+    text-align: left;
+    margin-bottom: 35px;
+    margin-top: 50px;
+}
+
+.l-main-newsCon .l-int-conc {
+    padding: 0 40px 0 10px;
+}
+
+.l-main-newsCon .l-int-conc p {
+    margin: 0px;
+}
+
+.l-main-newsCon .l-int-conc ul {
+    list-style: none;
+    padding-left: 7px;
+}
+
+.l-main-newsCon .l-int-conc .l-pub-content li {
+    border-bottom: 1px dashed #d8d8d8;
+    height: 39px;
+    line-height: 39px;
+}
+
+/*协会要闻界面 结束*/
+
+/*家庭论坛页面 开始*/
+.l-intro-con .l-int-conc {
+    height: auto;
+}
+
+.l-intro-con .l-fd-discuss {
+    border-top: 1px dashed #d8d8d8;
+    margin: 40px 20px 230px;
+    padding-top: 24px;
+}
+
+.l-intro-con .l-fd-discuss h3 {
+    font-size: 16px;
+}
+
+.l-intro-con .l-fd-discuss p {
+    font-size: 14px;
+    margin-top: 12px;
+}
+
+.l-fd-name {
+    margin-top: 40px;
+    font-size: 14px;
+}
+
+.l-fd-inputname {
+    border: 1px solid #d8d8d8;
+    width: 100px;
+    height: 30px;
+    margin-left: 12px;
+}
+
+.l-fd-discon {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.l-fd-comment {
+    border-top: 1px solid #d8d8d8;
+    padding-top: 24px;
+    font-size: 14px;
+    padding-bottom: 180px;
+}
+
+.fd-comment-tip {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+p.fd-name {
+    margin-top: 40px;
+    display: inline-block;
+}
+
+.name-input {
+    width: 100px;
+    height: 30px;
+    border: 1px solid #d8d8d8;
+    margin-left: 12px;
+}
+
+ .fd-com-input {
+    width: 648px;
+    height: 98px;
+    resize: none;
+    display: block;
+    margin-bottom: 20px;
+     margin-top: 15px;
+}
+
+ .l-fd-submit {
+    width: 80px;
+    height: 30px;
+    background-color: #c30d23;
+    text-align: center;
+    line-height: 30px;
+    border: none;
+    color: white;
+    margin-right: 12px;
+}
+
+/*家庭论坛页面 结束*/
+
+/*家庭课堂页面开始*/
+
+.l-intro-con div.l-int-conh {
+
+}
+
+.l-int-conh .l-fc-classify {
+    margin-left: 0px;
+}
+
+.l-int-conh .l-fc-classify li {
+    float: left;
+    width: 176px;
+    height: 140px;
+    margin: 20px 0;
+    border-right: 1px solid #d8d8d8;
+    line-height: 120px;
+    color: #d8d8d8;
+}
+
+.l-int-conh .l-fc-classify li:last-child {
+    border-right: none;
+}
+
+.l-int-conh .l-fc-classify li a {
+    padding-top: 10px;
+    font-size: 65px;
+    color: #999999;
+}
+
+.l-int-conh .l-fc-classify li a p {
+    margin-top: 30px;
+}
+
+.l-int-conh .l-fc-classify li a:hover {
+    color: #fe0000;
+}
+.l-int-conh .l-fc-classify li a:hover p {
+    color: #fe0000;
+}
+
+/*家庭课堂页面结束*/
+
+
+/*下载页面 开始*/
+
+.l-main-newscon-in  .l-pub-content .l-click-down {
+    float: none;
+    height: 40px;
+    line-height: 40px;
+    vertical-align: top;
+}
+
+/*下载页面 结束*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
