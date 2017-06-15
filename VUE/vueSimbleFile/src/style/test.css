@@ -1,0 +1,6 @@
+div {
+    background-size : 100% 100%;
+    border: 1px solid #000;
+    border-radius: 3px;
+    display: flex;
+}
