@@ -1,0 +1,88 @@
+body,
+html {
+  padding: 0;
+  margin: 0;
+}
+body #app,
+html #app {
+  text-align: center;
+}
+body #app .title,
+html #app .title {
+  margin: 30px auto;
+  font-size: 18px;
+  color: red;
+  width: 100px;
+}
+body #app .animateArticle,
+html #app .animateArticle {
+  border: 1px solid #738bcc;
+  padding: 10px 20px;
+  margin: 20px;
+}
+body #app .animateArticle:nth-child(2) .fade-enter-active,
+html #app .animateArticle:nth-child(2) .fade-enter-active,
+body #app .animateArticle:nth-child(2) .fade-leave-active,
+html #app .animateArticle:nth-child(2) .fade-leave-active {
+  transition: opacity 0.5s;
+}
+body #app .animateArticle:nth-child(2) .fade-enter,
+html #app .animateArticle:nth-child(2) .fade-enter,
+body #app .animateArticle:nth-child(2) .fade-leave-active,
+html #app .animateArticle:nth-child(2) .fade-leave-active {
+  opacity: 0;
+}
+body #app .animateArticle:nth-child(3),
+html #app .animateArticle:nth-child(3) {
+  /* 可以设置不同的进入和离开动画 */
+  /* 设置持续时间和动画函数 */
+}
+body #app .animateArticle:nth-child(3) .slide-fade-enter-active,
+html #app .animateArticle:nth-child(3) .slide-fade-enter-active {
+  transition: all .3s ease;
+}
+body #app .animateArticle:nth-child(3) .slide-fade-leave-active,
+html #app .animateArticle:nth-child(3) .slide-fade-leave-active {
+  transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
+}
+body #app .animateArticle:nth-child(3) .slide-fade-enter,
+html #app .animateArticle:nth-child(3) .slide-fade-enter,
+body #app .animateArticle:nth-child(3) .slide-fade-leave-active,
+html #app .animateArticle:nth-child(3) .slide-fade-leave-active {
+  transform: translate(10px, 10px);
+  opacity: 0;
+}
+body #app .animateArticle:nth-child(5) .bounce-enter-active,
+html #app .animateArticle:nth-child(5) .bounce-enter-active {
+  animation: bounce-in 0.5s;
+}
+body #app .animateArticle:nth-child(5) .bounce-leave-active,
+html #app .animateArticle:nth-child(5) .bounce-leave-active {
+  animation: bounce-out 0.5s;
+}
+@keyframes bounce-in {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes bounce-out {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+body #app .customDir,
+html #app .customDir {
+  margin: 10px;
+}

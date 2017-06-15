@@ -1,0 +1,63 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+html {
+  height: 100%;
+}
+html body {
+  height: 100%;
+}
+
+.main {
+    height: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.catalogue {
+    height: 100%;
+    background-color: #3ea8dd;
+    width: 15%;
+}
+.catalogue ul {
+    padding-top: 40px;
+    text-align: right;
+    padding-right: 20px;
+}
+.catalogue ul, li {
+    list-style: none;
+    margin: 10px auto;
+}
+.catalogue ul li {
+}
+.catalogue ul li a {
+    color: #000;
+    font-size: 30px;
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
