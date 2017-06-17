@@ -1,0 +1,63 @@
+.login-form {
+    margin-top: 95px;
+}
+
+.login-form img:nth-child(1) {
+    padding: 0px;
+}
+
+.login-tip {
+    margin-top: 75px;
+    font-family: Algerian;
+    color: #acce22;
+    font-size: 18px;
+}
+
+#l-head {
+    width: 77px;
+    height: 77px;
+    background-color: #d8e27f;
+    border: 9px solid #acce22 !important;
+    border-radius: 50%;
+    padding: 0px;
+    line-height: 77px;
+    font-size: 23px;
+}
+
+.l-agency {
+
+}
+
+.horizontal {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.horizontal > div {
+    width: 33.33%;
+}
+
+.l-secondMenu {
+    margin-top: 35px;
+}
+
+.l-bottom-tip {
+    margin-top: 68px;
+    text-align: center;
+    color: white;
+    font-size: 18px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

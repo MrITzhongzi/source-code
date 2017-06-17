@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Title</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/fonts/iconfont.css">
+</head>
+<body style="background-color: #fff;">
+    <div class="headerPro-l">
+        <span class="icon-back"></span>
+        <h4>商品列表页</h4>
+    </div>
+    <div class="productDetail-l">
+        <nav>
+            <div class="productType-l choose-lhw"><span class="iconfont iconn-gouwuche"></span>类型</div>
+            <div class="productBrand-l"><span class="iconfont iconn-pinpai"></span>品牌</div>
+        </nav>
+        <div class="typeDetail-lhw">
+            <ul>
+                <li><a href="#">小方块</a></li>
+                <li><a href="#">小方块</a></li>
+                <li><a href="#">小方块</a></li>
+                <li><a href="#">小方块</a></li>
+                <li><a href="#">小方块</a></li>
+                <li><a href="#">小方块</a></li>
+                <li><a href="#">小方块</a></li>
+                <li><a href="#">小方块</a></li>
+                <li><a href="#">小方块</a></li>
+                <li><a href="#">小方块</a></li>
+                <li><a href="#">小方块</a></li>
+                <li><a href="#">小方块</a></li>
+            </ul>
+        </div>
+        <div class="product-lhw">
+            <ul>
+                <li>
+                    <div class="productImage-l">
+                        <img src="../image/logo.png" alt="">
+                        <p>点击此图片共五张图片</p>
+                    </div>
+                    <div class="product-desc">
+                        <h3>靓亲纸尿裤非拉拉裤</h3>
+                        <p>邮费五元满300元包邮</p>
+                        <span class="price-lhw">￥<span class="price-number-l">50</span></span>
+                    </div>
+                    <button class="joinCar">加入购物车</button>
+                </li>
+                <li>
+                    <div class="productImage-l">
+                        <img src="../image/logo.png" alt="">
+                        <p>点击此图片共五张图片</p>
+                    </div>
+                    <div class="product-desc">
+                        <h3>靓亲纸尿裤非拉拉裤</h3>
+                        <p>邮费五元满300元包邮</p>
+                        <span class="price-lhw">￥<span class="price-number-l">50</span></span>
+                    </div>
+                    <button class="joinCar">加入购物车</button>
+                </li>
+                <li>
+                <div class="productImage-l">
+                    <img src="../image/logo.png" alt="">
+                    <p>点击此图片共五张图片</p>
+                </div>
+                <div class="product-desc">
+                    <h3>靓亲纸尿裤非拉拉裤</h3>
+                    <p>邮费五元满300元包邮</p>
+                    <span class="price-lhw">￥<span class="price-number-l">50</span></span>
+                </div>
+                <button class="joinCar">加入购物车</button>
+            </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="goshoppingCar"><span class="iconfont iconn-gouwuche"></span></div>
+
+    <!--点击勾出车  弹出的底部模态框-->
+
+    <div class="bottomProductModal">
+        <div class="bottomProductModal-in">
+            <h4>型号数量选择</h4>
+            <ul>
+                <li>型号</li>
+                <li>大米芥麦/6(6盒每箱) <span class="circle-lhw circleCheck-lhw"></span></li>
+                <li>大米芥麦/6(6盒每箱) <span class="circle-lhw"></span></li>
+                <li>大米芥麦/6(6盒每箱)</li>
+            </ul>
+            <div class="buyNumber">
+                <span>购买数量</span>
+
+               <div>
+                   <button>+</button>
+                   <input type="text" disabled value="1">
+                   <button>-</button>
+               </div>
+            </div>
+            <button class="joinInShopCar">加入购物车</button>
+        </div>
+    </div>
+</body>
+<script>
+    var typeDetailLhw = document.getElementsByClassName('typeDetail-lhw')[0];
+    var productTypeL = document.getElementsByClassName('productType-l')[0];
+
+    productTypeL.addEventListener('click',function () {
+        if(typeDetailLhw.style.display == "block"){
+            typeDetailLhw.style.display = 'none';
+        }else {
+            typeDetailLhw.style.display = 'block';
+        }
+    },false)
+</script>
+</html>
