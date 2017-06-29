@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <div>
+        <h4>computed属性</h4>
+        <p>{{message}}</p>
+        <p>{{reversedMessage}}</p>
+
+        <h4>get和set的计算属性</h4>
+        <input type="text" v-model="firstname">
+        <input type="text" v-model="lastname">
+        <p>{{msg2}}</p>
+        <p>{{firstname}}</p>
+        <p>{{lastname}}</p>
+    </div>
+    <div>
+        <h4>watch检测属性的改变</h4>
+        <input type="text" v-model="watchProp">
+        <p>{{watchProp}}</p>
+    </div>
+    <div :style="{ display : [ '-webkit-box', '-ms-flexbox', 'flex' ] }">
+        <div :style="{width : '50%',color : 'white',backgroundColor : 'red'}">第一个div</div>
+        <div :style="{width : '50%', color: 'blue',backgroundColor : 'green'}">第二个div</div>
+    </div>
+    <div>
+        <br>
+        <template v-if="loginType === 'username'">
+            <label>Username</label>
+            <input placeholder="Enter your username" key="username-input">
+        </template>
+        <template v-else>
+            <label>Email</label>
+            <input placeholder="Enter your email address" key="email-input">
+        </template>
+        <br>
+        <button @click="changeType()">切换登录方式</button>
+    </div>
+    <div>
+        <h4>v-show测试</h4>
+        <p v-show="isShow">这里是一段文本</p>
+        <br>
+        <button @click="isShow = !isShow">控制显示隐藏</button>
+    </div>
+    <div>
+        <h4>.self事件修饰符</h4>
+        <div :style="{width : '100px',height : '100px',backgroundColor : 'green'}" @click.self="selfFun()">
+            <div :style="{width : '50px',height : '50px',backgroundColor : 'yellow',margin : '10px auto'}"  >
+
+            </div>
+        </div><h4>没有加.self事件修饰符</h4>
+        <div :style="{width : '100px',height : '100px',backgroundColor : 'green'}" @click="selfFun()">
+            <div :style="{width : '50px',height : '50px',backgroundColor : 'yellow',margin : '10px auto'}"  >
+
+            </div>
+        </div>
+
+    </div>
+    <div>
+        <h4>兼职修饰符</h4>
+        <input type="text" @keyup.enter="enterFUn()">
+        <input type="text" @keyup.mm="enterFUn2()">
+        <input type="text" @keyup.alt.mm="artMM()">
+    </div>
+</div>
+<script src="node_modules/vue/dist/vue.js"></script>
+<script>
+    Vue.config.keyCodes.mm = 77;
+    const vm = new Vue({
+        el : '#app',
+        data : {
+            message : 'this is a message',
+            watchProp : "watchProp",
+            firstname : 'li',
+            lastname: 'hongwei',
+            loginType : 'username',
+            isShow : true
+        },
+        computed : {
+            reversedMessage : function () {
+                return this.message.split('').reverse().join('')
+            },
+            msg2 : {
+                get : function () {
+                    return this.firstname + ' ' + this.lastname;
+                },
+                set : function () {
+                    this.firstname = this.msg2.split(' ')[0];
+                    this.lastname = this.msg2.split(' ')[1];
+                }
+            }
+        },
+        watch : {
+            watchProp : function () {
+                console.log('watchProp改变了一次');
+            }
+        },
+        methods : {
+            changeType : function () {
+                if(this.loginType == 'username'){
+                    this.loginType = "email";
+                }else {
+                    this.loginType = 'username'
+                }
+            },
+            selfFun : function () {
+                alert('.self的作用是只有点击自身而不是子元素 的时候调用  ')
+            },
+            enterFUn : function () {
+               console.log('你按下了enter键')
+            },
+            enterFUn2 : function () {
+                console.log(' 自定义的 mm')
+            },
+            artMM : function () {
+                console.log('你连续按下了 mm + alt')
+            }
+        }
+
+    });
+</script>
+</body>
+</html>
