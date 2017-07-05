@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=">
+    <title>Title</title>
+</head>
+<body>
+<input type="button" value="jquery测试 touch事件">
+
+<button>原生js测试</button>
+
+<script src="../node_modules/jquery/dist/jquery.js"></script>
+<script>
+
+
+    //触摸开始 调用
+    $(document).on('touchstart','input',function () {
+        console.log('touch start');
+    });
+    //触摸过程中 调用
+    $(document).on('touchmove','input',function () {
+        console.log('touch move');
+    });
+    //触摸结束 调用
+    $(document).on('touchend','input',function () {
+        console.log('touch end');
+    })
+
+
+    /* 这种方法是不管用的。  touch一类的方法必须用  二级 dom 绑定，  例如：　addeventlinstener
+
+    var btn = document.getElementsByTagName('button')[0];
+
+    btn.ontouchstart = function () {
+        console.log('js start');
+    }
+
+
+    btn.ontouchmove = function () {
+        console.log('js move');
+    }
+
+    btn.ontouchend = function () {
+        console.log('js end');
+    }*/
+
+    //原生js 中的 touch 事件
+    var btn = document.getElementsByTagName('button')[0];
+    //触摸开始 调用
+    btn.addEventListener('touchstart',function () {
+        console.log('js start');
+    })
+    //触摸过程中调用
+    btn.addEventListener('touchmove',function () {
+        console.log('js move');
+    })
+    //触摸结束调用
+    btn.addEventListener('touchend',function () {
+        console.log('js end');
+    })
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <title></title>
+    <style>
+        .trip-trace * {
+            margin: 0;
+            padding: 0;
+            color: #333;
+            font-size: 15px;
+        }
+        .content-padded {
+            padding: 0 15px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .horizontal {
+            display: -webkit-box;
+        }
+        .flex-1 {
+             -webkit-box-flex: 1;
+         }
+        .trip-trace {
+            padding-top: 10px;
+            background-color: #fff;
+        }
+        .trip-trace .title {
+            padding-bottom: 10px;
+            border-bottom: 1px solid #d8d8d8;
+            margin-bottom: 20px;
+        }
+        .trip-trace .help {
+            width: 20px;
+        }
+        .trip-trace .wrap {
+            border-left: 1px solid #999;
+            box-sizing: border-box;
+            padding-left: 20px;
+            position: relative;
+        }
+        .trip-trace .wrap p:first-of-type {
+            font-size: 14px;
+            color: #999;
+            line-height: 20px;
+            position: relative;
+            top: -5px;
+        }
+        .trip-trace .wrap p:first-of-type.color-green {
+            color: #25ae5f;
+        }
+        .trip-trace .wrap p:last-of-type {
+            font-size: 12px;
+            color: #999;
+            padding-bottom: 6px;
+            border-bottom: 1px solid #d8d8d8;
+        }
+        .trip-trace .circle {
+            position: absolute;
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+            z-index: 100;
+            background-color: #999;
+            top: 0;
+            left: -5px;
+        }
+        .trip-trace .green {
+            background-color: #25ae5f;
+            width: 12px;
+            height: 12px;
+            left: -6px;
+        }
+        .trip-trace .tel {
+            color: #3eb1db;
+            border-bottom: 1px solid #3eb1db;
+        }
+        .trip-trace .wrap div:last-of-type {
+            height: 10px;
+        }
+        .trip-trace .last .wrap {
+            border-left: 1px solid #fff;
+        }
+        .trip-trace .last p:last-of-type {
+            border-bottom: 1px solid #fff;
+        }
+        .trip-trace .last .wrap div:last-of-type {
+            height: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="content-padded trip-trace">
+        <div class="title">物流跟踪</div>
+        <div class="horizontal">
+            <div class="help"></div>
+            <div class="flex-1">
+                <div class="wrap">
+                    <div class="circle green"></div>
+                    <p class="color-green">【烟台市】已签收，签收人草签。感谢使用天天快递</p>
+                    <p>2016-12-12 12:15:15</p>
+                    <div></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="horizontal">
+            <div class="help"></div>
+            <div class="flex-1">
+                <div class="wrap">
+                    <div class="circle"></div>
+                    <p>【烟台市】已签收，签收人草签。感谢使用天天快递,<a class="tel">154879465464</a>正在为您派件</p>
+                    <p>2016-12-12 12:15:15</p>
+                    <div></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="horizontal last">
+            <div class="help"></div>
+            <div class="flex-1">
+                <div class="wrap">
+                    <div class="circle"></div>
+                    <p>【烟台市】已签收，签收人草签。感谢使用天天快递</p>
+                    <p>2016-12-12 12:15:15</p>
+                    <div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
