@@ -1,0 +1,87 @@
+html,body,h2,p {
+    padding: 0;
+    margin: 0;
+}
+
+.int-header {
+    background: #f7f7f7;
+    color: #1c1c1c;
+    box-shadow: 0 0 1px rgba(213, 213, 213, 0.75);
+    height: 44px;
+    line-height: 44px;
+}
+.int-header a {
+    text-decoration: none;
+}
+
+.int-header .iconfont {
+    color: #2ebbf0;
+    font-weight: 700;
+    margin-left: 20px;
+}
+
+.content {
+    width: 100%;
+    margin: 0 auto;
+}
+.content .terms-company {
+    padding: 20px 20px 10px 20px;
+    line-height: 24px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.content .terms-name {
+    padding-bottom: 10px;
+    font-size: 16px;
+    text-align: center;
+}
+.terms-ul {
+    padding: 5px 10px;
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+    list-style: none;
+}
+.terms-ul li:last-child {
+    border-bottom: 1px solid #ccc;
+}
+.terms-ul .terms-title {
+    width: 100%;
+    border-top:1px solid #ccc;
+    height: 37px;
+    line-height: 37px;
+    font-size: 16px;
+    padding: 0 0 0 10px;
+    font-family: "幼圆", "黑体", 'Microsoft YaHei', sans-serif;
+}
+.terms-ul .terms-title span {
+    width: 30px;
+    height: 30px;
+    float: right;
+    display: block;
+    font-size: 30px;
+    margin-right: 30px;
+    margin-top: 3px;
+    line-height: 37px;
+    color: #ccc;
+
+}
+.terms-ul .terms-info {
+    font-size: 13px;
+    line-height: 14px;
+    color: #867b7b;
+    padding: 10px;
+    display: none;
+    border-top: 1px solid #ccc;
+    -webkit-transition: all .6s ease;
+    -moz-transition: all .6s ease;
+    -o-transition: all .6s ease;
+    -ms-transition: all .6s ease;
+    transition: all .6s ease;
+    font-family: 'Microsoft YaHei', "黑体", sans-serif;
+}
+.terms-ul .terms-info a {
+    color: #867b7b;
+    text-decoration: none;
+}
