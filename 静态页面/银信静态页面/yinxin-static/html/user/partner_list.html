@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <title>我的伙伴</title>
+    <link rel="stylesheet" href="../../css/base.css"/>
+    <style>
+        .tab-three {
+            background-color: #ef8300;
+            padding: 12px 0;
+            color: #fff;
+            border-top: 1px solid #fff;
+        }
+        .tab-three .flex-1 {
+            width: 33.33333333333333%;
+            border-right: 1px solid #fff;
+            line-height: 16px;
+            text-align: center;
+        }
+        .tab-three .flex-1:last-of-type {
+            border-right: 0;
+        }
+        .tab-three .title {
+            font-size: 15px;
+            padding-bottom: 3px;
+        }
+        .tab-three .desc {
+            font-size: 12px;
+        }
+        .triangle-topleft {
+            position: absolute;
+            top: 10px;
+            left: 0;
+            width: 0;
+            height: 0;
+            border-top: 8px solid #e73929;
+            border-right: 8px solid transparent;
+        }
+        .ul-partner li {
+            padding: 0 15px;
+        }
+        .ul-partner .icon {
+            color: #999;
+            line-height: 40px;
+        }
+        .ul-partner li>.horizontal {
+            position: relative;
+            padding: 10px 0;
+        }
+        .ul-partner .two>.horizontal {
+            padding-left: 25px;
+        }
+        .ul-partner .three>.horizontal {
+            padding-left: 50px;
+        }
+        .ul-partner .bg-cover {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin: 0 10px;
+        }
+        .ul-partner .num {
+            font-size: 12px;
+            color: #e73929;
+            padding-left: 4px;
+            line-height: 18px;
+        }
+        .ul-partner .flex-1 {
+            color: #e73929;
+            line-height: 40px;
+        }
+        .ul-partner .two .num, .ul-partner .two .flex-1 {
+            color: #00a587;
+        }
+        .ul-partner .three .num, .ul-partner .three .flex-1 {
+            color: #ef8300;
+        }
+        .ul-partner .two .triangle-topleft {
+            border-top-color: #00a587;
+            left: 25px;
+        }
+        .ul-partner .three .triangle-topleft {
+            border-top-color: #ef8300;
+            left: 50px;
+        }
+    </style>
+</head>
+<body>
+<div class="fixed-top">
+    <header>
+        <div class="left">
+            <a class="icon icon-back"></a>
+        </div>
+        <h1>我的伙伴</h1>
+    </header>
+    <div class="tab-three horizontal">
+        <div class="flex-1">
+            <div class="title">下级总人数</div>
+            <div class="desc">100人</div>
+        </div>
+        <div class="flex-1">
+            <div class="title">一级人数</div>
+            <div class="desc">100人</div>
+        </div>
+        <div class="flex-1">
+            <div class="title">二级人数</div>
+            <div class="desc">2人</div>
+        </div>
+    </div>
+</div>
+<div style="padding-top: 104px;">
+    <div class="content-top-10">
+        <ul class="ul-partner">
+            <li class="one">
+                <div class="horizontal">
+                    <div class="triangle-topleft"></div>
+                    <div class="num">1</div>
+                    <div class="bg-cover" style="background-image: url(../../image/sample.gif)"></div>
+                    <div class="flex-1 ellipsis">姓名姓名（3人）</div>
+                    <div class="icon icon-up"></div>
+                </div>
+            </li>
+            <li class="two">
+                <div class="horizontal">
+                    <div class="triangle-topleft"></div>
+                    <div class="num">2</div>
+                    <div class="bg-cover" style="background-image: url(../../image/sample.gif)"></div>
+                    <div class="flex-1 ellipsis">姓名姓名（3人）</div>
+                    <div class="icon icon-up"></div>
+                </div>
+            </li>
+            <li class="three">
+                <div class="horizontal">
+                    <div class="triangle-topleft"></div>
+                    <div class="num">3</div>
+                    <div class="bg-cover" style="background-image: url(../../image/sample.gif)"></div>
+                    <div class="flex-1 ellipsis">姓名姓名（3人）</div>
+                    <div class="icon icon-down"></div>
+                </div>
+            </li>
+            <li class="one">
+                <div class="horizontal">
+                    <div class="triangle-topleft"></div>
+                    <div class="num">1</div>
+                    <div class="bg-cover" style="background-image: url(../../image/sample.gif)"></div>
+                    <div class="flex-1 ellipsis">姓名姓名（3人）</div>
+                    <div class="icon icon-down"></div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>

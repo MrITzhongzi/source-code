@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <title>确认订单</title>
+    <link rel="stylesheet" href="../../css/base.css"/>
+    <style>
+        body {
+            background-color: #ef8300;
+        }
+    </style>
+</head>
+<body>
+<div onclick="goProv();" style="width: 200px;height: 200px;">选择</div>
+<div class="region-list animated fast fadeInUpBig" id="prov-list">
+    <div class="headline" onclick="returnRegion(this);">返回</div>
+    <ul class="active" id="prov-ul">
+        <li onclick="goCity();">
+            <div class="horizontal">
+                <div class="flex-1">山东</div>
+            </div>
+        </li>
+        <li onclick="goCity();">
+            <div class="horizontal">
+                <div class="flex-1">辽宁</div>
+            </div>
+        </li>
+    </ul>
+</div>
+<div class="region-list animated fast fadeInUpBig" id="city-list">
+    <div class="headline" onclick="returnRegion(this);">返回选择省或直辖市</div>
+    <ul class="active">
+        <li onclick="goDist();">
+            <div class="horizontal">
+                <div class="flex-1">安阳</div>
+            </div>
+        </li>
+        <li onclick="goDist();">
+            <div class="horizontal">
+                <div class="flex-1">安顺</div>
+            </div>
+        </li>
+        <li onclick="goDist();">
+            <div class="horizontal">
+                <div class="flex-1">鞍山</div>
+            </div>
+        </li>
+    </ul>
+</div>
+<div class="region-list animated fast fadeInUpBig" id="dist-list">
+    <div class="headline" onclick="returnRegion(this);">返回选择城市</div>
+    <ul class="active">
+        <li onclick="regionDone();">
+            <div class="horizontal">
+                <div class="flex-1">鼓楼区</div>
+            </div>
+        </li>
+        <li onclick="regionDone();">
+            <div class="horizontal">
+                <div class="flex-1">沙河口区</div>
+            </div>
+        </li>
+        <li onclick="regionDone();">
+            <div class="horizontal">
+                <div class="flex-1">镇宁布依族自治区</div>
+            </div>
+        </li>
+    </ul>
+</div>
+<script type="text/javascript" src="../../script/jquery.js"></script>
+<script type="text/javascript" src="../../script/template.js"></script>
+<script type="text/javascript">
+    function goProv() {
+        $("#prov-list").show();
+    }
+    function goCity() {
+        $("#city-list").show();
+    }
+    function goDist() {
+        $("#dist-list").show();
+    }
+    function returnRegion(obj) {
+        $(obj).parent().hide();
+    }
+    function regionDone() {
+        $(".region-list").hide();
+    }
+</script>
+</body>
+</html>

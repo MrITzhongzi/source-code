@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <title>申请退款</title>
+    <link rel="stylesheet" href="../../css/base.css"/>
+</head>
+<body>
+<div id="cont">
+<div class="padding-bottom-61">
+    <div class="refund-title">退款类型*</div>
+    <ul class="ul-one">
+        <li>
+            <div class="horizontal">
+                <div class="flex-1">我要退款<span class="color-999">(无需退货)</span></div>
+                <input type="radio" name="1" checked class="aui-checkbox"/>
+            </div>
+        </li>
+        <li>
+            <div class="horizontal">
+                <div class="flex-1">我要退货</div>
+                <input type="radio" name="1" class="aui-checkbox"/>
+            </div>
+        </li>
+    </ul>
+    <div class="refund-title">收货状态*</div>
+    <ul class="ul-one">
+        <li>
+            <div class="horizontal">
+                <div class="flex-1">未收到货</div>
+                <input type="radio" name="2" checked class="aui-checkbox"/>
+            </div>
+        </li>
+        <li>
+            <div class="horizontal">
+                <div class="flex-1">已收到货</div>
+                <input type="radio" name="2" class="aui-checkbox"/>
+            </div>
+        </li>
+    </ul>
+    <div class="refund-title">退款原因*</div>
+    <ul class="ul-one">
+        <li>
+            <div class="horizontal">
+                <div class="flex-1 color-999">请选择退款原因</div>
+                <div class="icon icon-up"></div>
+                <!--<div class="icon icon-down"></div>-->
+            </div>
+        </li>
+    </ul>
+    <div class="refund-title">退款金额*</div>
+    <ul class="ul-one">
+        <li>
+            <div class="horizontal">
+                <div class="flex-1">
+                    <input placeholder="请输入退款金额"/>
+                </div>
+            </div>
+        </li>
+    </ul>
+    <div class="refund-title">退款说明<span>(可不填)</span></div>
+    <ul class="ul-one">
+        <li>
+            <div class="horizontal">
+                <div class="flex-1">
+                    <input placeholder="请输入退款说明"/>
+                </div>
+            </div>
+        </li>
+    </ul>
+    <ul class="ul-one margin-top-10">
+        <li>
+            <div class="horizontal">
+                <div class="icon icon-camera absolute-middle" style="font-size: 18px;"></div>
+                <!--<div class="flex-1 text-right color-999">上传凭证最多3张</div>-->
+                <div class="flex-1 three-img text-right">
+                    <div class="wrapper">
+                        <a class="bg-cover" style="background-image: url(../../image/add_img.png);"></a>
+                        <!--<div class="icon icon-remove"></div>-->
+                    </div>
+                    <div class="wrapper">
+                        <a class="bg-cover" style="background-image: url(../../image/sample.gif);" onclick="goImg('../../image/sample.gif');"></a>
+                        <!--<div class="icon icon-remove"></div>-->
+                    </div>
+                    <div class="wrapper">
+                        <a class="bg-cover" style="background-image: url(../../image/dream_bg.png);" onclick="goImg('../../image/dream_bg.png');"></a>
+                        <!--<div class="icon icon-remove"></div>-->
+                    </div>
+                    <!--<div class="wrapper">-->
+                        <!--<a class="bg-cover" style="background-image: url(../../image/sample.gif);" onclick="openBigPic('../../image/sample.gif');"></a>-->
+                        <!--&lt;!&ndash;<div class="icon icon-remove"></div>&ndash;&gt;-->
+                    <!--</div>-->
+                    <!--<div class="wrapper">-->
+                        <!--<a class="bg-cover" style="background-image: url(../../image/dream_bg.png);" onclick="openBigPic('../../image/dream_bg.png');"></a>-->
+                        <!--&lt;!&ndash;<div class="icon icon-remove"></div>&ndash;&gt;-->
+                    <!--</div>-->
+                </div>
+            </div>
+        </li>
+    </ul>
+    <!--<div class="upload-img margin-top-10">-->
+        <!--<div class="wrapper">-->
+            <!--<div class="bg-cover" style="background-image: url(../../image/sample.gif);"></div>-->
+            <!--<div class="icon-cancel"></div>-->
+        <!--</div>-->
+        <!--<div class="wrapper">-->
+            <!--<div class="bg-cover" style="background-image: url(../../image/sample.gif);"></div>-->
+            <!--<div class="icon-cancel"></div>-->
+        <!--</div>-->
+        <!--<div class="wrapper">-->
+            <!--<div class="bg-cover" style="background-image: url(../../image/sample.gif);"></div>-->
+            <!--<div class="icon-cancel"></div>-->
+        <!--</div>-->
+    <!--</div>-->
+</div>
+<div class="btn-fixed">
+    <div class="btn btn-active">提交申请</div>
+</div>
+</div>
+
+
+<script type="text/javascript" src="../../script/jquery.js"></script>
+<script src="../../script/ht.js"></script>
+<script>
+    function goImg(imgUrl) {
+        $("body").openPic(imgUrl, function(){
+            alert("删除"+ imgUrl);
+        });
+    }
+
+</script>
+<!--<script>-->
+    <!--var scrollTop;-->
+
+    <!--function openBigPic(imgUrl) {-->
+        <!--scrollTop = $(this).scrollTop();-->
+        <!--alert(scrollTop)-->
+        <!--var bigPicHtml = '<div class="pop-big-pic" >' +-->
+                <!--'<div class="pop-bg" onclick="closeBigPic();"></div>' +-->
+                <!--'<img class="absolute-core width-full" src="' + imgUrl + '" onclick="closeBigPic();"/>' +-->
+                 <!--'<div class="icon icon-delete absolute-center" onclick="alert(1);"></div>' +-->
+                <!--'</div>';-->
+        <!--$("body").append(bigPicHtml);-->
+        <!--if ($('.pop-big-pic').css('display') != 'none') return;-->
+        <!--$('.pop-big-pic').fadeIn(200);-->
+        <!--$("#cont").addClass('pop-under');-->
+
+        <!--//监听返回。进行地址选择时，点击返回，仅关闭地址选择-->
+        <!--pushHistory();-->
+        <!--window.addEventListener("popstate", function(e) {-->
+            <!--if ($(".pop-big-pic").css("display") == 'block') {-->
+                <!--closeBigPic();-->
+            <!--}-->
+        <!--}, false);-->
+    <!--}-->
+
+    <!--function closeBigPic() {-->
+        <!--$('.pop-big-pic').fadeOut(100);-->
+        <!--$("#cont").removeClass('pop-under');-->
+        <!--$("body").scrollTop(scrollTop);-->
+        <!--setTimeout(function () {-->
+            <!--$('.pop-big-pic').remove();-->
+        <!--}, 100);-->
+    <!--}-->
+
+    <!--//监听返回。-->
+    <!--function pushHistory() {-->
+        <!--var state = {-->
+            <!--title: "title",-->
+            <!--url: "#"-->
+        <!--};-->
+        <!--window.history.pushState(state, "title", "#");-->
+    <!--}-->
+<!--</script>-->
+</body>
+</html>

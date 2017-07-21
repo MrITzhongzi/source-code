@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta content="telephone=no" name="format-detection"/>
+    <title>方形大转盘</title>
+    <script>!function (e, i) {
+        var t = e.documentElement, n = navigator.userAgent.match(/iphone|ipod|ipad/gi), a = n ? Math.min(i.devicePixelRatio, 3) : 1, m = "orientationchange"in window ? "orientationchange" : "resize";
+        t.dataset.dpr = a;
+        for (var d, l, c = !1, o = e.getElementsByTagName("meta"), r = 0; r < o.length; r++)l = o[r], "viewport" == l.name && (c = !0, d = l);
+        if (c)d.content = "width=device-width,initial-scale=1.0,maximum-scale=1.0, minimum-scale=1.0,user-scalable=no"; else {
+            var o = e.createElement("meta");
+            o.name = "viewport", o.content = "width=device-width,initial-scale=1.0,maximum-scale=1.0, minimum-scale=1.0,user-scalable=no", t.firstElementChild.appendChild(o)
+        }
+        var s = function () {
+            var e = t.clientWidth;
+            e / a > 640 && (e = 640 * a), window.remScale = e / 640, t.style.fontSize = 200 * (e / 640) + "px"
+        };
+        s(), e.addEventListener && i.addEventListener(m, s, !1)
+    }(document, window);</script>
+    <link rel="stylesheet" href="prize.css"/>
+</head>
+<body>
+<div id="db-content">
+    <img class="banner" src="img/banner.png">
+
+    <div class="info">
+        <div class="needCredits">今日剩余1次免费机会</div>
+    </div>
+    <div class="main">
+        <div class="turntable">
+            <div class="box first" data-index="1" data-id="1" data-appitemid="100" data-itemid="100" data-type="object">
+                <img src="img/geoRY1460550061033.png">
+                <p>实物</p>
+            </div>
+            <div class="box second" data-index="2" data-id="2" data-appitemid="100" data-itemid="100"
+                 data-type="coupon">
+                <img src="img/dBntN1460550061148.png">
+                <p>优惠券</p>
+            </div>
+            <div class="box third" data-index="3" data-id="3" data-appitemid="100" data-itemid="100"
+                 data-type="virtual">
+                <img src="img/QJ2um1460550061148.png">
+                <p>虚拟商品</p>
+            </div>
+            <div class="box fourth" data-index="8" data-id="4" data-appitemid="100" data-itemid="100"
+                 data-type="phonebill">
+                <img src="img/f2bul1460550061022.png">
+                <p>话费</p>
+            </div>
+            <div class="start fifth"></div>
+            <div class="box sixth" data-index="4" data-id="5" data-appitemid="100" data-itemid="100" data-type="again">
+                <img src="img/HSceZ1460550061158.png">
+                <p>再来一次</p>
+            </div>
+            <div class="box seventh" data-index="7" data-id="6" data-appitemid="100" data-itemid="100"
+                 data-type="thanks">
+                <img src="img/fMX9a1460550061033.png">
+                <p>谢谢参与</p>
+            </div>
+            <div class="box eighth" data-index="6" data-id="7" data-appitemid="100" data-itemid="100" data-type="qb">
+                <img src="img/oCafq1460550061174.png">
+                <p>Q币</p>
+            </div>
+            <div class="box ninth" data-index="5" data-id="8" data-appitemid="100" data-itemid="100" data-type="alipay">
+                <img src="img/clk8Z1460550061167.png">
+                <p>支付宝</p>
+            </div>
+        </div>
+    </div>
+    <div class="rules">活动规则</div>
+    <div class="description">
+        <h4>活动规则</h4>
+        <ul>
+            <li>
+                当您参加积分抽奖时，兑换不同时间段内的一个或多个抽 奖编号，多个抽奖编号包括起号、止号以及中间连续编号为您所兑换的抽奖编号。当抽奖结束时，采用随机或人工抽取的形式抽取抽奖编号作为中奖标识。
+            </li>
+            <li>
+                每期抽奖编号都从某个固定抽奖编号数开始，您兑换的抽奖编号可能会出现抽奖编号相同的情况，但是抽奖期日不同。您兑换到的抽奖编号仅代表您在本期对应奖品编号中的序列。
+            </li>
+            <li>
+                每期抽奖活动只限于
+                <a href="">该期该奖品</a>
+                兑换到该抽奖编号的用户，不同期或不同奖品的相同编号的用户不在中奖范围内。期对应奖品编号中的序列.
+            </li>
+        </ul>
+    </div>
+    <div class="rules">奖品说明</div>
+    <div class="gift-description">
+        <ul>
+            <li>
+                <h2>惊喜礼品</h2>
+                <p>随机赠送一份实物奖品，非常超值。</p>
+            </li>
+            <li>
+                <h2>5Q币</h2>
+                <p>中奖后输入领奖QQ号，系统自动充值至该支付宝账户。</p>
+            </li>
+            <li>
+                <h2>惊喜礼品</h2>
+                <p>随机赠送一份实物奖品，非常超值。</p>
+            </li>
+            <li>
+                <h2>惊喜礼品</h2>
+                <p>随机赠送一份实物奖品，非常超值。</p>
+            </li>
+        </ul>
+    </div>
+    <div class="description">
+        <div class="probability-rules">
+            <header>
+                其他说明 <i></i>
+            </header>
+            <section>
+                <ol>
+                    <li>
+                        惊喜奖品中奖概率约为10%，5Q币中奖概率为1%，3元支付宝中奖概率为3%，再来一次中奖概率为25%，京东20元优惠券中奖概率为10%，话费1元中奖概率为3%，滴滴10元红包中奖概率为15%。
+                    </li>
+                    <li>综合中奖概率为64%</li>
+                </ol>
+            </section>
+        </div>
+    </div>
+</div>
+<div class="result-modal">
+    <div class="dialog">
+        <section><i class="face"></i>
+
+            <div class="result-info">
+                <p></p>
+                <span></span>
+            </div>
+        </section>
+        <p class="block-help">也可到首页"兑换记录"领奖，24小时内有效！</p>
+        <footer>
+            <a class="cancel" href=""></a>
+            <a class="sure" href=""></a>
+        </footer>
+    </div>
+</div>
+<script src="prize.js"></script>
+</body>
+</html>

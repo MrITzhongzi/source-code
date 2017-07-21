@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <title>文章列表</title>
+    <link rel="stylesheet" href="../../css/base.css"/>
+</head>
+<body>
+<div class="fixed-top">
+    <header>
+        <h1 class="text-center">
+            <div class="buy horizontal">
+                <div>视频</div>
+                <div class="active">文章</div>
+            </div>
+        </h1>
+    </header>
+    <div class="tab-go">
+        <div class="tab horizontal scroll">
+            <div class="flex-1 active">头条</div>
+            <div class="flex-1">房产</div>
+            <div class="flex-1">美食</div>
+            <div class="flex-1">教育</div>
+            <div class="flex-1">汽车</div>
+            <div class="flex-1">健康</div>
+            <div class="flex-1">美图</div>
+            <div class="flex-1">视频</div>
+            <div class="flex-1">房产</div>
+            <div class="flex-1">美食</div>
+            <div class="flex-1">教育</div>
+            <div class="flex-1">汽车</div>
+            <div class="flex-1">健康</div>
+            <div class="flex-1">美图</div>
+            <div class="flex-1">视频</div>
+        </div>
+        <div class="icon-go btn-active2"></div>
+    </div>
+</div>
+<div class="padding-bottom-51" style="padding-top: 85px;">
+    <ul class="news tap">
+        <li class="one">
+            <div class="wrapper">
+                <div class="title">澎湃新闻澎湃新闻澎湃新闻</div>
+                <div class="img bg-cover" style="background-image: url(../../image/sample.gif)"></div>
+                <div class="time">澎湃新闻　58评论　10分钟前</div>
+            </div>
+        </li>
+        <li>
+            <div class="wrapper">
+                <div class="horizontal">
+                    <div class="flex-1 title with-img">山海回东文化节，于2016年12月21日在文化约惠七夕，爱要有礼</div>
+                    <div class="img bg-cover" style="background-image: url(../../image/sample.gif);"></div>
+                </div>
+                <div class="time">澎湃新闻　58评论　11-20 23:15</div>
+            </div>
+        </li>
+        <li class="three">
+            <div class="wrapper">
+                <div class="title">澎湃新闻澎湃新闻澎湃新闻</div>
+                <div class="img-wrap">
+                    <div class="wrap">
+                        <div class="img bg-cover" style="background-image: url(../../image/sample.gif)"></div>
+                    </div>
+                    <div class="wrap">
+                        <div class="img bg-cover" style="background-image: url(../../image/sample.gif)"></div>
+                    </div>
+                    <div class="wrap">
+                        <div class="img bg-cover" style="background-image: url(../../image/sample.gif)"></div>
+                    </div>
+                </div>
+                <div class="time">央视新闻　2000评论　刚刚</div>
+            </div>
+        </li>
+        <li>
+            <div class="wrapper">
+                <div class="title">澎湃新闻澎湃新闻澎湃新闻</div>
+                <div class="time">澎湃新闻　58评论　10分钟前</div>
+            </div>
+        </li>
+    </ul>
+</div>
+
+<footer>
+    <ul class="horizontal">
+        <li class="flex-1 active">
+            <span class="icon-home"></span>
+            <div>首页</div>
+        </li>
+        <li class="flex-1">
+            <span class="icon-union"></span>
+            <div>联盟</div>
+        </li>
+        <li class="flex-1" >
+            <span class="icon-find"></span>
+            <div>发现</div>
+        </li>
+        <li class="flex-1" >
+            <span class="icon-member"></span>
+            <div>会员</div>
+        </li>
+        <li class="flex-1" >
+            <span class="icon-mine"></span>
+            <div>我的</div>
+        </li>
+    </ul>
+</footer>
+<script type="text/javascript" src="../../script/jquery.js"></script>
+<script type="text/javascript">
+    $(".icon-go").click(function(){
+        var t = $(".tab").scrollLeft();
+        $('.tab').animate(
+                {'scrollLeft':t+220},
+                {'easing': 'swing'}
+        );
+    });
+</script>
+</body>
+</html>

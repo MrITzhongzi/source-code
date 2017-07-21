@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <title></title>
+    <link rel="stylesheet" href="../../css/base.css"/>
+</head>
+<body>
+<div id="cont">
+    <div class="width-full" onclick="goPop();">打开</div>
+<div class="pop">
+    <div class="pop-bg" onclick="closePop();"></div>
+    <div class="shop animated fast fadeInUpBig">
+        <div class="select-type padding-bottom-51">
+            <div class="goods horizontal">
+                <div class="bg-cover" style="background-image: url(../../image/sample.gif);"></div>
+                <div class="flex-1">
+                    <div class="yahei color-red">¥50-90</div>
+                    <div class="type">请选择分类</div>
+                </div>
+                <div class="icon-cancel2"onclick="closePop();"></div>
+            </div>
+            <div class="contain1" style="overflow-y: auto;">
+                <div class="choose">
+                    <div>请选择分类</div>
+                    <div class="tip">
+                        <div class="active">90g</div><div class="color-999">90g</div><div>980g</div><div>90g</div>
+                    </div>
+                </div>
+                <ul class="ul-one">
+                    <li class="buy-amount">
+                        <div class="horizontal border-top border-bottom">
+                            <div class="name">购买数量</div>
+                            <a class="wrap flex-1 text-right">
+                                <span class="count btn-active2">-</span>
+                                <span class="color-red">1</span>
+                                <span class="count btn-active2">+</span>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="btn-two horizontal" style="position: absolute">
+            <a class="btn btn-active" style="background-color: #ef8300">加入购物车</a>
+            <a class="btn btn-active">立即购买</a>
+        </div>
+    </div>
+</div>
+</div>
+<script type="text/javascript" src="../../script/jquery.js"></script>
+<script type="text/javascript">
+    var scrollTop;
+    //弹出控制
+    function goPop() {
+        scrollTop = $(this).scrollTop();
+        $(".pop").fadeIn(200);
+        $("#cont").addClass('pop-under');
+        $(".btn-two").css("bottom", "0")
+    }
+    function closePop() {
+        $(".pop").fadeOut(200);
+        $("#cont").removeClass('pop-under');
+        $("body").scrollTop(scrollTop);
+    }
+    $(function() {
+        $(".pop .contain1").height($(window).height()*0.75 - 192);
+        $(".select-type .tip div").each(function () {
+            $(this).click(function () {
+                $(".select-type .tip div").removeClass("active");
+                $(this).addClass("active");
+            });
+        })
+    })
+</script>
+</body>
+</html>

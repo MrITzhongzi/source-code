@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <title>筛选</title>
+    <link rel="stylesheet" href="../../css/base.css"/>
+</head>
+<body>
+<div class="pop-filter">
+    <div class="content-top-10"></div>
+    <div class="padding-bottom-61">
+        <div class="div-title"><div class="border-bottom">分类</div></div>
+        <div class="type-block">
+            <div>饼干</div><div>蛋黄派</div><div>饼干</div>
+        </div>
+        <div class="div-title"><div class="border-top" style="padding-top: 5px;">价格区间</div></div>
+        <div class="price-range horizontal">
+            <div class="flex-1">
+                <input class="width-full" placeholder="最低价格"/>
+            </div>
+            <div class="middle">-</div>
+            <div class="flex-1">
+                <input class="width-full" placeholder="最高价格"/>
+            </div>
+        </div>
+        <div class="type-block padding-top-0">
+            <div>0-69</div><div>69-99</div>
+        </div>
+    </div>
+
+    <div class="btn-fixed">
+        <div class="btn btn-active">确认</div>
+    </div>
+
+</div>
+<script type="text/javascript" src="../../script/jquery.js"></script>
+<script type="text/javascript">
+    $(function() {
+        $(".type-block>div").each(function () {
+            $(this).click(function () {
+                $(".type-block>div").removeClass("active");
+                $(this).addClass("active");
+            });
+        })
+    })
+</script>
+</body>
+</html>

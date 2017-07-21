@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <title>一元夺宝</title>
+    <link rel="stylesheet" href="../../css/base.css"/>
+    <link rel="stylesheet" href="../../css/lib/swiper-3.3.1.min.css">
+    <style>
+        .bar-top {
+            padding-top: 66.67%;;
+        }
+        .shop-top {
+            width: 100%;
+            padding-top: 62%;
+            background-position: center;
+            background-size: cover;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+
+<div class="pop">
+    <div class="pop-bg"></div>
+    <div class="bg-cover"></div>
+    <div class="pop-join animated fast fadeInUpBig">
+        <div class="title text-center">
+            选择参与人数
+            <div class="icon-cancel2"></div>
+        </div>
+        <div class="contain">
+            <div class="count-wrap text-center">
+                <span class="count btn-active2 left">-</span>
+                <span>1</span>
+                <span class="count btn-active2 right">+</span>
+            </div>
+            <div class="num-wrap">
+                <div class="title size-12 color-red">100积分/人次</div>
+                <div class="wrap">
+                    <div>5</div>
+                    <div class="active">10</div>
+                    <div class="color-999">20</div>
+                    <div>50</div>
+                </div>
+                <div class="tip">
+                    <p>提示：此商品同一用户每单最多可参与100份，</p>
+                    <p>请在5分钟内完成支付，超时自动取消。</p>
+                    <p>抢宝有风险，参与需谨慎。</p>
+                </div>
+            </div>
+        </div>
+        <a class="btn btn-active">支付200积分</a>
+    </div>
+</div>
+
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <div class="shop-top" style="background-image: url('../../image/code.png')"></div>
+        </div>
+        <div class="swiper-slide">
+            <div class="shop-top" style="background-image: url('../../image/code.png')"></div>
+        </div>
+        <div class="swiper-slide">
+            <div class="shop-top" style="background-image: url('../../image/code.png')"></div>
+        </div>
+    </div>
+    <div class="swiper-pagination"></div>
+</div>
+<div class="padding-bottom-61">
+
+    <!--<div class="bar-top bg-cover" style="background-image: url(../../image/sample.gif)"></div>-->
+    <div class="goods-overview">
+        <div class="title">小馋猫小馋猫小馋猫小馋猫小馋猫小馋猫小馋猫小馋猫小馋猫小馋猫小馋猫</div>
+        <div class="detail horizontal">
+            <div class="flex-1" style="line-height: 36px;">
+                总需999人/剩余<span class="color-red">100</span>人
+            </div>
+            <span class="color-red yahei">¥</span>
+            <span class="money color-red yahei">280.</span>
+            <span class="color-red yahei" style="position: relative;left: -5px;">99</span>
+            <span>100积分</span>
+        </div>
+    </div>
+    <article class="margin-top-10 one-yuan-article">
+        <p class="p-title">商品详情</p>
+        商品介绍商品介绍商品介绍商品介绍
+        <p class="p-title">规则说明</p>
+        商品介绍商品介绍商品介绍商品介绍
+        <img class="width-full" src="../../image/sample.gif"/>
+        商品介绍商品介绍商品介绍商品介绍商品介绍
+    </article>
+</div>
+<div class="btn-fixed">
+    <div class="btn btn-active">立即抢购</div>
+</div>
+</body>
+<script src="../../script/swiper-3.3.1.min.js"></script>
+<script>
+    var mySwiper = new Swiper('.swiper-container', {
+        direction: 'horizontal',
+        loop: true,
+        pagination: '.swiper-pagination'
+    })
+</script>
+</html>

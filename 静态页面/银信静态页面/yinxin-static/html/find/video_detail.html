@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <title></title>
+    <link rel="stylesheet" href="../../css/base.css"/>
+    <style>
+        html, body {
+            background-color: #fff;;
+        }
+    </style>
+</head>
+<body>
+<div class="fixed-top">
+    <div class="bg-cover bar-top" style="background-image: url(../../image/sample.gif);"></div>
+    <div class="video-overview border-bottom">
+        <div class="title">做售货员时最怕</div>
+        <div class="horizontal desc">
+            <div class="flex-1">20000次播放</div>
+            <div class="icon-good"></div>
+        </div>
+    </div>
+</div>
+<div id="comment-wrap" class="padding-bottom-51">
+    <ul class="ul-comment">
+        <li>
+            <div class="horizontal">
+                <div class="bg-cover" style="background-image: url(../../image/sample.gif);"></div>
+                <div class="flex-1">
+                    <div class="horizontal title">
+                        <div class="flex-1 blue">狗头军最高指挥官</div>
+                        <div><span class="icon-good"></span>1956</div>
+                    </div>
+                    <div class="detail">睿智的大国领袖</div>
+                    <div class="time">11-15 21:00 ·　<span class="btn-active2">回复</span></div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="horizontal">
+                <div class="bg-cover" style="background-image: url(../../image/sample.gif);"></div>
+                <div class="flex-1">
+                    <div class="horizontal title">
+                        <div class="flex-1 blue">狗头军最高指挥官</div>
+                        <div><span class="icon-good"></span>1956</div>
+                    </div>
+                    <div class="detail">回复<span class="blue">手机用户18996999874</span>：睿智的大国领袖</div>
+                    <div class="time">11-15 21:00 ·　<span class="btn-active2">回复</span></div>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+<div class="comment-bar horizontal">
+    <div class="flex-1">
+        <input placeholder="写评论"/>
+    </div>
+    <div class="icon icon-message"></div>
+    <div class="icon icon-heart"></div>
+    <!--<div class="icon icon-heart2"></div>-->
+    <div class="icon icon-forword"></div>
+</div>
+<script type="text/javascript" src="../../script/jquery.js"></script>
+<script type="text/javascript">
+    $(function() {
+        $("#comment-wrap").css("padding-top", $(".fixed-top").height());
+    })
+</script>
+</body>
+</html>

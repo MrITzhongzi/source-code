@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <title>商品详情</title>
+    <link rel="stylesheet" href="../../css/base.css"/>
+    <style>
+        .bar-top {
+            padding-top: 100%;;
+        }
+
+        /*.m-sidebar {position: fixed;top: 0;right: 0;background: #000;z-index: 2000;	width: 35px;height: 100%;font-size: 12px;color: #fff;}*/
+        /*.m-sidebar .cart {color: #fff;text-align: center;line-height: 20px;padding: 200px 0 0 0px;top:100px;}*/
+        /*.m-sidebar .cart span {	display: block;	width: 20px;margin: 0 auto;}*/
+        /*.m-sidebar .cart i {width: 35px;height: 35px;display: block;}*/
+        /*.u-flyer {display: block;width: 50px;height: 50px;border-radius: 50px;position: fixed;z-index: 9999;}*/
+
+    </style>
+</head>
+<body>
+
+<!--<div class="m-sidebar">-->
+    <!--<div class="cart">-->
+        <!--<i id="end"></i>-->
+        <!--<span>购物车</span>-->
+    <!--</div>-->
+<!--</div>-->
+
+<!--<header>-->
+    <!--<div class="left">-->
+        <!--<a class="icon icon-back"></a>商品详情-->
+    <!--</div>-->
+    <!--<div class="right">-->
+        <!--<a class="icon icon-forword"></a>-->
+    <!--</div>-->
+<!--</header>-->
+<div class="padding-bottom-51">
+    <div class="bar-top bg-cover" style="background-image: url(../../image/sample.gif)"></div>
+    <div class="goods-overview">
+        <div class="title">小馋猫小馋猫小馋猫小馋猫小馋猫小馋猫小馋猫小馋猫小馋猫小馋猫小馋猫</div>
+        <div class="detail horizontal border-no">
+            <div class="flex-1">
+                <span class="color-red yahei">¥</span>
+                <span class="money color-red yahei">280.</span>
+                <span class="color-red yahei" style="position: relative;left: -5px;">99</span>
+            </div>
+        </div>
+        <div class="detail horizontal" style="padding: 2px 0 8px;">
+            <div class="flex-1"><span class="through yahei">¥300.00</span></div>
+            <div class="flex-1">快递费：<span class="yahei">10元</span></div>
+            <div>成都</div>
+        </div>
+    </div>
+    <div class="ticket-wrap tap horizontal">
+        <div class="icon-ticket2 color-red"></div>
+        <div class="flex-1">20元店铺优惠券</div>
+        <div class="icon-go"></div>
+    </div>
+    <ul class="ul-one margin-top-10 tap">
+        <li>
+            <div class="horizontal">
+                <div class="flex-1">选择分类</div>
+                <div class="icon icon-go"></div>
+            </div>
+        </li>
+    </ul>
+
+    <div class="goods-shop margin-top-10">
+        <div class="horizontal shop-title">
+            <div class="bg-cover" style="background-image: url(../../image/sample.gif)"></div>
+            <div class="flex-1 ellipsis">小馋猫美味</div>
+        </div>
+        <div class="shop-option">
+            <div class="left btn-active2"><span class="icon icon-phone"></span>联系客服</div>
+            <div class="right btn-active2"><span class="icon icon-shop"></span>进入店铺</div>
+        </div>
+    </div>
+
+    <!--<div class="show-detail">-->
+        <!--<div class="icon-go-up color-red"></div>-->
+        <!--<div class="wrap">-->
+            <!--<div class="absolute-center">继续上拉，查看图文详情</div>-->
+        <!--</div>-->
+    <!--</div>-->
+
+    <div class="div-title margin-top-10"><div class="border-bottom">商品介绍</div></div>
+    <article>
+        商品介绍商品介绍商品介绍商品介绍
+        <img class="width-full" src="../../image/sample.gif"/>
+        商品介绍商品介绍商品介绍商品介绍商品介绍
+    </article>
+</div>
+<div class="buy-btn horizontal">
+    <div class="option">
+        <div class="wrap btn-active2">
+            <div class="icon icon-shop"></div>店铺
+        </div>
+        <div class="wrap btn-active2">
+            <div class="icon icon-shopping"></div>购物车
+        </div>
+    </div>
+    <a class="flex-1 btn btn-active" id="goCart">加入购物车</a>
+    <a class="flex-1 btn btn-active">立即购买</a>
+</div>
+
+<script type="text/javascript" src="../../script/jquery.js"></script>
+<!--<script type="text/javascript" src="../../script/jquery.fly.min.js"></script>-->
+
+<script>
+    var isDetailShow = 0;
+    $(function () {
+        if( !!navigator.userAgent.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/) ) {
+            $("body").scrollTop(0);
+        }
+        if (($(".div-title").offset().top + 51 - $(window).height() <= $("body").scrollTop()) && isDetailShow == 0) {
+            isDetailShow = 1;
+            alert("调用加载详情方法")
+        }
+        $(window).scroll(function () {
+            if (($(".div-title").offset().top + 51 - $(window).height() <= $("body").scrollTop()) && isDetailShow == 0) {
+                isDetailShow = 1;
+                alert("调用加载详情方法")
+            }
+        });
+    });
+</script>
+
+<!--<script>-->
+    <!--$('#goCart').on('click', addCart);-->
+    <!--function addCart(event) {-->
+        <!--var offset = $('#end').offset(), flyer = $('<img class="u-flyer" src="http://www.ui3g.com/ui3gimg/2015/img27ui/220554cf535f30cad[1].gif"/>');-->
+        <!--flyer.fly({-->
+            <!--start: {-->
+                <!--left: event.pageX,-->
+                <!--top: event.pageY-->
+            <!--},-->
+            <!--end: {-->
+                <!--left: offset.left,-->
+                <!--top: offset.top,-->
+                <!--width: 20,-->
+                <!--height: 20-->
+            <!--}-->
+        <!--});-->
+    <!--}-->
+<!--</script>-->
+</body>
+</html>

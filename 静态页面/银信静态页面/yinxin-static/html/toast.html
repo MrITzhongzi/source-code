@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <title>首页</title>
+    <link rel="stylesheet" href="../css/base.css"/>
+    <style>
+    </style>
+</head>
+<body>
+<div onclick="openLoading();">开始</div>
+<div onclick="closeLoading();">结束</div>
+<!--<div id="loadingToast" style="display:none;">-->
+    <!--<div class="weui-mask_transparent"></div>-->
+    <!--<div class="weui-toast">-->
+        <!--<i class="weui-loading weui-icon_toast"></i>-->
+        <!--<p class="weui-toast__content">数据加载中</p>-->
+    <!--</div>-->
+<!--</div>-->
+
+</body>
+<script src="../script/jquery.js"></script>
+<script src="../script/ht.js"></script>
+<script type="text/javascript">
+
+    function openLoading(){
+        var loadingHtml = '<div id="loadingToast" style="display:none;"><div class="weui-mask_transparent"></div><div class="weui-toast"><i class="weui-loading weui-icon_toast"></i><p class="weui-toast__content">数据加载中</p></div></div>';
+        $("body").append(loadingHtml);
+        if ($('#loadingToast').css('display') != 'none') return;
+        $('#loadingToast').fadeIn(100);
+    }
+    function closeLoading() {
+        $('#loadingToast').fadeOut(100);
+        setTimeout(function () {
+            $('#loadingToast').remove();
+        }, 1000);
+    }
+</script>
+</html>

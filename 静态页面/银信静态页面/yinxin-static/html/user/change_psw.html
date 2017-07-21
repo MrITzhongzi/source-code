@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <title>修改密码</title>
+    <link rel="stylesheet" href="../../css/base.css"/>
+</head>
+<body>
+    <div class="user-form">
+        <div class="wrap horizontal">
+            <div class="icon icon-unlock"></div>
+            <div class="flex-1">
+                <input placeholder="请输入旧密码"/>
+            </div>
+        </div>
+        <div class="wrap horizontal">
+            <div class="icon icon-lock"></div>
+            <div class="flex-1">
+                <input placeholder="请输入新密码"/>
+            </div>
+        </div>
+        <div class="wrap horizontal">
+            <div class="icon icon-lock"></div>
+            <div class="flex-1">
+                <input placeholder="请确认新密码"/>
+            </div>
+        </div>
+        <div class="wrap horizontal verify">
+            <div class="icon icon-eye"></div>
+            <div class="flex-1">
+                <input placeholder="验证码"/>
+            </div>
+            <!--未获取时去掉already-->
+            <div class="code already">获取验证码</div>
+        </div>
+    </div>
+    <div class="btn-wrap">
+        <a class="btn btn-active">确定</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <title></title>
+    <link rel="stylesheet" href="../../css/base.css"/>
+</head>
+<body>
+<div id="cont">
+    <a class="btn btn-active" onclick="goPop();">点击弹出</a>
+<div class="pop">
+    <div class="pop-bg" onclick="closePop();"></div>
+    <div class="pop-coupon animated fast fadeInUpBig">
+        <div class="title border-bottom">店铺优惠</div>
+        <div class="contain padding-bottom-61">
+            <ul class="ul-one">
+                <li>
+                    <div class="horizontal">
+                        <div class="flex-1">满300减100</div>
+                        <input class="aui-checkbox" type="radio" name="coupon"/>
+                    </div>
+                </li>
+                <li>
+                    <div class="horizontal">
+                        <div class="flex-1">满300减100</div>
+                        <input class="aui-checkbox" type="radio" name="coupon"/>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="btn-two horizontal" style="position: absolute">
+            <a class="btn btn-active" style="width: 100%;"  onclick="closePop();">完成</a>
+        </div>
+    </div>
+</div>
+</div>
+
+<script src="../../script/jquery.js"></script>
+<script type="text/javascript">
+    var scrollTop;
+    $(".pop .contain").height($(window).height()*0.75 - 100);
+    //弹出控制
+    function goPop() {
+        scrollTop = $(this).scrollTop();
+        $(".pop").fadeIn(200);
+        $("#cont").addClass('pop-under');
+    }
+    function closePop() {
+        $(".pop").fadeOut(200);
+        $("#cont").removeClass('pop-under');
+        $("body").scrollTop(scrollTop);
+    }
+</script>
+</body>
+</html>
