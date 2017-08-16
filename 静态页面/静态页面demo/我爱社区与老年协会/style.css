@@ -1,0 +1,43 @@
+html,body {
+  height: 100%;
+}
+body {
+  /* background: linear-gradient(to bottom,#b7becb,#2b5d94); */
+  background: #fff;
+}
+header {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+section {
+  background: #fff;
+  width: 98%;
+  margin: 10px auto;
+  border-radius: 5px; 
+  box-sizing: border-box;
+  padding: 6px;
+}
+section header {
+  font-size: 19px;
+  font-weight: normal;
+}
+
+section aside {
+  text-align: center;
+}
+
+.erweima:nth-child(1) {
+  width: 40%;
+}
+.erweima:nth-child(2){
+  width: 37%;
+}
+
+.weixinpage {
+  width: 90%;
+  margin-top: 10px;
+}
+.info {
+  width: 90%;
+}
