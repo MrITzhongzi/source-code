@@ -1,0 +1,144 @@
+@import "../common/reset.css";
+@import "../common/com_style.css";
+body {
+  margin: 0;
+  background-color: #eeeeee;
+}
+body .home-head {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  height: 50px;
+  background-color: rgba(255, 0, 0, 0);
+}
+body .home-head .community {
+  float: left;
+  margin-top: 25px;
+  margin-left: 10px;
+  color: white;
+}
+body .home-head .community a svg {
+  width: 19px;
+  height: 19px;
+  margin-right: 3px;
+}
+body .home-head .community a span {
+  font-size: 16px;
+  color: white;
+}
+body .home-head .message {
+  float: right;
+  margin-right: 10px;
+  margin-top: 25px;
+}
+body .home-head .message svg {
+  width: 22px;
+  height: 22px;
+}
+body .head-img img {
+  vertical-align: bottom;
+  width: 100%;
+}
+body .head-img .swiper-container,
+body .head-img .swiper-wrapper {
+  height: 225px;
+}
+body .head-img .swiper-container .swiper-slide,
+body .head-img .swiper-wrapper .swiper-slide {
+  height: 100%;
+}
+body .head-img .swiper-container .img,
+body .head-img .swiper-wrapper .img {
+  height: 100%;
+}
+body nav {
+  padding-top: 25px;
+  background-color: #fff;
+}
+body nav .nav-list {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+body nav .nav-list li {
+  width: 20%;
+  box-sizing: border-box;
+  text-align: center;
+}
+body nav .nav-list li a svg {
+  width: 40px;
+  height: 40px;
+}
+body nav .nav-list li a p {
+  margin-top: 10px;
+  font-size: 12px;
+}
+body nav .nav-foot {
+  border-top: 1px solid #ebebeb;
+  margin-top: 25px;
+  overflow: hidden;
+  height: 45px;
+  line-height: 45px;
+}
+body nav .nav-foot svg {
+  width: 48px;
+  float: left;
+  margin-top: 14px;
+  margin-left: 10px;
+}
+body nav .nav-foot .advertising {
+  float: left;
+  font-size: 13px;
+  margin-left: 8px;
+  width: 60%;
+  overflow: hidden;
+  white-space: normal;
+  text-overflow: ellipsis;
+}
+body nav .nav-foot span {
+  display: block;
+  float: right;
+  width: 40px;
+  height: 23px;
+  background-color: #ea5513;
+  border-radius: 12px;
+  font-size: 12px;
+  line-height: 23px;
+  margin-top: 8px;
+  text-align: center;
+  color: white;
+  margin-right: 16px;
+}
+body .tip {
+  color: #999999;
+  font-size: 12px;
+  padding: 25px 0 25px 0;
+  text-align: center;
+}
+body .pub-footer {
+  background-color: #ffffff;
+  height: 49px;
+}
+body .pub-footer ul {
+  text-align: center;
+  display: flex;
+}
+body .pub-footer ul li {
+  width: 25%;
+  box-sizing: border-box;
+  padding: 7px 0 5px 0;
+}
+body .pub-footer ul li a {
+  display: block;
+}
+body .pub-footer ul li a svg {
+  width: 22px;
+  height: 22px;
+}
+body .pub-footer ul li a p {
+  font-size: 10px;
+  color: #666666;
+}

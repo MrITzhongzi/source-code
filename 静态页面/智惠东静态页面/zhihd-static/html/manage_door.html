@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>门禁管理</title>
+    <link rel="stylesheet" href="../style/manage_door/manage_door.css">
+</head>
+<body>
+<header class="pub-header">
+    <svg class="icon" aria-hidden="true">
+        <use xlink:href="#icon-caise-zuojiantou"></use>
+    </svg>
+    <h4>门禁管理</h4>
+    <a href="javascript:;" class="head-right">钥匙申请</a>
+</header>
+<section class="auto-open">
+    <svg class="icon" aria-hidden="true">
+        <use xlink:href="#icon-zidongkaimen"></use>
+    </svg>
+    <span>自动开门</span>
+    <section class="switch">
+        <input type="checkbox" checked="true">
+        <a class="replace-input"></a>
+    </section>
+</section>
+<section class="shequtongzhi">
+    <header>
+        <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-menjinguanli"></use>
+        </svg>
+        <section class="title">
+            <h6>海滨阁2号楼3单元</h6>
+            <time>有效期：2037-03-09 10:07:20</time>
+        </section>
+    </header>
+    <footer>
+        <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-fenxiang"></use>
+        </svg>
+        <a href="#">分享临时钥匙</a>
+    </footer>
+</section>
+<section class="shequtongzhi">
+    <header>
+        <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-menjinguanli"></use>
+        </svg>
+        <section class="title">
+            <h6>海滨阁2号楼3单元</h6>
+            <time>有效期：2037-03-09 10:07:20</time>
+        </section>
+    </header>
+    <footer>
+        <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-fenxiang"></use>
+        </svg>
+        <a href="#">分享临时钥匙</a>
+    </footer>
+</section><section class="shequtongzhi">
+    <header>
+        <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-menjinguanli"></use>
+        </svg>
+        <section class="title">
+            <h6>海滨阁2号楼3单元</h6>
+            <time>有效期：2037-03-09 10:07:20</time>
+        </section>
+    </header>
+    <footer>
+        <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-fenxiang"></use>
+        </svg>
+        <a href="#">分享临时钥匙</a>
+    </footer>
+</section><section class="shequtongzhi">
+    <header>
+        <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-menjinguanli"></use>
+        </svg>
+        <section class="title">
+            <h6>海滨阁2号楼3单元</h6>
+            <time>有效期：2037-03-09 10:07:20</time>
+        </section>
+    </header>
+    <footer>
+        <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-fenxiang"></use>
+        </svg>
+        <a href="#">分享临时钥匙</a>
+    </footer>
+</section>
+<footer class="manage-foot">
+    <button>生成桌面钥匙</button>
+</footer>
+</body>
+<script src="../lib/iconfont.js"></script>
+<script src="../script/utils/pub_function.js"></script>
+<script>
+    //自动开门点击事件
+    var switchEle = document.querySelector('.switch')
+    var checkboxVal = switchEle.querySelector('input')
+    var aElement = switchEle.querySelector('.replace-input')
+    var swichOnCss = {
+        backgroundColor: "#3cb034"
+    },swichOffCss = {
+        backgroundColor: "#cccccc"
+    },checkboxOnCss = {
+        left: "0px"
+    },checkboxOffCss = {
+        left: "21px"
+    }
+
+    aElement.onclick = function (e) {
+        e.preventDefault()
+        checkboxVal.checked = !checkboxVal.checked
+        if(checkboxVal.checked){
+            utils.setCss(switchEle,swichOffCss)
+            utils.setCss(checkboxVal,checkboxOffCss)
+        }else {
+            utils.setCss(switchEle,swichOnCss)
+            utils.setCss(checkboxVal,checkboxOnCss)
+        }
+    }
+    checkboxVal.onclick = function (e) {
+        e.preventDefault()
+    }
+</script>
+</html>

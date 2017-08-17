@@ -1,0 +1,95 @@
+@import "../common/reset.css";
+html {
+  height: 100%;
+}
+html body {
+  height: 100%;
+  margin: 0;
+  background-color: #fff;
+}
+html body .head-img {
+  position: relative;
+}
+html body .head-img img {
+  width: 100%;
+}
+html body .head-img a {
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  margin-left: -18px;
+  font-size: 18px;
+  color: white;
+  text-decoration: none;
+}
+html body .account {
+  margin-top: 30px ;
+}
+html body .account section {
+  border-bottom: 1px solid #ccc;
+  width: 80%;
+  margin: 20px auto 0;
+  padding-bottom: 10px;
+}
+html body .account section input {
+  border: none;
+  outline: none;
+  background-color: #ffffff;
+  font-size: 15px;
+}
+html body .account section:nth-child(2) input {
+  width: 50%;
+}
+html body .account section:nth-child(2) .get-veri-code {
+  text-decoration: none;
+  color: #26a1f7;
+  float: right;
+}
+html body .account section:nth-child(2) .disabled {
+  color: #cccccc;
+}
+html body .verification {
+  margin-top: 30px;
+}
+html body .verification a {
+  width: 80%;
+  height: 44px;
+  border-radius: 22px;
+  display: block;
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  margin: 0 auto;
+  line-height: 44px;
+}
+html body .verification .verifi-tel {
+  background: #0096ff;
+}
+html body .verification .verifi-wx {
+  margin-top: 20px;
+  background-color: #3cb034;
+}
+html body .verification .verifi-wx svg {
+  background-color: #fff;
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  border-radius: 50%;
+}
+html body footer {
+  text-align: center;
+  margin-top: 95px;
+  font-size: 12px;
+}
+html body footer a {
+  text-decoration: none;
+  color: #0096ff;
+}
+@media screen and (max-width: 374px) {
+  html body .verification {
+    margin-top: 25px;
+  }
+  html body footer {
+    margin-top: 53px;
+  }
+}
