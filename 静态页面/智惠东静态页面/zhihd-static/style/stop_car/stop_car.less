@@ -1,0 +1,57 @@
+@import "../common/reset.css";
+@import "../common/com_style.css";
+
+body {
+  background-color: #eeeeee;
+  .car_header {
+    background-color: transparent;
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+    h4{
+      color: white;
+    }
+    span {
+      float: right;
+      color: white;
+      margin-right: 10px;
+    }
+  }
+  nav {
+    height: 190px;
+    background: url("../../imgs/stop_car/tingchejiaofei_bg.png")center / 100% 190px no-repeat;
+    position: relative;
+    margin-bottom: 50px;
+    .nav-con {
+      width: 90%;
+      height: 115px;
+      position: absolute;
+      bottom: -39px;
+      left: 5%;
+      background-color: #fff;
+      border-radius: 5px;
+      display: flex;
+      box-sizing: border-box;
+      padding: 10px;
+      section{
+        width: 50%;
+        height: 100%;
+        text-align: center;
+        svg{
+          width: 45px;
+          height: 45px;
+        }
+        p{
+          font-size: 15px;
+          margin-top: 11px;
+        }
+      }
+      .left{
+        border-right: 1px solid #999999;
+      }
+      .right{
+
+      }
+    }
+  }
+}

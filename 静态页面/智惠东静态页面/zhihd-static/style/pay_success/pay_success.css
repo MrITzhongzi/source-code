@@ -1,8 +1,24 @@
 @import "../common/reset.css";
 @import "../common/com_style.css";
 body {
-  background-color: #eeeeee;
-  margin: 0;
+  background-color: #fff;
+}
+body .success {
+  margin-top: 45px;
+  text-align: center;
+}
+body .success svg {
+  width: 80%;
+  height: 80%;
+}
+body .success h4 {
+  font-size: 18px;
+  margin-top: 15px;
+}
+body .success p {
+  color: #999999;
+  font-size: 13px;
+  margin-top: 8px;
 }
 body footer {
   text-align: center;

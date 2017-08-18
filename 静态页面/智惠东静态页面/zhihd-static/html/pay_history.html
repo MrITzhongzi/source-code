@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>缴费记录</title>
+    <link rel="stylesheet" href="../style/pay_history/pay_history.css">
+</head>
+<body>
+<header class="pub-header">
+    <svg class="icon" aria-hidden="true">
+        <use xlink:href="#icon-caise-zuojiantou"></use>
+    </svg>
+    <h4>缴费记录</h4>
+</header>
+<nav id="nav-list"></nav>
+<section id="container">
+    <!--这里是渲染nav对应的内容-->
+    <section index="0" data-sign="quick-tab" style="flex-grow: 1; display: none;">
+        <section class="history">
+            <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-linshitingchejiaofei"></use>
+            </svg>
+            <section class="tab-content">
+                <h4>粤L1564</h4>
+                <p>2017-08-02 13:40</p>
+            </section>
+            <span class="number">
+                -150.00
+            </span>
+        </section>
+        <section class="history">
+            <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-linshitingchejiaofei"></use>
+            </svg>
+            <section class="tab-content">
+                <h4>粤L1564</h4>
+                <p>2017-08-02 13:40</p>
+            </section>
+            <span class="number">
+                -150.00
+            </span>
+        </section>
+        <section class="history">
+            <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-linshitingchejiaofei"></use>
+            </svg>
+            <section class="tab-content">
+                <h4>粤L1564</h4>
+                <p>2017-08-02 13:40</p>
+            </section>
+            <span class="number">
+                -150.00
+            </span>
+        </section><section class="history">
+        <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-linshitingchejiaofei"></use>
+        </svg>
+        <section class="tab-content">
+            <h4>粤L1564</h4>
+            <p>2017-08-02 13:40</p>
+        </section>
+        <span class="number">
+                -150.00
+            </span>
+    </section><section class="history">
+        <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-linshitingchejiaofei"></use>
+        </svg>
+        <section class="tab-content">
+            <h4>粤L1564</h4>
+            <p>2017-08-02 13:40</p>
+        </section>
+        <span class="number">
+                -150.00
+            </span>
+    </section><section class="history">
+        <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-linshitingchejiaofei"></use>
+        </svg>
+        <section class="tab-content">
+            <h4>粤L1564</h4>
+            <p>2017-08-02 13:40</p>
+        </section>
+        <span class="number">
+                -150.00
+            </span>
+    </section>
+        <section class="history">
+            <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-linshitingchejiaofei"></use>
+            </svg>
+            <section class="tab-content">
+                <h4>粤L1564</h4>
+                <p>2017-08-02 13:40</p>
+            </section>
+            <span class="number">
+                -150.00
+            </span>
+        </section>
+        <section class="history">
+            <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-linshitingchejiaofei"></use>
+            </svg>
+            <section class="tab-content">
+                <h4>粤L1564</h4>
+                <p>2017-08-02 13:40</p>
+            </section>
+            <span class="number">
+                -150.00
+            </span>
+        </section>
+        <section class="history">
+            <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-linshitingchejiaofei"></use>
+            </svg>
+            <section class="tab-content">
+                <h4>粤L1564</h4>
+                <p>2017-08-02 13:40</p>
+            </section>
+            <span class="number">
+                -150.00
+            </span>
+        </section>
+        <section class="history">
+            <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-linshitingchejiaofei"></use>
+            </svg>
+            <section class="tab-content">
+                <h4>粤L1564</h4>
+                <p>2017-08-02 13:40</p>
+            </section>
+            <span class="number">
+                -150.00
+            </span>
+        </section>
+
+
+
+    </section>
+    <section index="1" data-sign="quick-tab" style="flex-grow: 1; display: none;">1</section>
+    <section index="2" data-sign="quick-tab" style="flex-grow: 1; display: none;">2</section>
+    <section index="3" data-sign="quick-tab" style="flex-grow: 1; display: none;">3</section>
+</section>
+</body>
+<script src="../lib/iconfont.js"></script>
+<script src="../lib/quick.tab.js"></script>
+<script>
+    var contentHeight = document.body.clientHeight - 95
+    console.log(contentHeight)
+    var quickTabObj = {
+        navEl: "#nav-list",
+        navBgc:"#fff",
+        contentEl: "#container",
+        contentHeight: contentHeight + "px",
+        navColor: "#333",
+        number: 4,
+        fontSize: "16px",
+        tabName: ['全部','粤L1564','粤L1564','粤L1564'],
+        height: "45px",
+        lineHeight: "45px",
+        seletedBottomColor: "#0096ff"
+    }
+    new QuickTab(quickTabObj)
+</script>
+</html>

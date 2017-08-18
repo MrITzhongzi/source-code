@@ -1,0 +1,59 @@
+@import "../common/reset.css";
+@import "../common/com_style.css";
+body {
+  background-color: #eeeeee;
+}
+body .money .right {
+  color: #e5393f;
+}
+body .unit .right {
+  color: #000000;
+}
+body .pay_type {
+  background-color: #fff;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+body .pay_type ul li {
+  overflow: hidden;
+  height: 75px;
+  box-sizing: border-box;
+  padding: 10px;
+  border-bottom: 1px solid #ebebeb;
+  width: 90%;
+  margin: 0 auto;
+}
+body .pay_type ul li svg {
+  width: 40px;
+  height: 40px;
+  float: left;
+}
+body .pay_type ul li .description {
+  float: left;
+  margin-left: 10px;
+}
+body .pay_type ul li .description h4 {
+  font-size: 18px;
+}
+body .pay_type ul li .description p {
+  font-size: 12px;
+  color: #999999;
+}
+body .pay_type ul li .radio {
+  margin-top: 10px;
+  float: right;
+}
+body footer {
+  text-align: center;
+  margin-top: 60px;
+}
+body footer button {
+  width: 80%;
+  height: 44px;
+  border: none;
+  border-radius: 22px;
+  color: white;
+  background-color: #0096ff;
+  outline: none;
+  font-size: 16px;
+}

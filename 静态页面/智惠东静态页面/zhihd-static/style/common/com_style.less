@@ -1,15 +1,20 @@
 
+body {
+  margin: 0;
+}
+/*公共头部*/
 .pub-header {
   overflow: hidden;
-  height: 50px;
-  line-height: 60px;
+  height: 44px;
+  line-height: 44px;
   background-color: #fff;
   position: relative;
+  border-bottom: 1px solid #ebebeb;
   svg {
     float: left;
     width: 22px;
     height: 22px;
-    margin-top: 19px;
+    margin-top: 11px;
     margin-left: 10px;
   }
   h4{
@@ -155,5 +160,166 @@
     text-align: center;
     font-size: 12px;
     color: #999999;
+  }
+  ul {
+    li{
+      width: 90%;
+      margin: 0 auto;
+      overflow: hidden;
+      line-height: 45px;
+      border-bottom: 1px solid #ebebeb;
+      .key {
+        float: left;
+        height: 45px;
+      }
+      svg{
+        float: right;
+        margin-top: 15px;
+      }
+      .value{
+        height: 45px;
+        float: right;
+        width: 70%;
+        overflow: hidden;
+        text-align: right;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        border: none;
+        outline: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+      }
+      select{
+        direction: rtl;
+        width: auto!important;
+        font-size: 1em;
+        background-color: #fff;
+      }
+    }
+  }
+}
+
+/*停车缴费 公共块*/
+.pub-tingche-info {
+  margin-top: 10px;
+  background-color: #fff;
+  padding: 18px 10px 10px 10px ;
+  header {
+    display: flex;
+    svg{
+      width: 30px;
+      height: 30px;
+      margin-top: 4px;
+    }
+    .car_info {
+      flex-grow: 1;
+      margin-left: 10px;
+      h6 {
+        font-size: 16px;
+
+      }
+      p{
+        font-size: 13px;
+        color: #666666;
+      }
+    }
+    .btn {
+      button{
+        border: none;
+        outline: none;
+        width: 60px;
+        height: 24px;
+        border-radius: 12px;
+        color: white;
+        background-color: #0096ff;
+        margin-top: 7px;
+        line-height: 24px;
+        text-align: center;
+      }
+      .jiaofei {
+        background-color: #fff;
+        border: 1px solid #0096ff;
+        color: #0096ff;
+        //line-height: 26px;
+        line-height: 2px;
+      }
+      .suoche {
+
+      }
+    }
+  }
+  footer {
+    height: 35px;
+    line-height: 35px;
+    font-size: 13px;
+    margin-top: 18px;
+    border-top: 1px solid #ebebeb;
+    a{
+      margin-right: 26px;
+      display: block;
+      float: left;
+      margin-top: 7px;
+      svg{
+        width: 12px;
+        height: 12px;
+        margin-right: 8px;
+      }
+    }
+    .client {
+      float: right;
+      margin-top: 7px;
+      svg{
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
+}
+
+/*单个 块 （左右结构）类似缴费界面 的缴费金额*/
+.single_block {
+  background-color: #fff;
+  margin-top: 5px;
+  overflow: hidden;
+  height: 45px;
+  line-height: 45px;
+  box-sizing: border-box;
+  padding: 0 10px;
+  .left{
+    float: left;
+  }
+  .right {
+    float: right;
+  }
+}
+/*公共 头部 的补间说明*/
+.pub-title {
+  height: 35px;
+  line-height: 35px;
+  background-color: transparent;
+  padding-left: 10px;
+  box-sizing: border-box;
+}
+/*自定义 radio 样式 */
+.radio{
+  box-sizing: border-box;
+ input{
+    display: none;
+ }
+  i{
+    content: '';
+    display: block;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #999999;
+    border-radius: 50%;
+    padding: 0.2em;
+    box-sizing: border-box;
+  }
+
+  input:checked + i{
+    background-color: #3cb034;
+    background-clip: content-box;
   }
 }

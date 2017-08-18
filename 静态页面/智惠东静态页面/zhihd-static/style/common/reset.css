@@ -57,3 +57,8 @@ h1, h2, h3, h4, h5, h6 {
 .clearfix {
     *zoom: 1;
 }
+
+/*常用颜色*/
+.cor-gray {
+    color: #999;
+}

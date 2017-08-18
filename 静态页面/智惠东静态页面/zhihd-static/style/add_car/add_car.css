@@ -2,7 +2,9 @@
 @import "../common/com_style.css";
 body {
   background-color: #eeeeee;
-  margin: 0;
+}
+body .add_car_msg {
+  margin-top: 5px;
 }
 body footer {
   text-align: center;
@@ -16,5 +18,4 @@ body footer button {
   color: white;
   background-color: #0096ff;
   outline: none;
-  font-size: 16px;
 }

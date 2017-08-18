@@ -2,7 +2,9 @@
 @import "../common/com_style.css";
 body {
   background-color: #eeeeee;
-  margin: 0;
+}
+body .pub-list-info {
+  margin-top: 5px;
 }
 body footer {
   text-align: center;
