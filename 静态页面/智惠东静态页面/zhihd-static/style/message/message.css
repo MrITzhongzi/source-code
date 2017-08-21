@@ -1,0 +1,55 @@
+@import "../common/reset.css";
+@import "../common/com_style.css";
+body {
+  background-color: #fff;
+}
+.msg-content ul {
+  padding: 0 15px;
+}
+.msg-content ul li {
+  box-sizing: border-box;
+  padding: 15px 0 0 0;
+  display: flex;
+}
+.msg-content ul li .msg-icon {
+  position: relative;
+}
+.msg-content ul li .msg-icon i[class~="iconfont"] {
+  font-size: 50px;
+  color: #f48122;
+}
+.msg-content ul li .msg-icon .number {
+  position: absolute;
+  right: 0px;
+  top: 0;
+  width: 16px;
+  height: 16px;
+  background-color: red;
+  border-radius: 50%;
+  color: white;
+  box-sizing: border-box;
+  font-size: 12px;
+  text-align: center;
+}
+.msg-content ul li .msg-icon .hidden {
+  display: none;
+}
+.msg-content ul li .msg-type {
+  flex-grow: 1;
+  margin-left: 15px;
+  margin-top: 8px;
+  border-bottom: 1px solid #ebebeb;
+  padding-bottom: 15px;
+}
+.msg-content ul li .msg-type h4 {
+  font-size: 15px;
+}
+.msg-content ul li .msg-type p {
+  font-size: 13px;
+  color: #999999;
+}
+.msg-content ul li .msg-type i {
+  float: right;
+  margin-top: 6px;
+  color: #999999;
+}

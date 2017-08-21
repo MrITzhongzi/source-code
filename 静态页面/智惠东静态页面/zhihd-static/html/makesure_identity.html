@@ -3,22 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <title>增加车辆</title>
-    <link rel="stylesheet" href="../style/add_car/add_car.css">
+    <title>我是业主</title>
     <link rel="stylesheet" href="../style/font/iconfont.css">
+    <link rel="stylesheet" href="../style/makesure_identity/makesure_identity.css">
 </head>
 <body>
 <header class="pub-header">
     <i class="iconfont icon-jiantou3"></i>
-    <h4>增加车辆</h4>
-    <span>添加</span>
+    <h4>我是业主</h4>
 </header>
-<section class="pub-list-info add_car_msg">
+<section class="pub-list-info">
+    <h4>请如实填写信息，方便物业审核</h4>
     <ul>
-        <li><span class="key">车牌号</span><input class="value" maxlength="10" placeholder="姓名"/></li>
+        <li><span class="key">真实姓名</span><input class="value" maxlength="10" placeholder="姓名"/></li>
         <li><span class="key">身份证号</span><input class="value" maxlength="20" placeholder="身份证号"/></li>
+        <li><span class="key">手机号码</span><input class="value"  maxlength="15" placeholder="手机号"/></li>
+    </ul>
+</section>
+<section class="pub-list-info">
+    <h4>顶绑定房间所在的社区信息</h4>
+    <ul>
         <li>
-            <span class="key" >类型</span>
+            <span class="key" >选择小区</span>
+            <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-youjiantou"></use>
+            </svg>
+            <span class="value cor-gray">选择小区</span>
+        </li>
+        <li>
+            <span class="key" >选择房间</span>
             <svg class="icon" aria-hidden="true">
                 <use xlink:href="#icon-youjiantou"></use>
             </svg>
@@ -29,18 +42,10 @@
                 <option value="3">12dddddddddddddd3</option>
             </select>
         </li>
-        <li>
-            <span class="key" >选择小区</span>
-            <svg class="icon" aria-hidden="true">
-                <use xlink:href="#icon-youjiantou"></use>
-            </svg>
-            <span class="value cor-gray">选择小区</span>
-        </li>
     </ul>
 </section>
-<footer>
-    <button>确认添加</button>
+<footer class="pub-footer">
+    <button>提交</button>
 </footer>
 </body>
-<script src="../lib/iconfont.js"></script>
 </html>

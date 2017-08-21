@@ -10,11 +10,9 @@ body {
   background-color: #fff;
   position: relative;
   border-bottom: 1px solid #ebebeb;
-  svg {
+  i {
     float: left;
-    width: 22px;
-    height: 22px;
-    margin-top: 11px;
+    font-size: 22px;
     margin-left: 10px;
   }
   h4{
@@ -323,3 +321,119 @@ body {
     background-clip: content-box;
   }
 }
+/*物业缴费 消息块*/
+.pub-tenement-msg {
+  margin-top: 10px;
+  background-color: #fff;
+  box-sizing: border-box;
+  padding: 1px 4%;
+  header {
+    height: 45px;
+    line-height: 45px;
+    border-bottom: 1px solid #ebebeb;
+    box-sizing: border-box;
+    label {
+      margin-right: 10px;
+    }
+    .time {
+      .month{
+        font-size: 24px;
+        color: #333333;
+        font-weight: 700;
+      }
+      .year {
+        font-size: 15px;
+        color: #666666;
+      }
+    }
+    .wait_pay {
+      float: right;
+      color: #e13a3c;
+    }
+  }
+  .content {
+    border-bottom: 1px solid #ebebeb;
+    padding-bottom: 10px;
+    ul{
+      li {
+        overflow: hidden;
+        font-size: 14px;
+        color: #999999;
+        margin-top: 8px;
+        .key {
+
+        }
+        .value{
+          float: right;
+        }
+      }
+    }
+  }
+  footer {
+    height: 35px;
+    line-height: 35px;
+    overflow: hidden;
+    key {
+      font-size: 14px;
+      float: left;
+    }
+    .value {
+      float: right;
+    }
+  }
+}
+/*复选按钮样式*/
+.checkbox {
+  input {
+    display: none;
+  }
+  i {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #999;
+    border-radius: 50%;
+    box-sizing: border-box;
+    padding: 0.3em;
+    background-color: #fff;
+    position: relative;
+  }
+  input:checked + i{
+    background-color: #0096ff;
+  }
+  i::before,
+  i::after {
+    content: "";
+    width: 6px;
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+    left: 1px;
+    top: 8px;
+    transform: rotate(45deg);
+  }
+  i::after {
+    width: 10px;
+    left: auto;
+    right: 0px;
+    top: 6px;
+    transform: rotate(-45deg);
+  }
+}
+
+/*公共底部*/
+.pub-footer {
+  text-align: center;
+  margin-top: 60px;
+  button {
+    width: 80%;
+    height: 44px;
+    border: none;
+    border-radius: 22px;
+    color: white;
+    background-color: #0096ff;
+    outline: none;
+    font-size: 16px;
+  }
+}
+

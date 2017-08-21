@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>故障报修</title>
+    <link rel="stylesheet" href="../style/font/iconfont.css">
+    <link rel="stylesheet" href="../style/breakdown/breakdown.css">
+</head>
+<body>
+<header class="pub-header">
+    <i class="iconfont icon-jiantou3"></i>
+    <h4>故障报修</h4>
+    <a href="javascript:;" class="head-right">申请报修</a>
+</header>
+<nav id="nav-list"></nav>
+<section id="container">
+    <!--这里是渲染nav对应的内容-->
+    <section index="0" data-sign="quick-tab" data-sign="quick-tab" style="flex-grow: 1; display: none;">
+        <ul>
+            <li>
+                <header>
+                    <h4>公共设施</h4>
+                    <span class="time">10分钟前</span>
+                </header>
+                <footer>
+                    <i class="iconfont icon-gonggongsheshi"></i>
+                    <p>哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈</p>
+                    <i class="iconfont icon-youjiantou"></i>
+                </footer>
+            </li>
+            <li>
+                <header>
+                    <h4>水管维修</h4>
+                    <span class="time">10分钟前</span>
+                </header>
+                <footer>
+                    <i class="iconfont icon-shuiguanweixiu"></i>
+                    <p>哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈</p>
+                    <i class="iconfont icon-youjiantou"></i>
+                </footer>
+            </li>
+            <li>
+                <header>
+                    <h4>电梯维修</h4>
+                    <span class="time">10分钟前</span>
+                </header>
+                <footer>
+                    <i class="iconfont icon-diantiweixiu"></i>
+                    <p>哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈</p>
+                    <i class="iconfont icon-youjiantou"></i>
+                </footer>
+            </li>
+            <li>
+                <header>
+                    <h4>居民付费</h4>
+                    <span class="time">10分钟前</span>
+                </header>
+                <footer>
+                    <i class="iconfont icon-juminfufei"></i>
+                    <p>哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈</p>
+                    <i class="iconfont icon-youjiantou"></i>
+                </footer>
+            </li>
+            <li>
+                <header>
+                    <h4>电路维修</h4>
+                    <span class="time">10分钟前</span>
+                </header>
+                <footer>
+                    <i class="iconfont icon-dianluweixiu"></i>
+                    <p>哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈</p>
+                    <i class="iconfont icon-youjiantou"></i>
+                </footer>
+            </li>
+        </ul>
+    </section>
+    <section index="1" data-sign="quick-tab" style="flex-grow: 1; display: none;">
+        <section style="margin: 15% auto 0;text-align: center">
+            <img src="../imgs/pub_img/zanwushuju.png" alt="" style="width: 22vw;">
+            <p style="text-align: center;color: #999999;font-size: 1em">&nbsp;&nbsp;暂无数据哦！</p>
+        </section>
+    </section>
+    <section index="2" data-sign="quick-tab" style="flex-grow: 1; display: none;">已完成</section>
+    <section index="3" data-sign="quick-tab" style="flex-grow: 1; display: none;">待评价</section>
+</section>
+</body>
+<script src="../lib/iconfont.js"></script>
+<script src="../lib/zepto.min.js"></script>
+<script src="../script/utils/pub_function.js"></script>
+<script src="../lib/quick.tab.js"></script>
+<script>
+    var contentHeight = utils.getViewPortHeight() - $('header').height() - 55
+    var tabObj = {
+        navEl: "#nav-list",
+        navBgc:"#fff",
+        navTextColor: "#666666",
+        contentEl: "#container",
+        contentHeight: contentHeight + "px",
+        navColor: "#333",
+        number: 4,
+        fontSize: "16px",
+        tabName: ['申请中','已指派','已完成','待评价'],
+        height: "45px",
+        lineHeight: "45px",
+        seletedBottomColor: "#0096ff",
+        selectedTextColor: "#0096ff"
+    }
+    new QuickTab(tabObj);
+</script>
+</html>

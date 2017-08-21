@@ -1,0 +1,5 @@
+@import "../common/reset.css";
+@import url(../common/com_style.css);
+body {
+  background-color: #eeeeee;
+}

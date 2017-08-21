@@ -1,0 +1,102 @@
+@import "../common/reset.css";
+@import "../common/com_style.css";
+body {
+  background-color: #eeeeee;
+}
+.pub-list-info {
+  margin-top: 5px;
+}
+.repair_type {
+  margin-top: 5px;
+  background-color: #fff;
+  box-sizing: border-box;
+  padding: 12px 12px 20px;
+}
+.repair_type header {
+  overflow: hidden;
+  height: 45px;
+  line-height: 45px;
+  border-bottom: 1px solid #ebebeb;
+}
+.repair_type header .left {
+  float: left;
+}
+.repair_type header .right {
+  float: right;
+}
+.repair_type .content {
+  padding: 12px 0 20px 0;
+}
+.repair_type .content p {
+  font-size: 15px;
+}
+.repair_type footer {
+  position: relative;
+  overflow: hidden;
+  height: 100px;
+}
+.repair_type footer img {
+  width: 30%;
+  margin-right: 4px;
+}
+.repair_type footer img:nth-child(3) {
+  margin-right: 0;
+}
+.repair_type footer i {
+  float: right;
+  line-height: 100px;
+}
+.pub-list-info .star {
+  height: 30px;
+  line-height: 30px;
+}
+.pub-list-info .star i {
+  font-size: 15px;
+}
+.pub-list-info .des {
+  font-size: 15px;
+  height: 30px;
+  line-height: 30px;
+}
+.pub-list-info .light {
+  color: #fe7a28;
+}
+footer {
+  margin-top: 5px;
+  background-color: #fff;
+  box-sizing: border-box;
+  padding: 0 4%;
+}
+footer .step {
+  overflow: hidden;
+  height: 60px;
+  padding: 12px 0 0 0;
+}
+footer .step .left {
+  display: block;
+  float: left;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #999999;
+  margin-top: 9px;
+  margin-left: 10px;
+}
+footer .step .right {
+  float: right;
+  width: 87%;
+  border-bottom: 1px solid #ebebeb;
+  padding-bottom: 12px;
+}
+footer .step .right p {
+  font-size: 15px;
+}
+footer .step .right span {
+  font-size: 12px;
+}
+footer .step-lignt {
+  color: #fe7a28;
+}
+footer .step-grey {
+  color: #999999;
+}

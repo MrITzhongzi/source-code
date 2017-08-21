@@ -10,11 +10,9 @@ body {
   position: relative;
   border-bottom: 1px solid #ebebeb;
 }
-.pub-header svg {
+.pub-header i {
   float: left;
-  width: 22px;
-  height: 22px;
-  margin-top: 11px;
+  font-size: 22px;
   margin-left: 10px;
 }
 .pub-header h4 {
@@ -304,4 +302,109 @@ body {
 .radio input:checked + i {
   background-color: #3cb034;
   background-clip: content-box;
+}
+/*物业缴费 消息块*/
+.pub-tenement-msg {
+  margin-top: 10px;
+  background-color: #fff;
+  box-sizing: border-box;
+  padding: 1px 4%;
+}
+.pub-tenement-msg header {
+  height: 45px;
+  line-height: 45px;
+  border-bottom: 1px solid #ebebeb;
+  box-sizing: border-box;
+}
+.pub-tenement-msg header label {
+  margin-right: 10px;
+}
+.pub-tenement-msg header .time .month {
+  font-size: 24px;
+  color: #333333;
+  font-weight: 700;
+}
+.pub-tenement-msg header .time .year {
+  font-size: 15px;
+  color: #666666;
+}
+.pub-tenement-msg header .wait_pay {
+  float: right;
+  color: #e13a3c;
+}
+.pub-tenement-msg .content {
+  border-bottom: 1px solid #ebebeb;
+  padding-bottom: 10px;
+}
+.pub-tenement-msg .content ul li {
+  overflow: hidden;
+  font-size: 14px;
+  color: #999999;
+  margin-top: 8px;
+}
+.pub-tenement-msg .content ul li .value {
+  float: right;
+}
+.pub-tenement-msg footer {
+  height: 35px;
+  line-height: 35px;
+  overflow: hidden;
+}
+.pub-tenement-msg footer key {
+  font-size: 14px;
+  float: left;
+}
+.pub-tenement-msg footer .value {
+  float: right;
+}
+/*复选按钮样式*/
+.checkbox input {
+  display: none;
+}
+.checkbox i {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #999;
+  border-radius: 50%;
+  box-sizing: border-box;
+  padding: 0.3em;
+  background-color: #fff;
+  position: relative;
+}
+.checkbox input:checked + i {
+  background-color: #0096ff;
+}
+.checkbox i::before,
+.checkbox i::after {
+  content: "";
+  width: 6px;
+  height: 2px;
+  background-color: #fff;
+  position: absolute;
+  left: 1px;
+  top: 8px;
+  transform: rotate(45deg);
+}
+.checkbox i::after {
+  width: 10px;
+  left: auto;
+  right: 0px;
+  top: 6px;
+  transform: rotate(-45deg);
+}
+/*公共底部*/
+.pub-footer {
+  text-align: center;
+  margin-top: 60px;
+}
+.pub-footer button {
+  width: 80%;
+  height: 44px;
+  border: none;
+  border-radius: 22px;
+  color: white;
+  background-color: #0096ff;
+  outline: none;
+  font-size: 16px;
 }

@@ -1,0 +1,58 @@
+@import "../common/reset.css";
+@import "../common/com_style.css";
+body {
+  background-color: #eeeeee;
+  overflow: hidden;
+}
+body #container {
+  margin-top: 10px;
+  background-color: #fff;
+}
+body #container section[data-sign] {
+  overflow: scroll;
+}
+body #container section[data-sign] ul {
+  padding: 0 4%;
+}
+body #container section[data-sign] ul li {
+  padding-top: 18px;
+  border-bottom: 1px solid #ebebeb;
+  overflow: hidden;
+}
+body #container section[data-sign] ul li header {
+  overflow: hidden;
+}
+body #container section[data-sign] ul li header h4 {
+  float: left;
+  font-size: 16px;
+}
+body #container section[data-sign] ul li header .time {
+  color: #666666;
+  font-size: 10px;
+  float: right;
+  margin-right: 22px;
+}
+body #container section[data-sign] ul li footer {
+  margin-top: 10px;
+  overflow: hidden;
+  padding-bottom: 23px;
+  height: 66px;
+  box-sizing: border-box;
+}
+body #container section[data-sign] ul li footer i:nth-child(1) {
+  float: left;
+  font-size: 30px;
+  color: #9673d8;
+}
+body #container section[data-sign] ul li footer p {
+  float: left;
+  width: 83%;
+  margin-left: 10px;
+  font-size: 14px;
+}
+body #container section[data-sign] ul li footer i:nth-child(3) {
+  float: right;
+  margin-top: 7px;
+  font-size: 18px;
+  color: #666666;
+}
