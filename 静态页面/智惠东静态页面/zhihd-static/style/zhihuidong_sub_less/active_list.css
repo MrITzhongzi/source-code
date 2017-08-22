@@ -1,0 +1,79 @@
+.active-list {
+  margin-top: 5px;
+  background-color: #fff;
+  padding: 15px 15px 0;
+}
+.active-list header {
+  height: 44px;
+  border-bottom: 1px solid #ebebeb;
+  line-height: 45px;
+  position: relative;
+}
+.active-list header i[class="icon-shijian-"] {
+  font-size: 16px;
+}
+.active-list header time {
+  margin-left: 8px;
+  color: #0096ff;
+  font-size: 15px;
+}
+.active-list header .baoming {
+  position: absolute;
+  top: -21px;
+  right: 10px;
+  text-align: center;
+}
+.active-list header .baoming i {
+  font-size: 30px;
+  color: #30b034;
+}
+.active-list header .baoming span {
+  position: absolute;
+  width: 100%;
+  display: block;
+  color: white;
+  font-size: 15px;
+}
+.active-list header .baoming .baomingzhong-color {
+  color: #ea4b2a;
+}
+.active-list header .baoming .finish-color {
+  color: #999;
+}
+.active-list .ac-content {
+  overflow: hidden;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.active-list .ac-content .logo {
+  width: 60px;
+  height: 60px;
+  background: url(../../imgs/huidongquan/qiuhun.png) center no-repeat;
+  float: left;
+}
+.active-list .ac-content .ac-description {
+  float: left;
+  margin-left: 18px;
+}
+.active-list .ac-content .ac-description h4 {
+  font-size: 15px;
+  color: #333;
+}
+.active-list .ac-content .ac-description p {
+  font-size: 13px;
+  color: #999;
+  margin-top: 10px;
+}
+.active-list footer {
+  height: 34px;
+  border-top: 1px solid #ebebeb;
+  line-height: 34px;
+}
+.active-list footer .peop-count {
+  float: right;
+  color: #666;
+}
+.active-list footer .peop-count i {
+  color: #999999;
+  margin-right: 8px;
+}

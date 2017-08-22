@@ -1,14 +1,19 @@
 
 body {
   margin: 0;
+  padding-top: 44px;
 }
 /*公共头部*/
 .pub-header {
   overflow: hidden;
-  height: 44px;
+  height: 43px;
   line-height: 44px;
   background-color: #fff;
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  width: 100%;
   border-bottom: 1px solid #ebebeb;
   i {
     float: left;
@@ -24,9 +29,9 @@ body {
     left: 35%;
   }
   .head-right{
-    font-size: 16px;
+    font-size: 18px;
     float: right;
-    margin-right: 10px;
+    margin-right: 15px;
     color: #0096ff;
   }
 }
@@ -187,6 +192,7 @@ body {
         -webkit-appearance: none;
         -moz-appearance: none;
         appearance: none;
+        text-align: right;
       }
       select{
         direction: rtl;
@@ -421,7 +427,7 @@ body {
   }
 }
 
-/*公共底部*/
+/*公共底部 按键样式*/
 .pub-footer {
   text-align: center;
   margin-top: 60px;
@@ -436,4 +442,6 @@ body {
     font-size: 16px;
   }
 }
+
+
 

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>惠东圈动态详情</title>
+    <link rel="stylesheet" href="../../style/font/iconfont.css">
+    <link rel="stylesheet" href="../../style/zhihuiquan_less/total.css">
+</head>
+<body class="hdq-msg-body">
+<header class="pub-header">
+    <i class="iconfont icon-jiantou3"></i>
+    <h4>惠东圈</h4>
+    <a href="javascript:;" class="head-right">下一步</a>
+</header>
+<section class="pub-hdq-msg">
+    <header>
+        <section class="head"></section>
+        <section class="head-name">
+            <h4>惠东圈</h4>
+            <p>一分钟</p>
+        </section>
+    </header>
+    <section class="hdq-content">
+        <p>这是惠东圈这是惠东圈这是惠东圈这是惠东圈这是惠东圈这是惠东圈这是惠东圈这是惠东圈这是惠东圈这是惠东圈这是惠东圈这是惠东圈这是惠东圈这是惠东圈这是惠东圈这是惠东圈</p>
+        <section class="hdq-show-img">
+            <img src="../../imgs/huidongquan/qiuhun.png" alt="">
+            <img src="../../imgs/huidongquan/qiuhun.png" alt="">
+            <img src="../../imgs/huidongquan/qiuhun.png" alt="">
+        </section>
+    </section>
+    <footer>
+        <!--<section class="fenxiang-pinglun-zan">
+            <span class="share"><i class="iconfont icon-fenxiang-1"></i>分享</span>
+            <span class="comment"><i class="iconfont icon-pinglun-"></i>评论</span>
+            <span class="zan zan-color"><i class="iconfont icon-dianzan-"></i>200</span>
+        </section>-->
+        <section class="fenxiang-zan">
+            <span class="share"><i class="iconfont icon-fenxiang-1"></i>分享</span>
+            <span class="zan zan-color"><i class="iconfont icon-dianzan-"></i>200</span>
+        </section>
+    </footer>
+</section>
+<section class="pub-hdq-comment">
+    <section class="c-head"></section>
+    <section class="c-content">
+        <h4>指挥官</h4>
+        <p class="con-detail">
+            <span class="content">非常不错</span>
+        </p>
+        <time>11-14 21:33</time><span class="reply">回复</span>
+    </section>
+</section>
+<section class="pub-hdq-comment">
+    <section class="c-head"></section>
+    <section class="c-content">
+        <h4>指挥官</h4>
+        <p class="con-detail">
+            <span class="reply-con">回复<span class="rep-peop">指挥官</span>:</span>
+            <span class="content">非常不错</span>
+        </p>
+        <time>11-14 21:33</time><span class="reply">回复</span>
+    </section>
+</section>
+<section class="foot-tip">
+    <p>———————就这么多啦———————</p>
+</section>
+<footer class="comment-foot">
+    <input type="text" placeholder="发表自己的看法吧"><span>评论</span>
+</footer>
+</body>
+<script>
+    (function () {
+        var imgBoxsEl = document.querySelectorAll('.hdq-show-img')
+        Array.prototype.forEach.call(imgBoxsEl,function (imgBoxEl) {
+            var imgsEle = imgBoxEl.children
+            Array.prototype.forEach.call(imgsEle,function (imgEl) {
+                if(imgsEle.length == 4){
+                    imgEl.style.width = 0.88 / 2  * 100 + "%"
+                    return
+                }
+                imgEl.style.width = 0.88 / imgsEle.length  * 100 + "%"
+            })
+        })
+    }())
+</script>
+</html>

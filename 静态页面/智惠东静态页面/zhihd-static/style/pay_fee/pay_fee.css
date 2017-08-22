@@ -16,7 +16,7 @@ body .pay_type {
 }
 body .pay_type ul li {
   overflow: hidden;
-  height: 75px;
+  height: 65px;
   box-sizing: border-box;
   padding: 10px;
   border-bottom: 1px solid #ebebeb;

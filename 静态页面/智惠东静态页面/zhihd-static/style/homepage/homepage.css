@@ -119,27 +119,27 @@ body .tip {
   padding: 25px 0 25px 0;
   text-align: center;
 }
-body .pub-footer {
+body .pub-bottom-footer {
   background-color: #ffffff;
   height: 49px;
 }
-body .pub-footer ul {
+body .pub-bottom-footer ul {
   text-align: center;
   display: flex;
 }
-body .pub-footer ul li {
+body .pub-bottom-footer ul li {
   width: 25%;
   box-sizing: border-box;
   padding: 7px 0 5px 0;
 }
-body .pub-footer ul li a {
+body .pub-bottom-footer ul li a {
   display: block;
 }
-body .pub-footer ul li a svg {
+body .pub-bottom-footer ul li a svg {
   width: 22px;
   height: 22px;
 }
-body .pub-footer ul li a p {
+body .pub-bottom-footer ul li a p {
   font-size: 10px;
   color: #666666;
 }

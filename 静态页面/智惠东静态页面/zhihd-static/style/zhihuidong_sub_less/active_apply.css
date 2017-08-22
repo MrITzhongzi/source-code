@@ -1,0 +1,66 @@
+.ac-app-body {
+  padding: 0;
+  background-color: #fff;
+}
+.ac-apply-head {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: transparent;
+  border-bottom: none;
+  color: white;
+}
+.ac-apply-head h4 {
+  color: white;
+}
+.apply-info {
+  padding: 0 15px;
+  margin-top: 15px;
+}
+.apply-info h4 {
+  font-size: 15px;
+  color: #333;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 6px;
+}
+.apply-info ul li {
+  height: 44px;
+  line-height: 45px;
+  border-bottom: 1px solid #cccccc;
+  overflow: hidden;
+}
+.apply-info ul li .key {
+  float: left;
+  color: #666666;
+}
+.apply-info ul li .value {
+  float: right;
+  margin-top: 14px;
+  border: none;
+  outline: none;
+  text-align: right;
+  width: 70%;
+  background-color: #fff;
+}
+.ac-app-foot {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  text-align: center;
+  border-top: 1px solid #ebebeb;
+  margin-top: 30px;
+}
+.ac-app-foot button {
+  height: 44px;
+  margin-top: 8px;
+  border-radius: 22px;
+  outline: none;
+  border: none;
+  width: 80%;
+  background-color: #0096ff;
+  color: white;
+  font-size: 16px;
+}

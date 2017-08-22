@@ -1,0 +1,213 @@
+
+body {
+  margin: 0;
+  padding-top: 44px;
+  padding-bottom: 45px;
+}
+
+
+/*公共头部*/
+.pub-header {
+  overflow: hidden;
+  height: 43px;
+  line-height: 44px;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  width: 100%;
+  border-bottom: 1px solid #ebebeb;
+  i {
+    float: left;
+    font-size: 22px;
+    margin-left: 10px;
+  }
+  h4{
+    width: 30%;
+    text-align: center;
+    color: #333333;
+    font-size: 18px;
+    position: absolute;
+    left: 35%;
+  }
+  .head-right{
+    font-size: 18px;
+    float: right;
+    margin-right: 15px;
+    color: #0096ff;
+  }
+}
+
+/*惠东圈消息快*/
+.pub-hdq-msg {
+  margin-top: 5px;
+  background-color: #ffffff;
+  padding-top: 15px;
+  header {
+    margin: 0 0 0 15px;
+    overflow: hidden;
+    .head{
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: url(../../imgs/huidongquan/qiuhun.png) center no-repeat;
+      float: left;
+    }
+    .head-name {
+      float: left;
+      margin-left: 10px;
+      h4 {
+        margin-top: 3px;
+        font-size: 16px;
+      }
+      p {
+        color: #999999;
+        font-size: 12px;
+      }
+    }
+  }
+  .hdq-content {
+    padding: 15px;
+    text-indent: 1em;
+    p {
+      font-size: 15px;
+    }
+  }
+  .hdq-show-img {
+    margin-top: 15px;
+    text-align: center;
+    text-indent: 0em;
+    img {
+    }
+  }
+  footer{
+    //height: 35px;
+    line-height: 35px;
+    .fenxiang-pinglun-zan {
+      display: flex;
+      border-top: 1px solid #ebebeb;
+      span {
+        font-size: 12px;
+        color: #666666;
+        flex-grow: 1;
+        text-align: center;
+        line-height: 30px;
+        i {
+          font-size: 16px;
+          margin-right: 4px;
+        }
+      }
+      .zan-color {
+        color: #ea4b2a;
+      }
+    }
+    .fenxiang-zan {
+      display: flex;
+      border-top: 1px solid #ebebbe;
+      justify-content: center;
+      line-height: 30px;
+      span {
+        font-size: 12px;
+        color: #666666;
+        width: 80px;
+        height: 30px;
+        text-align: center;
+        border-radius: 15px;
+        border: 1px solid #666666;
+        margin: 25px ;
+        i {
+          font-size: 16px;
+          margin-right: 4px;
+        }
+      }
+      .zan{
+        border: 1px solid #ea4b2a;
+      }
+      .zan-color {
+        color: #ea4b2a;
+      }
+    }
+  }
+}
+
+/*底部导航*/
+.pub-bottom-footer {
+  position: fixed;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  border-top: 1px solid #ebebeb;
+  background-color: #ffffff;
+  height: 49px;
+  ul {
+    text-align: center;
+    display: flex;
+    li {
+      width: 25%;
+      box-sizing: border-box;
+      padding: 7px 0 5px 0;
+      a {
+        display: block;
+        svg{
+          width: 22px;
+          height: 22px;
+        }
+        p{
+          font-size: 10px;
+          color: #666666;
+        }
+      }
+    }
+  }
+}
+
+/*消息详情评论*/
+.pub-hdq-comment {
+  width: 96%;
+  margin: 0 auto;
+  border-bottom: 1px solid #ebebeb;
+  .c-head {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: url(../../imgs/huidongquan/qiuhun.png) center no-repeat;
+    margin-left: 15px;
+    margin-top: 12px;
+    float: left;
+  }
+  .c-content {
+    overflow: hidden;
+    //height: 100px;
+    //border: 1px solid #000;
+    padding: 18px 10px;
+    font-size: 15px;
+    h4{
+      color: #666666;
+    }
+    .con-detail{
+      margin-top: 20px;
+      margin-bottom: 18px;
+      .reply-con {
+        .rep-peop {
+          color: #666;
+        }
+      }
+    }
+    time{
+      font-size: 12px;
+      color: #666666;
+    }
+    .reply {
+      display: inline-block;
+      width: 40px;
+      height: 16px;
+      border-radius: 8px;
+      background-color: #eeeeee;
+      text-align: center;
+      line-height: 16px;
+      font-size: 12px;
+      margin-left: 15px;
+    }
+  }
+}

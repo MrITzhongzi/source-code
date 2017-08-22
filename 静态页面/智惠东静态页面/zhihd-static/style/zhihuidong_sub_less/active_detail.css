@@ -1,0 +1,112 @@
+.ac-detail-body {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+.ac-detail-head {
+  background-color: transparent;
+  border: none;
+}
+.ac-detail-head i[class~="iconfont"] {
+  color: white;
+}
+.top-con {
+  background-color: #fff;
+}
+.top-con .banner {
+  height: 165px;
+  background: url(../../imgs/active_details/1.png) center / auto 100% no-repeat;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: relative;
+}
+.top-con .banner h4 {
+  font-size: 18px;
+  position: absolute;
+  top: 35%;
+  left: 15px;
+  padding-right: 10px;
+}
+.top-con .banner p {
+  font-size: 12px;
+  position: absolute;
+  top: 55%;
+  left: 15px;
+  padding-right: 10px;
+  line-height: 20px;
+}
+.top-con .text-desc {
+  padding: 15px;
+}
+.top-con .text-desc p {
+  font-size: 12px;
+  line-height: 23px;
+}
+.top-con footer {
+  margin: 0 16px;
+  padding: 10px 0px 0 0;
+  height: 65px;
+  box-sizing: border-box;
+  border-top: 1px solid #ebebeb;
+}
+.top-con footer section i[class~="iconfont"] {
+  font-size: 16px;
+  margin-right: 8px;
+}
+.top-con footer section time {
+  font-size: 15px;
+  color: #0096ff;
+}
+.top-con footer .ac-position {
+  margin-top: 4px;
+}
+.top-con footer .ac-position span {
+  color: #666;
+}
+.ac-description {
+  padding: 0 15px;
+  background-color: #fff;
+  margin-top: 5px;
+}
+.ac-description header {
+  border-bottom: 1px solid #ebebeb;
+}
+.ac-description header h4 {
+  font-size: 15px;
+  color: #333;
+  height: 34px;
+  line-height: 34px;
+}
+.ac-description .ac-intro-top {
+  padding: 10px 0 0 0;
+  font-size: 12px;
+  line-height: 23px;
+}
+.ac-description .ac-intro-img {
+  background: url(../../imgs/huidongquan/qiuhun.png) center / 100% auto no-repeat;
+  height: 165px;
+  margin-top: 20px;
+}
+.ac-description .ac-intro-bottom {
+  font-size: 12px;
+  line-height: 23px;
+}
+.ac-description .ac-intro-bottom p {
+  margin-top: 20px;
+}
+.ac-description footer {
+  height: 60px;
+  text-align: center;
+  border-top: 1px solid #ebebeb;
+  margin-top: 30px;
+}
+.ac-description footer button {
+  height: 44px;
+  margin-top: 8px;
+  border-radius: 22px;
+  outline: none;
+  border: none;
+  width: 80%;
+  background-color: #0096ff;
+  color: white;
+  font-size: 16px;
+}

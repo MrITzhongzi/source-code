@@ -1,0 +1,366 @@
+@import "../common/reset.css";
+@import "../common/huidongquan_com.css";
+body {
+  background-color: #eeeeee;
+}
+.pub-header .head-right {
+  font-size: 22px;
+}
+nav {
+  height: 90px;
+  text-align: center;
+  padding: 13px 0px;
+  background-color: #fff;
+}
+nav ul {
+  display: flex;
+  justify-content: center;
+  overflow-y: hidden;
+}
+nav ul li {
+  width: 22%;
+}
+nav ul li span[class~="iconfont"] {
+  font-size: 40px;
+}
+nav ul li span[class~="icon-shipin-"] {
+  color: #f45372;
+}
+nav ul li span[class~="icon-huodong-"] {
+  color: #f48122;
+}
+nav ul li span[class~="icon-huati-"] {
+  color: #30b75a;
+}
+nav ul li p {
+  margin-top: 12px;
+  font-size: 12px;
+}
+.classify {
+  background-color: #fff;
+  height: 100px;
+  margin-top: 5px;
+}
+.classify ul {
+  padding: 10px 0;
+  overflow: scroll;
+  white-space: nowrap;
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+}
+.classify ul li {
+  position: relative;
+  float: left;
+  text-align: center;
+  height: 100%;
+  margin: 0 6px;
+}
+.classify ul li img {
+  width: 120px;
+  height: 80px;
+}
+.classify ul li p {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: white;
+}
+.classify ul li:nth-child(1) {
+  margin-left: 15px;
+}
+.classify ul li:last-child {
+  margin-right: 15px;
+}
+.hdq-msg-body {
+  background-color: #ffffff;
+  padding-bottom: 0px;
+}
+.foot-tip {
+  text-align: center;
+  height: 55px;
+  line-height: 55px;
+}
+.foot-tip p {
+  color: #999999;
+}
+.comment-foot {
+  display: flex;
+  padding: 0 10%;
+  margin: 0 auto;
+  height: 50px;
+  background-color: #eeeeee;
+}
+.comment-foot input {
+  flex-grow: 1;
+  outline: none;
+  border: 1px solid #999999;
+  height: 30px;
+  border-radius: 15px;
+  box-sizing: border-box;
+  padding: 0 10px;
+  margin-top: 10px;
+}
+.comment-foot span {
+  line-height: 50px;
+  font-size: 16px;
+  margin-left: 10px;
+  color: #666666;
+}
+.active-list {
+  margin-top: 5px;
+  background-color: #fff;
+  padding: 15px 15px 0;
+}
+.active-list header {
+  height: 44px;
+  border-bottom: 1px solid #ebebeb;
+  line-height: 45px;
+  position: relative;
+}
+.active-list header i[class="icon-shijian-"] {
+  font-size: 16px;
+}
+.active-list header time {
+  margin-left: 8px;
+  color: #0096ff;
+  font-size: 15px;
+}
+.active-list header .baoming {
+  position: absolute;
+  top: -21px;
+  right: 10px;
+  text-align: center;
+}
+.active-list header .baoming i {
+  font-size: 30px;
+  color: #30b034;
+}
+.active-list header .baoming span {
+  position: absolute;
+  width: 100%;
+  display: block;
+  color: white;
+  font-size: 15px;
+}
+.active-list header .baoming .baomingzhong-color {
+  color: #ea4b2a;
+}
+.active-list header .baoming .finish-color {
+  color: #999;
+}
+.active-list .ac-content {
+  overflow: hidden;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.active-list .ac-content .logo {
+  width: 60px;
+  height: 60px;
+  background: url(../../imgs/huidongquan/qiuhun.png) center no-repeat;
+  float: left;
+}
+.active-list .ac-content .ac-description {
+  float: left;
+  margin-left: 18px;
+}
+.active-list .ac-content .ac-description h4 {
+  font-size: 15px;
+  color: #333;
+}
+.active-list .ac-content .ac-description p {
+  font-size: 13px;
+  color: #999;
+  margin-top: 10px;
+}
+.active-list footer {
+  height: 34px;
+  border-top: 1px solid #ebebeb;
+  line-height: 34px;
+}
+.active-list footer .peop-count {
+  float: right;
+  color: #666;
+}
+.active-list footer .peop-count i {
+  color: #999999;
+  margin-right: 8px;
+}
+.ac-detail-body {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+.ac-detail-head {
+  background-color: transparent;
+  border: none;
+}
+.ac-detail-head i[class~="iconfont"] {
+  color: white;
+}
+.top-con {
+  background-color: #fff;
+}
+.top-con .banner {
+  height: 165px;
+  background: url(../../imgs/active_details/1.png) center / auto 100% no-repeat;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: relative;
+}
+.top-con .banner h4 {
+  font-size: 18px;
+  position: absolute;
+  top: 35%;
+  left: 15px;
+  padding-right: 10px;
+}
+.top-con .banner p {
+  font-size: 12px;
+  position: absolute;
+  top: 55%;
+  left: 15px;
+  padding-right: 10px;
+  line-height: 20px;
+}
+.top-con .text-desc {
+  padding: 15px;
+}
+.top-con .text-desc p {
+  font-size: 12px;
+  line-height: 23px;
+}
+.top-con footer {
+  margin: 0 16px;
+  padding: 10px 0px 0 0;
+  height: 65px;
+  box-sizing: border-box;
+  border-top: 1px solid #ebebeb;
+}
+.top-con footer section i[class~="iconfont"] {
+  font-size: 16px;
+  margin-right: 8px;
+}
+.top-con footer section time {
+  font-size: 15px;
+  color: #0096ff;
+}
+.top-con footer .ac-position {
+  margin-top: 4px;
+}
+.top-con footer .ac-position span {
+  color: #666;
+}
+.ac-description {
+  padding: 0 15px;
+  background-color: #fff;
+  margin-top: 5px;
+}
+.ac-description header {
+  border-bottom: 1px solid #ebebeb;
+}
+.ac-description header h4 {
+  font-size: 15px;
+  color: #333;
+  height: 34px;
+  line-height: 34px;
+}
+.ac-description .ac-intro-top {
+  padding: 10px 0 0 0;
+  font-size: 12px;
+  line-height: 23px;
+}
+.ac-description .ac-intro-img {
+  background: url(../../imgs/huidongquan/qiuhun.png) center / 100% auto no-repeat;
+  height: 165px;
+  margin-top: 20px;
+}
+.ac-description .ac-intro-bottom {
+  font-size: 12px;
+  line-height: 23px;
+}
+.ac-description .ac-intro-bottom p {
+  margin-top: 20px;
+}
+.ac-description footer {
+  height: 60px;
+  text-align: center;
+  border-top: 1px solid #ebebeb;
+  margin-top: 30px;
+}
+.ac-description footer button {
+  height: 44px;
+  margin-top: 8px;
+  border-radius: 22px;
+  outline: none;
+  border: none;
+  width: 80%;
+  background-color: #0096ff;
+  color: white;
+  font-size: 16px;
+}
+.ac-app-body {
+  padding: 0;
+  background-color: #fff;
+}
+.ac-apply-head {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: transparent;
+  border-bottom: none;
+  color: white;
+}
+.ac-apply-head h4 {
+  color: white;
+}
+.apply-info {
+  padding: 0 15px;
+  margin-top: 15px;
+}
+.apply-info h4 {
+  font-size: 15px;
+  color: #333;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 6px;
+}
+.apply-info ul li {
+  height: 44px;
+  line-height: 45px;
+  border-bottom: 1px solid #cccccc;
+  overflow: hidden;
+}
+.apply-info ul li .key {
+  float: left;
+  color: #666666;
+}
+.apply-info ul li .value {
+  float: right;
+  margin-top: 14px;
+  border: none;
+  outline: none;
+  text-align: right;
+  width: 70%;
+  background-color: #fff;
+}
+.ac-app-foot {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  text-align: center;
+  border-top: 1px solid #ebebeb;
+  margin-top: 30px;
+}
+.ac-app-foot button {
+  height: 44px;
+  margin-top: 8px;
+  border-radius: 22px;
+  outline: none;
+  border: none;
+  width: 80%;
+  background-color: #0096ff;
+  color: white;
+  font-size: 16px;
+}
