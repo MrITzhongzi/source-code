@@ -404,19 +404,40 @@ nav ul li p {
 .topic-list ul li .topic-cont .tp-con-foot h4 {
   font-size: 15px;
   margin-top: 6px;
+  width: 60%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .topic-list ul li .topic-cont .tp-con-foot p {
   font-size: 12px;
+  width: 90%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 html {
   height: 100%;
+}
+.top-detail-con .banner h4 {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 80%;
+  text-overflow: ellipsis;
+}
+.comment-number {
+  font-size: 12px;
+  margin: 0 2%;
+  border-bottom: 1px solid #ebebeb;
+  padding-bottom: 13px;
+  color: #666;
 }
 .tp-deta-body {
   background-color: #fff;
   height: 100%;
 }
 .tp-de-foot {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   width: 100%;
   box-sizing: border-box;
@@ -898,4 +919,49 @@ html {
 }
 .collect-list li:first-child {
   margin-top: 0px;
+}
+.gesiqi_info {
+  width: 100%;
+  height: 100%;
+  background: url(../../imgs/gesiqi_Info/beijing.png) center / cover no-repeat;
+  padding-top: 10vh;
+}
+.gesiqi_info .gesiqi-zhi {
+  width: 80vw;
+  height: 80vw;
+  background: url(../../imgs/gesiqi_Info/zhi.png) center / cover no-repeat;
+  position: absolute;
+  top: 25vh;
+  left: 12vw;
+  text-align: center;
+  box-sizing: border-box;
+  padding-right: 30px;
+}
+.gesiqi_info .gesiqi-zhi h3 {
+  margin-top: 25%;
+  font-weight: 700;
+  color: #f9700b;
+  font-size: 18px;
+}
+.gesiqi_info .gesiqi-zhi .gesixie-name {
+  font-size: 18px;
+  color: #0096ff;
+  margin-top: 25px;
+}
+.gesiqi_info .gesiqi-zhi .gesixie-tel {
+  margin-top: 8px;
+  font-size: 15px;
+  color: #0096ff;
+}
+.gesiqi_info .gesiqi-zhi .line {
+  height: 1px;
+  background-color: #0096ff;
+  width: 60%;
+  margin: 0 auto;
+  margin-top: 15px;
+}
+.gesiqi_info .gesiqi-zhi .company-name {
+  font-size: 15px;
+  color: #0096ff;
+  margin-top: 15px;
 }

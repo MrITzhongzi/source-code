@@ -54,3 +54,9 @@ body nav .nav-con section p {
 body nav .nav-con .left {
   border-right: 1px solid #999999;
 }
+.stop-car-con header .btn .suoche {
+  background-color: #ea5513;
+}
+.stop-car-con header .btn .jiesuo {
+  background-color: #30b759;
+}

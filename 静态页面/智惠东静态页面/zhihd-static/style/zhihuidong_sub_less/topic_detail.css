@@ -1,12 +1,25 @@
 html {
   height: 100%;
 }
+.top-detail-con .banner h4 {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 80%;
+  text-overflow: ellipsis;
+}
+.comment-number {
+  font-size: 12px;
+  margin: 0 2%;
+  border-bottom: 1px solid #ebebeb;
+  padding-bottom: 13px;
+  color: #666;
+}
 .tp-deta-body {
   background-color: #fff;
   height: 100%;
 }
 .tp-de-foot {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   width: 100%;
   box-sizing: border-box;

@@ -19,7 +19,15 @@
 .topic-list ul li .topic-cont .tp-con-foot h4 {
   font-size: 15px;
   margin-top: 6px;
+  width: 60%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .topic-list ul li .topic-cont .tp-con-foot p {
   font-size: 12px;
+  width: 90%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
