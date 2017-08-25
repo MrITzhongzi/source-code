@@ -1,8 +1,11 @@
-
+.ac-list-body {
+  padding: 0;
+}
 .active-list {
   margin-top: 5px;
   background-color: #fff;
   padding: 15px 15px 0;
+
   header {
     height: 44px;
     border-bottom: 1px solid #ebebeb;
@@ -53,14 +56,21 @@
     .ac-description {
       float: left;
       margin-left: 18px;
+      width: 65%;
       h4{
         font-size: 15px;
         color: #333;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
       }
       p{
         font-size: 13px;
         color: #999;
         margin-top: 10px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
       }
     }
   }
@@ -68,6 +78,13 @@
     height: 34px;
     border-top: 1px solid #ebebeb;
     line-height: 34px;
+    .position {
+      width: 50%;
+      display: inline-block;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
     .peop-count{
       float: right;
       color: #666;

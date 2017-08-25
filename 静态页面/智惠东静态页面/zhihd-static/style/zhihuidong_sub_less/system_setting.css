@@ -1,0 +1,67 @@
+.sys-con {
+  margin-top: 50px;
+  padding: 0 15px;
+  background-color: #fff;
+}
+.sys-con li {
+  overflow: hidden;
+  height: 45px;
+  line-height: 45px;
+  border-bottom: 1px solid #ebebeb;
+}
+.sys-con li .key {
+  color: #333;
+}
+.sys-con li .value {
+  float: right;
+}
+.sys-con li .value span {
+  color: #666;
+  font-size: 14px;
+}
+.switch {
+  width: 40px;
+  height: 20px;
+  background-color: #3cb034;
+  float: right;
+  border-radius: 10px;
+  margin-top: 12px;
+  margin-right: 10px;
+  position: relative;
+}
+.switch input {
+  -webkit-appearance: none;
+  border: none;
+  outline: none;
+  margin: 0;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: #fff;
+  position: absolute;
+  top: 1px;
+  left: 0;
+}
+.switch .replace-input {
+  display: block;
+  width: 120%;
+  height: 140%;
+  background-color: transparent;
+  position: absolute;
+  top: -20%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.pub-footer {
+  text-align: center;
+  margin-top: 60px;
+}
+.pub-footer button {
+  width: 80%;
+  height: 44px;
+  border: none;
+  border-radius: 22px;
+  color: white;
+  background-color: #0096ff;
+  outline: none;
+  font-size: 16px;
+}

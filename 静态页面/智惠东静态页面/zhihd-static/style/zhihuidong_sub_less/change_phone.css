@@ -1,0 +1,21 @@
+.change-phone {
+  margin-top: 25px;
+  background-color: #fff;
+  padding: 0 15px;
+}
+.change-phone li {
+  height: 44px;
+  line-height: 44px;
+  border-bottom: 1px solid #ebebeb;
+}
+.change-phone li input {
+  width: 60%;
+  border: none;
+  outline: none;
+  font-size: 15px;
+}
+.change-phone li .get-code {
+  font-size: 15px;
+  color: #0096ff;
+  float: right;
+}

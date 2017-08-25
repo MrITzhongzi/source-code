@@ -1,0 +1,101 @@
+.my-header {
+  position: relative;
+}
+.my-intro {
+  background-color: #fff;
+  height: 89px;
+  border-bottom: 1px solid #ebebeb;
+}
+.my-intro .head-img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  float: left;
+  background: url(../../imgs/topic/qixi.png) center / cover no-repeat;
+  margin-top: 15px;
+  margin-left: 15px;
+  margin-right: 13px;
+}
+.my-intro .intro-con {
+  overflow: hidden;
+  padding-top: 18px;
+}
+.my-intro .intro-con h4 {
+  font-size: 16px;
+}
+.my-intro .intro-con p {
+  font-size: 12px;
+  color: #666;
+  margin-top: 8px;
+}
+.my-intro .intro-con i[class~="iconfont"] {
+  float: right;
+  margin-right: 15px;
+  margin-top: 16px;
+}
+.my-cen-nav {
+  padding: 0;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  box-sizing: border-box;
+  padding-top: 13px;
+}
+.my-cen-nav section {
+  width: 20%;
+}
+.my-cen-nav section i {
+  font-size: 22px;
+}
+.my-cen-nav section i[class~="icon-daifukuan-"] {
+  color: #f48122;
+}
+.my-cen-nav section i[class~="icon-daifahuo-"] {
+  color: #45aedd;
+}
+.my-cen-nav section i[class~="icon-daishouhuo-"] {
+  color: #30b75a;
+}
+.my-cen-nav section i[class~="icon-tuikuanhuo-"] {
+  color: #f45372;
+}
+.my-cen-nav section p {
+  font-size: 12px;
+  color: #666666;
+  margin-top: 8px;
+}
+.center-list {
+  margin-top: 5px;
+  background-color: #fff;
+}
+.center-list ul li {
+  overflow: hidden;
+  height: 44px;
+  line-height: 44px;
+  box-sizing: border-box;
+  padding: 0 15px;
+  border-bottom: 1px solid #ebebeb;
+}
+.center-list ul li .key {
+  float: left;
+}
+.center-list ul li .key span {
+  color: #333;
+  margin-left: 5px;
+}
+.center-list ul li .key i {
+  font-size: 16px;
+}
+.center-list ul li .value {
+  float: right;
+}
+.center-list ul li .value span {
+  color: #666;
+}
+.center-list ul li .value i {
+  color: #666;
+}
+.pub-bottom-footer i[class~="iconfont"] {
+  font-size: 22px;
+}

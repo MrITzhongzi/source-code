@@ -40,10 +40,16 @@
         </p>
     </section>
     <footer>
-        <img src="../imgs/pub_img/zanwushuju.png" alt="">
-        <img src="../imgs/pub_img/zanwushuju.png" alt="">
-        <img src="../imgs/pub_img/zanwushuju.png" alt="">
         <i class="iconfont icon-youjiantou"></i>
+        <section class="rety-show-img-container">
+            <section class="rety-show-img" >
+                <img src="../imgs/pub_img/zanwushuju.png" alt="">
+                <img src="../imgs/pub_img/zanwushuju.png" alt="">
+                <img src="../imgs/pub_img/zanwushuju.png" alt="">
+                <img src="../imgs/pub_img/zanwushuju.png" alt="">
+                <img src="../imgs/pub_img/zanwushuju.png" alt="">
+            </section>
+        </section>
     </footer>
 </section>
 <section class="pub-list-info">
@@ -58,11 +64,13 @@
         </li>
         <li>
             <section class="star">
-                <i class="iconfont icon-wujiaoxing light"></i>
-                <i class="iconfont icon-wujiaoxing light"></i>
-                <i class="iconfont icon-wujiaoxing light"></i>
-                <i class="iconfont icon-wujiaoxing light"></i>
-                <i class="iconfont icon-wujiaoxing"></i>
+                <section class="star">
+                    <span data-index="0"><i class="iconfont icon-wujiaoxing light"></i></span>
+                    <span data-index="1"><i class="iconfont icon-wujiaoxing light"></i></span>
+                    <span data-index="2"><i class="iconfont icon-wujiaoxing light"></i></span>
+                    <span data-index="3"><i class="iconfont icon-wujiaoxing light"></i></span>
+                    <span data-index="4"><i class="iconfont icon-wujiaoxing light"></i></span>
+                </section>
             </section>
             <p class="des">来的有点晚，希望下次快一些</p>
         </li>
@@ -99,4 +107,27 @@
     </section>
 </footer>
 </body>
+<script>
+    (function () {
+        var starBox = document.querySelector('.star')
+        var spanEles = starBox.querySelectorAll('span')
+        var iEles = starBox.querySelectorAll('i[class~="iconfont"]')
+        var spanIndex
+        Array.prototype.forEach.call(spanEles,function (spanEle) {
+            spanEle.onclick = function () {
+                spanIndex = this.getAttribute('data-index')
+
+                for(var j = 0;j < iEles.length;j++){
+                    iEles[j].classList.remove('light')
+                }
+
+                for(var i = 0;i < spanEles.length;i++){
+                    if(i<=spanIndex){
+                        spanEles[i].children[0].classList.add("light")
+                    }
+                }
+            }
+        })
+    }())
+</script>
 </html>

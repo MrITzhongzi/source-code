@@ -1,0 +1,45 @@
+.my-set-head .head-right {
+  font-size: 16px;
+}
+.per-set {
+  margin-top: 50px;
+  background-color: #fff;
+  padding: 0 15px;
+}
+.per-set li {
+  overflow: hidden;
+  height: 44px;
+  line-height: 45px;
+  border-bottom: 1px solid #ebebeb;
+  color: #666;
+}
+.per-set li .key {
+  float: left;
+  font-size: 15px;
+}
+.per-set li .value {
+  float: right;
+  color: #666666;
+}
+.per-set li .value .set-head-img {
+  width: 60px;
+  height: 60px;
+  background: url(../../imgs/topic/qixi.png) center / cover no-repeat;
+  margin-top: 15px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+.per-set li .value i {
+  float: right;
+}
+.per-set li .value input {
+  border: none;
+  outline: none;
+  text-align: right;
+  color: #666666;
+  font-size: 15px;
+}
+.per-set li:nth-child(1) {
+  height: 89px;
+  line-height: 90px;
+}

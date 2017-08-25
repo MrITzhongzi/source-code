@@ -1,0 +1,27 @@
+.gesixie-con {
+  margin-top: 50px;
+  padding: 0 15px;
+  background-color: #fff;
+}
+.gesixie-con li {
+  height: 44px;
+  line-height: 44px;
+  border-bottom: 1px solid #ebebeb;
+  overflow: hidden;
+}
+.gesixie-con li .key {
+  float: left;
+  color: #666666;
+}
+.gesixie-con li .value {
+  float: right;
+}
+.gesixie-con li .value input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align: right;
+  font-size: 15px;
+  border: none;
+  outline: none;
+}

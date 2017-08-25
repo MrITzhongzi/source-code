@@ -1,0 +1,13 @@
+html {
+  height: 100%;
+}
+.tp-deta-body {
+  background-color: #fff;
+  height: 100%;
+}
+.tp-de-foot {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  box-sizing: border-box;
+}

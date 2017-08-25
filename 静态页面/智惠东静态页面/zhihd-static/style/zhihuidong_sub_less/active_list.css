@@ -1,3 +1,6 @@
+.ac-list-body {
+  padding: 0;
+}
 .active-list {
   margin-top: 5px;
   background-color: #fff;
@@ -54,20 +57,34 @@
 .active-list .ac-content .ac-description {
   float: left;
   margin-left: 18px;
+  width: 65%;
 }
 .active-list .ac-content .ac-description h4 {
   font-size: 15px;
   color: #333;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .active-list .ac-content .ac-description p {
   font-size: 13px;
   color: #999;
   margin-top: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .active-list footer {
   height: 34px;
   border-top: 1px solid #ebebeb;
   line-height: 34px;
+}
+.active-list footer .position {
+  width: 50%;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .active-list footer .peop-count {
   float: right;

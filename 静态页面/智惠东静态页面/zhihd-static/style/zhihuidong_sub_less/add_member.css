@@ -1,0 +1,30 @@
+.add-mem-head .head-right {
+  font-size: 15px;
+}
+.add-mem-con ul li .key span,
+.add-mem-con ul li .value span {
+  color: #666;
+}
+.get-code-box {
+  overflow: hidden;
+  background-color: #fff;
+  margin-top: 5px;
+  box-sizing: border-box;
+  padding: 0 15px;
+  height: 45px;
+  line-height: 45px;
+}
+.get-code-box input {
+  float: left;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  border: none;
+  margin-top: 14px;
+  font-size: 16px;
+}
+.get-code-box .get-code {
+  float: right;
+  color: #0096ff;
+}

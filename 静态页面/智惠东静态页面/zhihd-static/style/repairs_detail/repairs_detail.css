@@ -32,26 +32,32 @@ body {
 }
 .repair_type footer {
   position: relative;
-  overflow: hidden;
   height: 100px;
+  overflow: hidden;
 }
-.repair_type footer img {
-  width: 30%;
+.repair_type footer .rety-show-img-container {
+  overflow: scroll;
+}
+.repair_type footer .rety-show-img-container .rety-show-img img {
+  width: 100px;
+  height: 100px;
   margin-right: 4px;
 }
-.repair_type footer img:nth-child(3) {
+.repair_type footer .rety-show-img-container .rety-show-img img:last-child {
   margin-right: 0;
 }
 .repair_type footer i {
-  float: right;
-  line-height: 100px;
+  position: absolute;
+  right: 0px;
+  top: 50%;
+  margin-top: -8px;
 }
 .pub-list-info .star {
   height: 30px;
   line-height: 30px;
 }
 .pub-list-info .star i {
-  font-size: 15px;
+  font-size: 18px;
 }
 .pub-list-info .des {
   font-size: 15px;

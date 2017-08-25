@@ -1,0 +1,55 @@
+.house-nav {
+  margin-top: 45px;
+  height: 45px;
+  padding: 0;
+  line-height: 45px;
+}
+.house-nav ul li {
+  width: 50%;
+  border-bottom: 2px solid transparent;
+  font-size: 14px;
+  color: #666;
+}
+.house-nav ul .active {
+  color: #0096ff;
+  border-bottom: 2px solid #0096ff;
+}
+.house-cont {
+  margin-top: 5px;
+  background-color: #fff;
+  padding: 0 15px;
+}
+.house-cont li {
+  display: flex;
+  height: 69px;
+  box-sizing: border-box;
+  padding-top: 15px;
+  border-bottom: 1px solid #ebebeb;
+}
+.house-cont li .left {
+  font-size: 30px;
+  color: #f45372;
+  margin-right: 10px;
+}
+.house-cont li .middle {
+  flex-grow: 1;
+}
+.house-cont li .middle h4 {
+  font-size: 16px;
+  color: #333;
+}
+.house-cont li .middle p {
+  font-size: 12px;
+  color: #999;
+}
+.house-cont li .right p {
+  color: #999;
+  text-align: right;
+}
+.house-cont li .right p:nth-child(1) {
+  font-size: 14px;
+}
+.house-cont li .right p:nth-child(2) {
+  font-size: 12px;
+  margin-top: 3px;
+}

@@ -1,0 +1,42 @@
+.address-list {
+  padding: 0 15px;
+  background-color: #fff;
+  margin-top: 50px;
+}
+.address-list li {
+  height: 69px;
+  border-bottom: 1px solid #ebebeb;
+  padding-top: 16px;
+  box-sizing: border-box;
+}
+.address-list li h4 {
+  color: #333;
+  font-size: 16px;
+}
+.address-list li span {
+  color: #999;
+  font-size: 12px;
+}
+.address-list li .telphone {
+  margin-left: 28px;
+}
+.add-address-foot {
+  height: 50px;
+  background-color: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+.add-address-foot button {
+  border: none;
+  outline: none;
+  width: 80%;
+  height: 44px;
+  border-radius: 22px;
+  margin-top: 3px;
+  margin-left: 10%;
+  color: white;
+  background-color: #0096ff;
+  font-size: 16px;
+}

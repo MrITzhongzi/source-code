@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>立即评价</title>
+    <link rel="stylesheet" href="../style/font/iconfont.css">
+    <style>
+        @import "../style/repairs_detail/repairs_detail.css";
+        .pub-list-info {
+            margin-top: 50px;
+        }
+        .immediately{
+            text-align: center;
+        }
+        .star {
+            text-align: left;
+        }
+        .pub-list-info li textarea {
+            width: 98%;
+            height: 100px;
+            resize: none;
+            text-align: left;
+            border: 1px solid #ebebeb;
+            outline: none;
+            box-sizing: border-box;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+<header class="pub-header">
+    <i class="iconfont icon-jiantou3"></i>
+    <h4>评价</h4>
+</header>
+<section class="pub-list-info">
+    <ul>
+        <li>
+            <span class="key" >维修人</span>
+            <span class="value">张师傅</span>
+        </li>
+        <li>
+            <span class="key" >维修时间</span>
+            <span class="value">2017-03-09 10:07:20</span>
+        </li>
+        <li class="immediately">
+            <section class="star">
+                <span data-index="0"><i class="iconfont icon-wujiaoxing light"></i></span>
+                <span data-index="1"><i class="iconfont icon-wujiaoxing light"></i></span>
+                <span data-index="2"><i class="iconfont icon-wujiaoxing light"></i></span>
+                <span data-index="3"><i class="iconfont icon-wujiaoxing light"></i></span>
+                <span data-index="4"><i class="iconfont icon-wujiaoxing light"></i></span>
+            </section>
+            <textarea placeholder="请输入您的评价"></textarea>
+        </li>
+    </ul>
+</section>
+<script>
+    (function () {
+        var starBox = document.querySelector('.star')
+        var spanEles = starBox.querySelectorAll('span')
+        var iEles = starBox.querySelectorAll('i[class~="iconfont"]')
+        var spanIndex
+        Array.prototype.forEach.call(spanEles,function (spanEle) {
+            spanEle.onclick = function () {
+                spanIndex = this.getAttribute('data-index')
+
+                for(var j = 0;j < iEles.length;j++){
+                    iEles[j].classList.remove('light')
+                }
+
+                for(var i = 0;i < spanEles.length;i++){
+                    if(i<=spanIndex){
+                        spanEles[i].children[0].classList.add("light")
+                    }
+                }
+            }
+        })
+    }())
+</script>
+</body>
+</html>

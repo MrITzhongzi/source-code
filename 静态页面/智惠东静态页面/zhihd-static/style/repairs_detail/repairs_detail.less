@@ -33,18 +33,27 @@ body {
   }
   footer {
     position: relative;
-    overflow: hidden;
     height: 100px;
-    img {
-      width: 30%;
-      margin-right: 4px;
-    }
-    img:nth-child(3){
-      margin-right: 0;
+    overflow: hidden;
+    .rety-show-img-container{
+      overflow: scroll;
+      .rety-show-img{
+        img {
+          width: 100px;
+          height: 100px;
+          margin-right: 4px;
+
+        }
+        img:last-child{
+          margin-right: 0;
+        }
+      }
     }
     i {
-      float: right;
-      line-height: 100px;
+      position: absolute;
+      right: 0px;
+      top: 50%;
+      margin-top: -8px;
     }
   }
 }
@@ -54,7 +63,7 @@ body {
     height: 30px;
     line-height: 30px;
     i{
-      font-size: 15px;
+      font-size: 18px;
     }
   }
   .des {

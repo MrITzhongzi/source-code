@@ -1,0 +1,50 @@
+.collect-list {
+  margin-top: 44px;
+}
+.collect-list li {
+  height: 90px;
+  margin-top: 5px;
+  box-sizing: border-box;
+  padding: 10px 15px;
+  overflow: hidden;
+  background-color: #fff;
+}
+.collect-list li .msg {
+  float: left;
+  width: 66%;
+}
+.collect-list li .msg h4 {
+  font-size: 15px;
+  color: #333;
+  margin-bottom: 6px;
+}
+.collect-list li .msg span {
+  color: #999;
+  font-size: 12px;
+}
+.collect-list li .msg time {
+  color: #999;
+  font-size: 12px;
+  margin-left: 12px;
+}
+.collect-list li .video-show {
+  float: right;
+  width: 112px;
+  height: 70px;
+  background: url(../../imgs/topic/qixi.png) center / cover no-repeat;
+  position: relative;
+}
+.collect-list li .video-show time {
+  position: absolute;
+  right: 4px;
+  bottom: 4px;
+  text-align: center;
+  font-size: 12px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 2px 3px;
+  border-radius: 8px;
+}
+.collect-list li:first-child {
+  margin-top: 0px;
+}

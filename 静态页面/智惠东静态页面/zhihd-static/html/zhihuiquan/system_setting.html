@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>系统设置</title>
+    <link rel="stylesheet" href="../../style/font/iconfont.css">
+    <link rel="stylesheet" href="../../style/zhihuiquan_less/total.css">
+</head>
+<body>
+<header class="pub-header">
+    <i class="iconfont icon-jiantou3"></i>
+    <h4>系统设置</h4>
+</header>
+<section class="sys-con">
+    <ul>
+        <li>
+            <span class="key">信息通知</span>
+            <div class="value">
+                <i class="iconfont icon-youjiantou"></i>
+            </div>
+        </li>
+        <li>
+            <span class="key">自动开门</span>
+            <section class="value switch">
+                <input type="checkbox" checked="true">
+                <a class="replace-input"></a>
+            </section>
+        </li>
+        <li>
+            <span class="key">一键开门</span>
+            <div class="value">
+                <span>添加桌面钥匙</span>
+                <i class="iconfont icon-youjiantou"></i>
+            </div>
+        </li>
+        <li>
+            <span class="key">个人设置</span>
+            <div class="value">
+                <i class="iconfont icon-youjiantou"></i>
+            </div>
+        </li>
+    </ul>
+</section>
+<footer class="pub-footer">
+    <button>退出登录</button>
+</footer>
+</body>
+<script src="../../script/utils/pub_function.js"></script>
+<script>
+    //自动开门点击事件
+    var switchEle = document.querySelector('.switch')
+    var checkboxVal = switchEle.querySelector('input')
+    var aElement = switchEle.querySelector('.replace-input')
+    var swichOnCss = {
+        backgroundColor: "#3cb034"
+    },swichOffCss = {
+        backgroundColor: "#cccccc"
+    },checkboxOnCss = {
+        left: "0px"
+    },checkboxOffCss = {
+        left: "21px"
+    }
+
+    aElement.onclick = function (e) {
+        e.preventDefault()
+        checkboxVal.checked = !checkboxVal.checked
+        if(checkboxVal.checked){
+            utils.setCss(switchEle,swichOffCss)
+            utils.setCss(checkboxVal,checkboxOffCss)
+        }else {
+            utils.setCss(switchEle,swichOnCss)
+            utils.setCss(checkboxVal,checkboxOnCss)
+        }
+    }
+    checkboxVal.onclick = function (e) {
+        e.preventDefault()
+    }
+</script>
+</html>

@@ -1,0 +1,24 @@
+.add-house-head .head-right {
+  font-size: 15px;
+}
+.add-house-list {
+  margin-top: 50px;
+}
+.add-house-list li .value input {
+  border: none;
+  outline: none;
+  text-align: right;
+  font-size: 15px;
+}
+.add-house-list li .value .tel {
+  color: #333;
+}
+.add-house-list li .value select {
+  border: none;
+  outline: none;
+  text-align: right;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: #fff;
+}

@@ -1,0 +1,16 @@
+.gesixie-foot {
+  text-align: center;
+  margin-top: 28px;
+}
+.gesixie-foot button {
+  width: 135px;
+  height: 44px;
+  border-radius: 22px;
+  border: none;
+  outline: none;
+  color: white;
+  background-color: #0096ff;
+  text-align: center;
+  line-height: 44px;
+  font-size: 16px;
+}
