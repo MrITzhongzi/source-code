@@ -1,0 +1,255 @@
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+p {
+  margin: 0;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+a:focus {
+  -moz-outline-style: none;
+  -webkit-outline-style: none;
+  outline-style: none;
+  outline: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-weight: normal;
+}
+.fl-l {
+  float: left;
+}
+.fl-r {
+  float: right;
+}
+/*清除浮动*/
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  visibility: hidden;
+  clear: both;
+}
+.clearfix {
+  *zoom: 1;
+}
+/*常用颜色*/
+.cor-gray {
+  color: #999;
+}
+body {
+  background-color: #eee;
+  margin: 0;
+  padding-bottom: 49px;
+}
+header {
+  display: flex;
+  height: 44px;
+  line-height: 44px;
+  padding: 0 15px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+  background-color: rgba(113, 209, 198, 0);
+  box-sizing: border-box;
+}
+header .head {
+  width: 100px;
+  color: white;
+  font-size: 14px;
+}
+header .head i[class~="iconfont"] {
+  margin-left: 4px;
+  font-size: 12px;
+}
+header .search-in {
+  flex-grow: 1;
+  text-align: center;
+  position: relative;
+}
+header .search-in i[class~="iconfont"] {
+  position: absolute;
+  left: 20px;
+  top: 1px;
+  color: #999;
+}
+header .search-in input {
+  width: 90%;
+  outline: none;
+  border: none;
+  height: 30px;
+  margin-top: 6px;
+  border-radius: 15px;
+  box-sizing: border-box;
+  padding-left: 28px;
+  padding-right: 5px;
+  top: 2px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.banner {
+  height: 225px;
+}
+.banner .swiper-container .swiper-slide div {
+  height: 225px;
+}
+nav {
+  background-color: #fff;
+  overflow: scroll;
+}
+nav .nav-page {
+  text-align: center;
+  padding: 4px 0 25px 0;
+  overflow: hidden;
+}
+nav .nav-page .nav {
+  float: left;
+  width: 20vw;
+  margin-top: 21px;
+}
+nav .nav-page .nav img {
+  width: 40px;
+  height: 40px;
+}
+nav .nav-page .nav p {
+  font-size: 12px;
+  color: #333;
+  margin-top: 10px;
+}
+.pro-show {
+  margin-top: 5px;
+  background-color: #fff;
+  height: 195px;
+  padding: 5px 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.pro-show .left {
+  width: 49%;
+  height: 185px;
+  float: left;
+  margin-right: 5px;
+}
+.pro-show .right-top {
+  float: right;
+  height: 90px;
+  width: 49%;
+}
+.pro-show .right-bottom {
+  float: right;
+  margin-top: 5px;
+  height: 90px;
+  width: 49%;
+}
+.recommend {
+  margin-top: 5px;
+  background-color: #fff;
+  padding: 0 15px;
+}
+.recommend .re-title {
+  height: 34px;
+  color: #666;
+  border-bottom: 1px solid #ebebeb;
+  line-height: 34px;
+}
+.recommend ul li {
+  overflow: hidden;
+  border-bottom: 1px solid #ebebbe;
+  padding: 10px 0;
+  display: flex;
+}
+.recommend ul li .recom-logo {
+  width: 100px;
+  height: 100px;
+}
+.recommend ul li .recom-content {
+  flex-grow: 1;
+  overflow: hidden;
+  margin-left: 20px;
+}
+.recommend ul li .recom-content h4 {
+  width: 100%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-size: 15px;
+  color: #333;
+}
+.recommend ul li .recom-content .peisongfei {
+  margin-top: 16px;
+  color: #999;
+  font-size: 12px;
+}
+.recommend ul li .recom-content .gesixie,
+.recommend ul li .recom-content .baoyou {
+  width: 44px;
+  height: 16px;
+  display: inline-block;
+  text-align: center;
+  font-size: 12px;
+  -webkit-transform-origin-x: 0;
+  -webkit-transform: scale(0.9);
+  color: white;
+  border-radius: 6px;
+  background-color: #ea5514;
+  margin-top: 7px;
+  padding: 1px 2px;
+}
+.recommend ul li .recom-content .baoyou {
+  margin-left: 15px;
+}
+.recommend ul li .recom-content .danjia {
+  margin-top: 4px;
+}
+.recommend ul li .recom-content .danjia .price {
+  font-size: 16px;
+  color: #ea5514;
+}
+.recommend ul li .recom-content .danjia .yueshou {
+  color: #999;
+  font-size: 12px;
+  margin-left: 10px;
+}
+.recommend ul li .recom-content .danjia .dizhi {
+  color: #999;
+  font-size: 12px;
+  float: right;
+}
+.footer-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  background-color: #fff;
+  border-top: 1px solid #ebebeb;
+}
+.footer-nav ul {
+  overflow: hidden;
+}
+.footer-nav li {
+  width: 25%;
+  float: left;
+  height: 49px;
+  box-sizing: border-box;
+  padding: 7px;
+  color: #666666;
+}
+.footer-nav li i[class~="iconfont"] {
+  font-size: 22px;
+}
+.footer-nav li p {
+  font-size: 10px;
+}
