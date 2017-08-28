@@ -2,12 +2,32 @@
   background-color: #ffffff;
   padding-bottom: 0px;
 }
+.hdq-msg-header {
+  text-align: center;
+  margin: 10px 15px 0;
+  border-bottom: 1px solid #ebebeb;
+  padding-bottom: 10px;
+}
+.hdq-msg-header h4 {
+  color: #333;
+  width: 65%;
+  margin: 0 auto;
+  font-weight: 700;
+}
 .foot-tip {
   text-align: center;
   height: 55px;
   line-height: 55px;
 }
 .foot-tip p {
+  color: #999999;
+  font-size: 12px;
+}
+.no-comment {
+  text-align: center;
+}
+.no-comment p {
+  font-size: 12px;
   color: #999999;
 }
 .comment-foot {
@@ -32,4 +52,45 @@
   font-size: 16px;
   margin-left: 10px;
   color: #666666;
+}
+.hdq-msg-foot {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  border: 1px solid #000;
+  height: 50px;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.6);
+  box-sizing: border-box;
+  padding: 5px 15px 0;
+}
+.hdq-msg-foot .foot-log {
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  background: url(../../imgs/topic/qixi.png) center / cover no-repeat;
+  float: left;
+  margin-right: 10px;
+}
+.hdq-msg-foot .foot-cont {
+  float: left;
+  color: white;
+}
+.hdq-msg-foot .foot-cont h4 {
+  font-size: 15px;
+}
+.hdq-msg-foot .foot-cont p {
+  font-size: 12px;
+}
+.hdq-msg-foot .download {
+  float: right;
+  border: none;
+  outline: none;
+  width: 100px;
+  height: 25px;
+  background-color: #0096ff;
+  color: white;
+  border-radius: 2px;
+  margin-top: 7px;
 }

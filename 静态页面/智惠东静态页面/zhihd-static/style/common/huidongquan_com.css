@@ -71,8 +71,12 @@ body {
 }
 .pub-hdq-msg .hdq-show-img {
   margin-top: 15px;
-  text-align: center;
   text-indent: 0em;
+  overflow: hidden;
+}
+.pub-hdq-msg .hdq-show-img .hqd-img {
+  float: left;
+  margin: 2px;
 }
 .pub-hdq-msg footer {
   line-height: 35px;

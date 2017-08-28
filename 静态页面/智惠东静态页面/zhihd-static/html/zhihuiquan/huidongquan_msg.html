@@ -6,12 +6,26 @@
     <title>惠东圈动态详情</title>
     <link rel="stylesheet" href="../../style/font/iconfont.css">
     <link rel="stylesheet" href="../../style/zhihuiquan_less/total.css">
+    <style>
+        body{
+            padding-bottom: 50px!important;
+        }
+        .comment-foot{
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 0 5%;
+        }
+        .comment-foot input{
+            width: 77%;
+            flex-grow: 0;
+        }
+    </style>
 </head>
 <body class="hdq-msg-body">
-<header class="pub-header">
-    <i class="iconfont icon-jiantou3"></i>
-    <h4>惠东圈</h4>
-    <a href="javascript:;" class="head-right">下一步</a>
+<header class="hdq-msg-header">
+    <h4>想要有小镇社区感，布鲁克林一栋公寓楼造成了梯田的样子</h4>
 </header>
 <section class="pub-hdq-msg">
     <header>
@@ -24,22 +38,19 @@
     <section class="hdq-content">
         <p>这是惠东圈这是惠东圈这是惠东圈这是惠东圈这是惠东圈这是惠东圈这是惠东圈这是惠东圈这是惠东圈这是惠东圈这是惠东圈这是惠东圈这是惠东圈这是惠东圈这是惠东圈这是惠东圈</p>
         <section class="hdq-show-img">
-            <img src="../../imgs/huidongquan/qiuhun.png" alt="">
-            <img src="../../imgs/huidongquan/qiuhun.png" alt="">
-            <img src="../../imgs/huidongquan/qiuhun.png" alt="">
+            <div class="hqd-img" style="background: url(../../imgs/huidongquan/qiuhun.png) center / cover no-repeat"></div>
+            <div class="hqd-img" style="background: url(../../imgs/huidongquan/qiuhun.png) center / cover no-repeat"></div>
+            <div class="hqd-img" style="background: url(../../imgs/huidongquan/qiuhun.png) center / cover no-repeat"></div>
+            <div class="hqd-img" style="background: url(../../imgs/huidongquan/qiuhun.png) center / cover no-repeat"></div>
         </section>
     </section>
-    <footer>
-        <!--<section class="fenxiang-pinglun-zan">
-            <span class="share"><i class="iconfont icon-fenxiang-1"></i>分享</span>
-            <span class="comment"><i class="iconfont icon-pinglun-"></i>评论</span>
-            <span class="zan zan-color"><i class="iconfont icon-dianzan-"></i>200</span>
-        </section>-->
-        <section class="fenxiang-zan">
-            <span class="share"><i class="iconfont icon-fenxiang-1"></i>分享</span>
-            <span class="zan zan-color"><i class="iconfont icon-dianzan-"></i>200</span>
-        </section>
-    </footer>
+    <!--<footer>-->
+
+        <!--<section class="fenxiang-zan">-->
+            <!--<span class="share"><i class="iconfont icon-fenxiang-1"></i>分享</span>-->
+            <!--<span class="zan zan-color"><i class="iconfont icon-dianzan-"></i>200</span>-->
+        <!--</section>-->
+    <!--</footer>-->
 </section>
 <section class="pub-hdq-comment">
     <section class="c-head"></section>
@@ -48,7 +59,7 @@
         <p class="con-detail">
             <span class="content">非常不错</span>
         </p>
-        <time>11-14 21:33</time><span class="reply">回复</span>
+        <time>11-14 21:33</time>
     </section>
 </section>
 <section class="pub-hdq-comment">
@@ -59,14 +70,18 @@
             <span class="reply-con">回复<span class="rep-peop">指挥官</span>:</span>
             <span class="content">非常不错</span>
         </p>
-        <time>11-14 21:33</time><span class="reply">回复</span>
+        <time>11-14 21:33</time>
     </section>
 </section>
-<section class="foot-tip">
-    <p>———————就这么多啦———————</p>
-</section>
-<footer class="comment-foot">
-    <input type="text" placeholder="发表自己的看法吧"><span>评论</span>
+<footer class="hdq-msg-foot">
+    <div class="foot-log"></div>
+    <section class="foot-cont">
+        <h4>智联万家 惠享生活</h4>
+        <p>立即下载智惠东客户端</p>
+    </section>
+    <button class="download">
+        立即下载
+    </button>
 </footer>
 </body>
 <script>
@@ -75,11 +90,23 @@
         Array.prototype.forEach.call(imgBoxsEl,function (imgBoxEl) {
             var imgsEle = imgBoxEl.children
             Array.prototype.forEach.call(imgsEle,function (imgEl) {
-                if(imgsEle.length == 4){
-                    imgEl.style.width = 0.88 / 2  * 100 + "%"
+                if(imgsEle.length == 1){
+                    imgEl.style.width = 98 + '%'
+                    imgEl.style.height = 230 +　'px'
                     return
                 }
-                imgEl.style.width = 0.88 / imgsEle.length  * 100 + "%"
+                if(imgsEle.length == 2){
+                    imgEl.style.width = 0.97 / 2  * 100 + "%"
+                    imgEl.style.height = 112 +　'px'
+                    return
+                }
+                if(imgsEle.length == 4){
+                    imgEl.style.width = 0.97 / 2  * 100 + "%"
+                    imgEl.style.height = 112 +　'px'
+                    return
+                }
+                imgEl.style.width = 0.96 / 3  * 100 + "%"
+                imgEl.style.height = 75 +　'px'
             })
         })
     }())

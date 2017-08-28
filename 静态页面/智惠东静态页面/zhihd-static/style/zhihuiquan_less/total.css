@@ -76,12 +76,32 @@ nav ul li p {
   background-color: #ffffff;
   padding-bottom: 0px;
 }
+.hdq-msg-header {
+  text-align: center;
+  margin: 10px 15px 0;
+  border-bottom: 1px solid #ebebeb;
+  padding-bottom: 10px;
+}
+.hdq-msg-header h4 {
+  color: #333;
+  width: 65%;
+  margin: 0 auto;
+  font-weight: 700;
+}
 .foot-tip {
   text-align: center;
   height: 55px;
   line-height: 55px;
 }
 .foot-tip p {
+  color: #999999;
+  font-size: 12px;
+}
+.no-comment {
+  text-align: center;
+}
+.no-comment p {
+  font-size: 12px;
   color: #999999;
 }
 .comment-foot {
@@ -106,6 +126,47 @@ nav ul li p {
   font-size: 16px;
   margin-left: 10px;
   color: #666666;
+}
+.hdq-msg-foot {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  border: 1px solid #000;
+  height: 50px;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.6);
+  box-sizing: border-box;
+  padding: 5px 15px 0;
+}
+.hdq-msg-foot .foot-log {
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  background: url(../../imgs/topic/qixi.png) center / cover no-repeat;
+  float: left;
+  margin-right: 10px;
+}
+.hdq-msg-foot .foot-cont {
+  float: left;
+  color: white;
+}
+.hdq-msg-foot .foot-cont h4 {
+  font-size: 15px;
+}
+.hdq-msg-foot .foot-cont p {
+  font-size: 12px;
+}
+.hdq-msg-foot .download {
+  float: right;
+  border: none;
+  outline: none;
+  width: 100px;
+  height: 25px;
+  background-color: #0096ff;
+  color: white;
+  border-radius: 2px;
+  margin-top: 7px;
 }
 .ac-list-body {
   padding: 0;
@@ -964,4 +1025,97 @@ html {
   font-size: 15px;
   color: #0096ff;
   margin-top: 15px;
+}
+.vid-body {
+  background-color: #fff;
+  padding-bottom: 50px;
+}
+.shipin-box video {
+  width: 100%;
+}
+.shipin-box .vi-title {
+  font-size: 15px;
+  margin-top: 12px;
+  color: #333;
+  padding: 0 15px;
+}
+.shipin-box .bofangcishi {
+  font-size: 12px;
+  margin-top: 12px;
+  color: #999;
+  padding: 0 15px;
+}
+.video-content {
+  padding: 0 15px;
+  margin-top: 20px;
+  height: 30px;
+  line-height: 30px;
+}
+.video-content header {
+  overflow: hidden;
+  border-bottom: 1px solid #ebebeb;
+  padding-bottom: 8px;
+}
+.video-content header .left {
+  overflow: hidden;
+  float: left;
+}
+.video-content header .left .my-head {
+  float: left;
+  background: url(../../imgs/topic/qixi.png) center / cover no-repeat;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+.video-content header .left span {
+  font-size: 14px;
+  color: #333;
+  margin-left: 8px;
+}
+.video-content header .right {
+  float: right;
+  color: #666666;
+}
+.video-content header .right i[class~="iconfonrt"] {
+  font-size: 16px;
+  margin-right: 6px;
+}
+.video-content header .right span {
+  font-size: 12px;
+}
+.video-content header .right .shoucang {
+  float: left;
+  margin-right: 20px;
+}
+.video-content header .right .fenxiang {
+  float: left;
+}
+.vi-commnet-list {
+  margin-top: 8px;
+}
+.vi-commnet-list .pub-hdq-comment .c-head {
+  margin-left: 9px;
+}
+.video-detail-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  background-color: #eeeeee;
+  line-height: 50px;
+}
+.video-detail-footer input {
+  border: none;
+  outline: none;
+  width: 80%;
+  height: 30px;
+  border-radius: 15px;
+  box-sizing: border-box;
+  padding-left: 20px;
+  margin-top: 10px;
+}
+.video-detail-footer span {
+  margin-left: 5px;
 }
