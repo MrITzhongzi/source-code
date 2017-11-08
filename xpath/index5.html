@@ -1,0 +1,48 @@
+<html>
+
+<body>
+    <script type="text/javascript">
+        function loadXMLDoc(dname) {
+            if (window.XMLHttpRequest) {
+                xhttp = new XMLHttpRequest();
+            }
+            else {
+                xhttp = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            xhttp.open("GET", dname, false);
+            xhttp.send("");
+
+            return xhttp.responseText;
+        }
+
+        function showDom() {
+            xml = loadXMLDoc('./test.html')
+            var xml = xml.split('body')[1].substring(1, xml.split('body')[1].length - 2) //截取指定的字符串
+            var divEle = document.createElement('div')
+
+            divEle.innerHTML = xml
+            document.body.appendChild(divEle)
+            path = '//div'
+
+            var i = 0
+            var result = document.evaluate(path, divEle)
+            var note = result.iterateNext();
+
+            while (note) {
+                i++
+                if(i == 2){
+                    note.style.color = "red"
+                }
+                console.log(note.innerHTML)
+                note = result.iterateNext()
+            }
+        }
+
+        showDom()
+
+
+    </script>
+
+</body>
+
+</html>
