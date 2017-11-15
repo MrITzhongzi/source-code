@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="app">
+        <ol>
+            <todo-item
+                v-for="item in groceryList"
+                v-bind:todo="item"
+                v-bind:key="item.id">
+            </todo-item>
+        </ol>
+        <input type="text" id="123" v-model="num">
+        <br>
+        <div v-html="rawHtml" style="color: red;"></div>
+
+        <input type="text" v-model:value="message">
+        <p>{{message}}</p>
+        <p>{{reversedMessage}}</p>
+
+
+        <div class="static"
+        v-bind:class="{ active: isActive, 'text-danger': hasError }">
+        测试，测试
+        </div>
+
+        <div v-bind:class="[activeClass, errorClass]">
+            数组语法
+        </div>
+    </div>
+
+    <script src="../node_modules/vue/dist/vue.js"></script>
+    <script>
+        Vue.component("todo-item",{
+            template: "<li>{{todo.text}}</li>",
+            props: ['todo']
+        })
+        var app = new Vue({
+            el: "#app",
+            data: {
+                groceryList: [
+                { id: 0, text: '蔬菜' },
+                { id: 1, text: '奶酪' },
+                { id: 2, text: '随便其他什么人吃的东西' }
+                ],
+                num: 10,
+                rawHtml:'<p>哈哈哈</p>',
+                message: "这是一个message",
+                isActive: true,
+                hasError: true,
+                activeClass: 'active',
+                errorClass: 'text-danger'
+            },
+            beforeCreate () {
+                console.log('beforeCreated')
+            },
+            created () {
+                console.log('created')
+            },
+            computed: {
+                reversedMessage (){
+                    return this.message.split('').reverse().join('')
+                }
+            }
+            
+        })
+
+        app.$watch('num',function(newValue, oldValue){
+            console.log(newValue)
+            console.log(oldValue)
+        })
+
+        app.groceryList[3] = { id: 3, text: '蔬菜333' }
+    </script>
+</body>
+</html>
