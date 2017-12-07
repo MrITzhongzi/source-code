@@ -5,7 +5,7 @@ import App from './App';
 import Login from './component/login'
 
 import {
-    HashRouter as Router,
+    BrowserRouter as Router,
     Route, Switch
 } from 'react-router-dom'
 

@@ -26,3 +26,29 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.total-content {
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+.ant-breadcrumb {
+  margin: 10px 0 10px 0;
+}
+.choose-time > .ant-calendar-picker{
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.choose-time .ant-btn {
+  width: 140px;
+}
+
+.choose-time .ant-btn i{
+  float: right;
+}
+
+.setting {
+  float: right;
+  margin-right: 8vw;
+}
