@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,body {
+    font-size: 14px;
+}
+
+.box {
+   background: linear-gradient(30deg,#2989cc,#fff 40%,#906a00 40%,white 80%);
+}
+
+.banner {
+    height: 35vh;
+    border: 1px solid #000;
+    background: url('./images/banner.jpg') center center / cover no-repeat;
+}
+
+.trip-nav {
+    padding-top: 1px solid transparent;
+    
+    .item {
+       position: relative;
+       width: 95%;
+       margin: 10px auto;
+       
+        .item-name {
+            width: 120px;
+            height: 68px;
+            float: left;
+            color: #fff;
+            padding-top: 15px; 
+            padding-left: 39px;
+            box-sizing: border-box;
+            font-size: 14px;
+            position: relative;
+            z-index: 1;
+        }
+        .item-content {
+            height: 44px;
+            width: 80%;
+            font-size: 13px;
+            padding-top: 10px;
+            
+            box-sizing: border-box;
+            padding-left: 50px;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+            border-left: none;
+            margin-top: 15px;
+            overflow: hidden;
+            position: absolute;
+            right: 0;
+            text-align: left;
+        
+        }
+        
+    }
+    .item:nth-child(1){
+        .item-name {
+            background:  url('./images/yellow.png') center / 120px  no-repeat;
+        }
+    }
+    .item:nth-child(2){
+        .item-name {
+            background:  url('./images/blue.png') center / 120px  no-repeat;
+        }
+    }
+    .item:nth-child(3){
+        .item-name {
+            background:  url('./images/purple.png') center / 120px  no-repeat;
+        }
+    }
+    .item:nth-child(4){
+        .item-name {
+            background:  url('./images/green.png') center / 120px  no-repeat;
+        }
+    }
+}
+
+.journey-plan {
+    
+    border-bottom: 1px solid transparent;
+    .plan-logo {
+        width: 200px;
+        height: 80px;
+        background: url('./images/journey.png') center top / 150px  no-repeat;
+    }
+    .plan-item {
+        margin-bottom: 30px;
+        h4 {
+            width: 80%;
+            height: 40px;
+            background: #ec6941;
+            box-sizing: border-box;
+            margin: 0 auto;
+            padding-left: 20px;
+            border-radius: 5px;
+            line-height: 40px;
+            color: wheat;
+        }
+        .plan-content {
+            width: 74%;
+            min-height: 200px;
+            margin: 0 auto;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            padding: 5px;
+            border-bottom-right-radius: 5px;
+            border-bottom-left-radius: 5px;
+            box-shadow: 2px 2px 1px #999;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.clearfix::after {
+    content: "";
+    display: block;
+    height: 0;
+    overflow: hidden;
+    clear: both
+}
