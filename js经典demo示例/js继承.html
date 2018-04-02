@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        //创建一个父函数（父类）
+        var Mammal = function (name) { 
+            this.name = name;
+         }
+        /*
+        给父函数的原型添加相应的方法。
+        注意： 函数原型中方法，以该函数为构造函数创建的所有对象均可访问。
+            即 ： var mmm = new Mammal();  mmm可以访问 Mammal 函数中所有的方法
+        */
+         Mammal.prototype.get_name = function () { 
+             return this.name;
+          }
+        Mammal.prototype.says = function () {  
+            return this.saying || " ";
+        }
+        /*
+            用new 调用父函数，会返回一个  用objec创建的对象，存储在变量  myMammal中
+        */
+        var myMammal = new Mammal("herb the mammal");
+        console.log(myMammal);
+
+        /*
+            创建子函数（子类。要继承父类的函数）
+
+        */
+        var Cat = function (name) {  
+            this.name = name;
+            this.saying = "meow";
+        }
+        /*
+            用父类返回的对象替换 子类 的原型prototype。（父类返回的对象可以访问父类所有的方法） 
+            因为用子类 Cat函数 new 的对象可以访问 cat 原型中所有的方法，而 子函数的原型又指向 父函数的对象， 父函数的对象可以访问父函数的方法。
+            即： 子函数的原型 指向了 父函数的 原型，这样，子函数 new 的对象就可以 访问 父类中的方法了。这样就实现了继承
+        */
+        Cat.prototype = myMammal;
+        /*
+            通过 给子函数原型增加新的方法，来 增加 子类的功能。（即类的拓展）
+        */
+        Cat.prototype.purr = function (n) {  
+            var i,s = '';
+            for(var i = 0;i < n;i++){
+                if(s){
+                    s += '-';
+                }
+                s += 'r';
+            }
+            return s;
+        }
+        /*
+            因为父函数中也有 get_name方法，给子函数的原型中增加 同名的 方法，这样 对象访问的时候 回 访问到 子函数 的get_name
+            即： 成员方法的重写
+        */
+        Cat.prototype.get_name = function () { 
+            return this.says() + ' ' + this.name + " " + this.says();
+         }
+
+         var myCat = new Cat("lihongwei");
+         console.log(myCat);
+
+         // 子函数的 原型  和  父函数的原型进行比较 ，  
+         console.log(myCat.prototype === myMammal.prototype)  // true
+    
+    </script>
+</body>
+
+</html>
