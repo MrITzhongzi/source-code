@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,user-scalable=0">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    </head>
+    <style type="text/css">
+
+        body{overflow:hidden;}
+
+        .modals button{width:100%;margin:0 auto;height:auto;line-height:30px;border:1px solid #4185F3;color:#fff;font-size:14px;background:#4185F3;margin:0 auto}
+        .modals-body{padding:30px 15px;font-size:10px;color:#666;text-align:center;background:#fff}
+        .sliders{cursor:not-allowed;display:block;position:fixed;overflow:hidden;z-index:103;top:0;right:0;bottom:0;left:0;width:100%;height:100%;background:rgba(20,20,20,.8)}
+        .modals{overflow-y:auto;max-height:95%;font-size:16px;z-index:103;border-radius:5px;background:#fff;width:50%;color:#333;display:block;box-shadow:0 0 3px rgba(0,0,0,.1);position:fixed;top:50%;left:50%;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%)}
+    </style>
+
+    <body>
+        <!--一个未知宽高的弹出框，水平垂直居中-->
+        <div class="sliders"></div>
+        <div class="modals">
+            <div class="modals-body">
+                用户信息丢失，请先登录
+            </div>
+            <button class="btns">确定</button>
+        </div>
+        <!--end-->
+        <div class="list"></div>
+    </body>
+    <script src="./jquery.js"></script>
+    <script>
+        //解决方案一：
+
+        // for(var i = 0;i<=30;i++){
+        //     $(".list").append("<p>BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB</p>");
+        // }
+
+        // //阻止防止滚动、缩放。
+        // $(".sliders,.modals").on("touchmove",function(event){
+        //     event.preventDefault();
+        // }); 
+
+        // $(".btns").on("click",function(){
+        //     $(".sliders,.modals").remove();
+        // });
+            
+        // 解决方案 二：
+        for(var i = 0;i<=30;i++){
+            $(".list").append("<p>BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB</p>");
+        }
+
+        $(".btns").on("click",function(){
+            $(".sliders,.modals").remove();
+
+            //关键代码
+            $("body").css("overflow-y","initial");
+
+        });
+    </script>
+
+</html>
