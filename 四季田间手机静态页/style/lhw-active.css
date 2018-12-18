@@ -1,0 +1,58 @@
+.active-area {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.ac-bottom-item {
+    padding: 10px;
+    flex-basis: 33%;
+    border-bottom: 1px solid #ebebeb;
+    box-sizing: border-box;
+}
+
+.ae-item-head {
+    background: url("../lhw-index/xianshirexiao.png") center / cover no-repeat;
+    height: 100px;
+    border: 1px solid #ebebeb;
+
+}
+
+.ae-item-con {
+
+}
+
+.aeic-title {
+
+}
+
+.aeic-speci {
+    color: #828281;
+    font-size: 13px;
+}
+
+.acei-price {
+    display: flex;
+    align-items: center;
+    padding-right: 10px;
+}
+
+.ac-price-content {
+    flex-grow: 1;
+    margin-top: 3px;
+}
+
+.ac-price-content > p:nth-child(1) {
+    font-size: 18px;
+    color: #fd3000;
+}
+
+.ac-price-content > p:nth-child(2) {
+    color: #828281;
+    text-decoration: line-through;
+    font-size: 13px;
+}
+
+.ad-add-to-car img {
+    margin-top: 12px;
+    width: 22px;
+}
