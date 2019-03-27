@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      .index-banner-box {
+        position: relative;
+      }
+      .index-banner-box nav {
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        display: flex;
+      }
+      .index-banner-box nav > a {
+        height: 68px;
+        box-sizing: border-box;
+        flex-grow: 1;
+        padding: 20px;
+        background-color: rgba(0, 0, 0, 0.6);
+        color: white;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+      }
+      .index-nav a img {
+        width: 45px;
+        margin: 0 10px;
+      }
+      .index-banner-box img {
+        width: 100%;
+      }
+
+      .about:hover .submenu {
+        height: auto;
+      }
+      .submenu {
+        position: absolute;
+        top: 97%;
+        left: 56%;
+        background: rgba(0, 0, 0, 0.5);
+        list-style: none;
+        width: 220px;
+        height: 0px;
+        overflow: hidden;
+        z-index: 2;
+        box-sizing: border-box;
+        /* padding-bottom: 10px; */
+      }
+      .submenu li a {
+        text-decoration: none;
+        color: white;
+        width: 100%;
+        display: block;
+        padding: 10px 10px;
+        text-align: center;
+      }
+      /* --- */
+
+      .sub-nav {
+        display: flex;
+      }
+      .sub-nav a {
+        flex-basis: 100px;
+        flex-grow: 1;
+        border-left: 1px solid #787878;
+        text-decoration: none;
+        color: white;
+        background: rgba(0, 0, 0, 0.8);
+        text-align: center;
+        height: 80px;
+        line-height: 80px;
+      }
+
+      .content-box {
+        background: #f7f1e3;
+        padding-top: 20px;
+        padding-bottom: 40px;
+      }
+      .content-row {
+        display: flex;
+        width: 80%;
+        margin-left: 10%;
+      }
+      .content-row > div {
+        flex-grow: 1;
+        flex-basis: 100px;
+        margin: 10px 10px 0;
+        text-align: center;
+        cursor: pointer;
+      }
+      .content-row > div img {
+        width: 100%;
+      }
+
+      /* 底部 */
+      footer {
+        background: #171717;
+      }
+      .foot-top {
+      }
+      .foot-nav {
+        display: flex;
+        padding: 50px 0;
+      }
+      .foot-nav > div {
+        color: #787878;
+        border-right: 2px solid #787878;
+        padding: 0 30px;
+        flex-grow: 1;
+        text-align: center;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      .foot-middle {
+        display: flex;
+        align-items: center;
+        font-size: 15px;
+      }
+      .tip {
+        width: 250px;
+        color: #787878;
+        text-align: center;
+        margin: 0 20px;
+      }
+      .line {
+        flex-grow: 1;
+        height: 1px;
+        background: #787878;
+      }
+
+      .foot-bottom {
+      }
+
+      .foo-bottom-top {
+        width: 80%;
+        text-align: center;
+        display: flex;
+        padding: 30px 0;
+        margin-left: 10%;
+        align-items: center;
+      }
+
+      .foo-bottom-top > div {
+        flex-grow: 1;
+        border-right: 2px solid #787878;
+        color: #787878;
+        font-size: 13px;
+        cursor: pointer;
+      }
+
+      .foo-bottom-bottom {
+        font-size: 13px;
+        color: #787878;
+        text-align: center;
+        padding: 20px 0 60px 0;
+      }
+
+      .qiyeshehuizeren:hover {
+          color: black;
+      }
+    </style>
+    <title>酒庄系列</title>
+  </head>
+  <body>
+    <div class="index-banner-box">
+      <nav class="index-nav">
+        <a href="#">
+          <img style="width: 20px;" src="images/fx.png" alt="" />
+          <span>
+            分享
+          </span>
+        </a>
+        <a href="#">
+          <img src="images/jzxl.png" alt="" />
+          <span>酒庄系列</span>
+        </a>
+        <a href="pinpaixilie.html" style="background-color: rgba(0, 0, 0, 0.8);">
+          <img style="width: 20px;" src="images/ppxl.png" alt="" />
+          <span>品牌系列</span>
+        </a>
+        <a href="./index.html" style="align-items: flex-end;padding: 0;">
+          <img style="width: 120px;" src="images/logo.png" alt="" />
+        </a>
+
+        <a href="about.html" class="about">
+          <img style="width: 45px;" src="images/gywm.png" alt="" />
+          <span>
+            关于我们
+          </span>
+          <ul class="submenu">
+            <li><a href="#">CASTEL概况</a></li>
+            <li><a href="#">新闻活动</a></li>
+            <li><a href="qiyeshehuizeren.html"  class="qiyeshehuizeren">企业社会责任</a></li>
+            <li><a href="#">法律声明</a></li>
+            <li><a href="#">联系我们</a></li>
+          </ul>
+        </a>
+
+        <a href="#">
+          <img src="images/fsxl.png" alt="" />
+          <span>风尚系列</span>
+        </a>
+        <a href="#">
+          <img style="width: 20px;" src="images/ss.png" alt="" />
+          <span>搜索</span>
+        </a>
+      </nav>
+      <img style="display: block;" src="images/pinpai-banner.png" />
+    </div>
+
+    <div class="sub-nav">
+      <a href="#" style="border: none;">
+        显示所有葡萄酒
+      </a>
+      <a href="#">
+        品牌系列
+      </a>
+      <a href="#">
+        类别
+      </a>
+      <a href="#">
+        种类
+      </a>
+      <a href="#">
+        产区
+      </a>
+    </div>
+
+    <div class="content-box">
+      <div class="content-row">
+        <div>
+          <img src="images/11.jpg" alt="" />
+        </div>
+        <div>
+          <img src="images/12.jpg" alt="" />
+        </div>
+        <div>
+          <img src="images/13.jpg" alt="" />
+        </div>
+        <div>
+          <img src="images/14.jpg" alt="" />
+        </div>
+      </div>
+
+      <div class="content-row">
+        <div>
+          <img src="images/21.png" alt="" />
+        </div>
+        <div>
+          <img src="images/22.png" alt="" />
+        </div>
+        <div>
+          <img src="images/23.png" alt="" />
+        </div>
+        <div>
+          <img src="images/24.png" alt="" />
+        </div>
+      </div>
+
+      <div style="text-align: center;">
+        <img
+          style="width: 20%;margin: 20px;"
+          src="images/xinpintuijian.png"
+          alt=""
+        />
+      </div>
+
+      <div class="content-row">
+        <div>
+          <img src="images/31.png" alt="" />
+        </div>
+        <div>
+          <img style="width: 82%;" src="images/32.png" alt="" />
+        </div>
+        <div>
+          <img style="width: 71%;" src="images/33.png" alt="" />
+        </div>
+        <div>
+          <img style="width: 59%;" src="images/34.png" alt="" />
+        </div>
+      </div>
+      <div class="content-row">
+        <div>
+          <img style="width: 72%;" src="images/41.png" alt="" />
+        </div>
+        <div>
+          <img style="width: 81%;" src="images/42.png" alt="" />
+        </div>
+        <div>
+          <img style="width: 78%;" src="images/43.png" alt="" />
+        </div>
+        <div>
+          <img style="width: 68%;" src="images/44.png" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <!-- 底部 -->
+    <footer>
+      <div class="foot-top">
+        <div class="foot-nav">
+          <div>CASTEL概况</div>
+          <div>新闻活动</div>
+          <div>企业社会责任</div>
+          <div>法律声明</div>
+          <div style="border: none;">联系我们</div>
+        </div>
+      </div>
+      <div class="foot-middle">
+        <div class="line"></div>
+        <div class="tip">饮酒过量将危害健康，请适量饮用</div>
+        <div class="line"></div>
+      </div>
+      <div class="foot-bottom">
+        <div class="foo-bottom-top">
+          <div>网站地图</div>
+          <div>友情链接</div>
+          <div>环境保护</div>
+          <div>法律声明</div>
+          <div style="border: none;">联系我们</div>
+        </div>
+        <div class="foo-bottom-bottom">
+          <p>
+            2015-2016 卡思黛乐酒业（中国）有限公司 沪ICP备11010832号 ALL Rights
+            <img src="images/power.jpg" style="vertical-align: bottom;" alt="">
+            Reserved Power By YONGOS
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script>
+   var dom = document.querySelector(".about");
+    dom.onmouseenter = function() {
+      console.log("11");
+      document.querySelector(".submenu").style.height = "248px";
+    };
+
+    dom.onmouseleave = function() {
+      console.log("22");
+      document.querySelector(".submenu").style.height = "0px";
+    };
+
+    document.querySelector(".submenu").onmouseenter = function() {
+      console.log("11");
+      document.querySelector(".submenu").style.height = "248px";
+    };
+    document.querySelector(".submenu").onmouseleave = function() {
+      console.log("33");
+      this.style.height = "0px";
+    };
+  </script>
+</html>
