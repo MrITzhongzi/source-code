@@ -1,0 +1,317 @@
+/* 最外层盒子 start */
+
+.index-box {
+  border-top: 1px solid transparent;
+  background-color: #f2f2f2;
+}
+
+/* 最外层盒子 end */
+
+/* header头部 start */
+
+.index-header {
+  background-color: #f2f2f2;
+}
+
+.header-bg {
+  height: 400rpx;
+  padding-top: 2%;
+}
+
+.search-con {
+  width: 94.2%;
+  height: 80rpx;
+  padding: 10rpx;
+  box-sizing: border-box;
+  margin-left: 3%;
+  border-radius: 10rpx;
+  overflow: hidden;
+  font-size: 15px;
+  background: white;
+  display: flex;
+  align-items: center;
+}
+
+.search-con image {
+  width: 40rpx;
+  margin: 0 20rpx 0 10rpx;
+}
+
+.search-con input {
+  flex-grow: 1;
+  height: 80rpx;
+  background-color: white;
+}
+
+.index-swiper {
+  margin-top: 20rpx;
+}
+
+.index-swiper swiper-item {
+  text-align: center;
+}
+
+.slide-image {
+  width: 94%;
+}
+
+/* header 头部 end */
+
+/* nav start */
+
+.index-nav {
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 35rpx;
+}
+
+.nav-item {
+  width: 20%;
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 14px;
+  margin-top: 15rpx;
+}
+
+.nav-item:nth-child(n + 5) {
+  /* 选中第二行的 nav 按钮 */
+}
+
+.nav-item > view {
+  margin-top: 5rpx;
+}
+
+.nav-item image {
+  width: 45%;
+}
+
+/* nav end */
+
+/* advertise start */
+
+.index-advertise {
+  display: flex;
+  background-color: white;
+  border-radius: 20rpx;
+  width: 96%;
+  margin: 0 auto;
+}
+
+.time-limit {
+  flex-grow: 1;
+  width: 50%;
+  max-width: 50%;
+  box-sizing: border-box;
+  padding: 20rpx;
+}
+
+.time-header, .group-header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.time-title, .group-title {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.time-con {
+  margin-left: 20rpx;
+  font-size: 12px;
+}
+
+.time-con > span {
+  background: #f95757;
+  color: white;
+  padding: 5rpx;
+  border-radius: 8rpx;
+}
+
+.time-con > label {
+  color: #f95757;
+  margin: 0 10rpx;
+}
+
+.time-hour {
+}
+
+.time-minute {
+}
+
+.time-second {
+}
+
+.time-limit-desc, .group-desc {
+  color: #f5a623;
+  font-size: 16px;
+  margin: 10rpx 0;
+  font-weight: 600;
+}
+
+.time-limit-pro-content, .group-pro-content {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 30rpx;
+}
+
+.time-limit-pro-content image, .group-pro-content image {
+  width: 30%;
+}
+
+.group {
+  flex-grow: 1;
+  width: 50%;
+  max-width: 50%;
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+
+.group-header {
+}
+
+.group-title {
+}
+
+.group-header .rob {
+  font-size: 12px;
+  padding: 2rpx 4rpx;
+  border-radius: 4rpx;
+  background-color: #ffa64b;
+  color: white;
+  margin-left: 30rpx;
+}
+
+.group-desc {
+  color: #4a90e2;
+}
+
+.group-pro-content {
+  display: flex;
+}
+
+/* advertise start */
+
+/* product start */
+
+.index-product {
+  width: 96%;
+  margin: 30rpx auto 0;
+  border-radius: 20rpx;
+  overflow: hidden;
+}
+
+.pro-nav {
+  height: 100rpx;
+  background: linear-gradient(#fff, #f2f2f2);
+  display: flex;
+  box-sizing: border-box;
+  padding: 20rpx 0 0 20rpx;
+}
+
+.hot-pro {
+}
+
+.pro-name {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.title-line {
+  height: 6rpx;
+  width: 80rpx;
+  background: linear-gradient(to right, #62be00, #9acd22);
+  margin: 0 auto;
+  margin-top: 10rpx;
+}
+
+.new-pro {
+  margin-left: 40rpx;
+}
+
+.pro-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.pro-item {
+  width: 49%;
+  background-color: white;
+  border-radius: 20rpx;
+  padding-bottom: 40rpx;
+  margin-bottom: 20rpx;
+}
+
+.pro-item:nth-child(2n + 1) {
+  margin-right: 2%;
+}
+
+.pro-image {
+}
+
+.pro-image image {
+  width: 100%;
+}
+
+.pro-con-detail {
+  box-sizing: border-box;
+  padding: 0 10rpx;
+}
+
+.product-desc {
+  display: flex;
+  font-size: 14px;
+  align-items: center;
+  font-weight: 600;
+  margin: 15rpx 0;
+}
+
+.product-desc image {
+  width: 38rpx;
+}
+
+.product-key {
+}
+
+.product-feature {
+}
+
+.specification {
+  display: flex;
+  color: #929292;
+  font-size: 13px;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 0 10rpx;
+}
+
+.quality {
+}
+
+.supplier {
+}
+
+.price-and-number {
+  display: flex;
+  align-items: center;
+  margin-top: 20rpx;
+}
+
+.pro-price {
+  color: #e65507;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.pro-price span {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.pro-number {
+  color: #929292;
+  font-size: 13px;
+  margin-left: 20rpx;
+}
+
+/* product start */

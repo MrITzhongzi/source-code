@@ -1,0 +1,169 @@
+<view class='index-box'>
+  <!-- header start -->
+  <view class='index-header'>
+    <view class='header-bg' style=" background: url('http://img.hapem.cn/index_bg.png') top left / 100% no-repeat;">
+      <view class='search-con'>
+        <image src='/images/search_icon.png' mode='widthFix' />
+        <input placeholder="请输入产品名称"></input>
+      </view>
+      <swiper class='index-swiper' indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+
+        <swiper-item>
+          <image src="/images/test_product.png" class="slide-image" width="90%" mode='widthFix' />
+        </swiper-item>
+        <swiper-item>
+          <image src="/images/test_product.png" class="slide-image" width="90%" mode='widthFix' />
+        </swiper-item>
+        <swiper-item>
+          <image src="/images/test_product.png" class="slide-image" width="90%" mode='widthFix' />
+        </swiper-item>
+      </swiper>
+
+    </view>
+  </view>
+  <!-- header end -->
+
+  <!-- nav start -->
+  <view class='index-nav'>
+    <view class='nav-item'>
+      <image src='/images/sign.png' mode='widthFix'></image>
+      <view>每日一签</view>
+    </view>
+    <view class='nav-item'>
+      <image src='/images/upgrade.png' mode='widthFix'></image>
+      <view>升级特权</view>
+    </view>
+    <view class='nav-item'>
+      <image src='/images/forum.png' mode='widthFix'></image>
+      <view>论坛中心</view>
+    </view>
+    <view class='nav-item'>
+      <image src='/images/discounts.png' mode='widthFix'></image>
+      <view>优惠卷</view>
+    </view>
+    <view class='nav-item'>
+      <image src='/images/fruits.png' mode='widthFix'></image>
+      <view>新鲜水果</view>
+    </view>
+    <view class='nav-item'>
+      <image src='/images/choose.png' mode='widthFix'></image>
+      <view>即时甄选</view>
+    </view>
+    <view class='nav-item'>
+      <image src='/images/vegetables.png' mode='widthFix'></image>
+      <view>蔬蛋水产</view>
+    </view>
+    <view class='nav-item'>
+      <image src='/images/smell.png' mode='widthFix'></image>
+      <view>粮油调味</view>
+    </view>
+  </view>
+  <!-- nav end -->
+
+  <!-- activity start -->
+  <view class='index-advertise'>
+    <!-- 限时抢购 -->
+    <view class='time-limit'>
+      <view class='time-header'>
+        <view class='time-title'>限时抢购</view>
+        <view class='time-con'>
+          <span class="time-hour">09</span>
+          <label>:</label>
+          <span class="time-minute">09</span>
+          <label>:</label>
+          <span class="time-second">09</span>
+        </view>
+      </view>
+      <view class='time-limit-desc'>
+        情系红船礼盒
+      </view>
+      <view class='time-limit-pro-content'>
+        <image src='/images/test_product1.png' mode='widthFix'></image>
+        <image src='/images/test_product1.png' mode='widthFix'></image>
+      </view>
+    </view>
+    <!-- 拼团推荐 -->
+    <view class='group'>
+      <view class='group-header'>
+        <view class='group-title'>拼团推荐</view>
+        <view class='rob'>马上抢</view>
+      </view>
+      <view class='group-desc'>
+        进口配料限时抢
+      </view>
+      <view class='group-pro-content'>
+        <image src='/images/test_product2.png' mode='widthFix'></image>
+        <image src='/images/test_product2.png' mode='widthFix'></image>
+      </view>
+    </view>
+  </view>
+  <!-- activity end -->
+
+  <!-- index-product start -->
+  <view class='index-product'>
+    <view class='pro-nav'>
+      <view class='hot-pro'>
+        <view class='pro-name'>热销商品</view>
+        <view class='title-line'></view>
+      </view>
+      <view class='new-pro'>
+        <view class='pro-name'>新品推荐</view>
+        <!-- <view class='title-line'></view> -->
+      </view>
+    </view>
+    <view class='pro-list'>
+
+      <!-- <view class='pro-item'>
+        <view class='pro-image'>
+          <image src='/images/test_product3.png' mode='widthFix'></image>
+        </view>
+        <view class='product-desc'>
+          <image src='/images/logo.png' mode='widthFix'></image>
+          <view class='product-key'>『现摘现发』</view>
+          <view class='product-feature'>月销过万</view>
+        </view>
+        <view class='specification'>
+          <view class='quality'>550g</view>
+          <view class='supplier'>自营</view>
+        </view>
+        <view class='price-and-number'>
+          <view class='pro-price'>
+            <span>￥</span>
+            49.9
+          </view>
+          <view class='pro-number'>
+            1.3万人付款
+          </view>
+        </view>
+      </view> -->
+
+      <block wx:for="{{[1,2,3,4,5]}}">
+        <view class='pro-item'>
+          <view class='pro-image'>
+            <image src='/images/test_product3.png' mode='widthFix'></image>
+          </view>
+          <view class='pro-con-detail'>
+            <view class='product-desc'>
+              <image src='/images/logo.png' mode='widthFix'></image>
+              <view class='product-key'>『现摘现发』</view>
+              <view class='product-feature'>月销过万</view>
+            </view>
+            <view class='specification'>
+              <view class='quality'>550g</view>
+              <view class='supplier'>自营</view>
+            </view>
+            <view class='price-and-number'>
+              <view class='pro-price'>
+                <span>￥</span>49.9
+              </view>
+              <view class='pro-number'>
+                1.3万人付款
+              </view>
+            </view>
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>
+  <!-- index-product end -->
+</view>
