@@ -1,0 +1,48 @@
+
+
+  <view class='discounts-item' style='background: url("/images/khaki-discounts.png") top / 100% no-repeat'>
+    <view class='dis-left'>
+      <view class='top-number'>
+        <span class='number-count'>100</span>
+        <span class='number-desc'>积分</span>
+      </view>
+      <view class='bottom-desc'>
+        满减优惠券
+      </view>
+    </view>
+    <view class='dis-right'>
+      <button>立即使用</button>
+    </view>
+  </view>
+
+<view class='discounts-item' style='background: url("/images/orange-red-discounts.png") top / 100% no-repeat'>
+    <view class='dis-left'>
+      <view class='top-number'>
+        <span class='number-count'>100</span>
+        <span class='number-desc'>积分</span>
+      </view>
+      <view class='bottom-desc'>
+        满减优惠券
+      </view>
+    </view>
+    <view class='dis-right'>
+      <button>立即使用</button>
+    </view>
+  </view>
+
+
+<view class='discounts-item' style='background: url("/images/orange-discounts.png") top / 100% no-repeat'>
+    <view class='dis-left'>
+      <view class='top-number'>
+        <span class='number-count'>100</span>
+        <span class='number-desc'>积分</span>
+      </view>
+      <view class='bottom-desc'>
+        满减优惠券
+      </view>
+    </view>
+    <view class='dis-right'>
+      <button>立即使用</button>
+    </view>
+  </view>
+

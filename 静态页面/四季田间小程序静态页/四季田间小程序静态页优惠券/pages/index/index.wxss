@@ -1,0 +1,57 @@
+
+
+.discounts-item {
+  height: 245rpx;
+  display: flex;
+  align-items: center;
+  color: white;
+  margin: 10rpx auto;
+}
+
+.dis-left {
+  flex-grow: 1;
+  width: 50%;
+}
+
+.top-number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30rpx;
+}
+
+.top-number span {
+  display: block;
+}
+
+.number-count {
+  font-size: 35px;
+}
+
+.number-desc {
+  font-size: 14px;
+  margin-left: 15rpx;
+}
+
+.bottom-desc {
+  font-size: 16px;
+  text-align: center;
+}
+
+.dis-right {
+  flex-grow: 1;
+  width: 50%;
+}
+
+.dis-right button {
+  font-size: 14px;
+  background-color: transparent;
+  width: 180rpx;
+  height: 60rpx;
+  line-height: 55rpx;
+  margin: 0 auto;
+  color: white;
+  outline: none;
+  border: 2px solid white;
+  border-radius: 40rpx;
+}
