@@ -1,0 +1,95 @@
+<!--index.wxml-->
+<view class="activity-box">
+
+ <view class='activity-item'>
+  <view class='ac-title'>
+    <view class='ac-desc'>
+      商品正在
+      <span>疯狂抢购</span>
+      中!
+    </view>
+    <view class='ac-time'>
+      <view class='time-con'>
+          <span class="time-hour">09</span>
+          <label>:</label>
+          <span class="time-minute">09</span>
+          <label>:</label>
+          <span class="time-second">09</span>
+        </view>
+    </view>
+  </view>
+
+  <view class='activity-content'>
+    <view class='ac-con-left'>
+      <image src='/images/test_product.png' mode='widthFix'></image>
+    </view>
+    <view class='ac-con-right'>
+      <view class='ac-pro-tag'>
+        <span>埃及橙子</span>
+        <span>进口生鲜</span>
+        <span>水果</span>
+        <span>绿色有机</span>
+      </view>
+      <view class='ac-pri-price'>
+        <span class='new-price'>￥378.9</span>
+        <span class='old-price'>价格￥90</span>
+      </view>
+      <view class='buy-pro-box'>
+        <button class='buy-pro-btn-red'>立即抢</button>
+      </view>
+    </view>
+  </view>
+
+  <view class='activity-content'>
+    <view class='ac-con-left'>
+      <image src='/images/test_product.png' mode='widthFix'></image>
+    </view>
+    <view class='ac-con-right'>
+      <view class='ac-pro-tag'>
+        <span>埃及橙子</span>
+        <span>进口生鲜</span>
+        <span>水果</span>
+        <span>绿色有机</span>
+      </view>
+      <view class='ac-pri-price'>
+        <span class='new-price'>￥378.9</span>
+        <span class='old-price'>价格￥90</span>
+      </view>
+      <view class='buy-pro-box'>
+        <button class='buy-pro-btn-red'>立即抢</button>
+      </view>
+    </view>
+  </view>
+
+ </view>
+
+ <view class='activity-item'>
+  <view class='ac-title'>
+    <view class='ac-title-con'>
+      拼团推荐
+    </view>
+  </view>
+
+  <view class='activity-content'>
+    <view class='ac-con-left'>
+      <image src='/images/test_product.png' mode='widthFix'></image>
+    </view>
+    <view class='ac-con-right'>
+      <view class='ac-pro-tag'>
+        <span>埃及橙子</span>
+        <span>进口生鲜</span>
+        <span>水果</span>
+        <span>绿色有机</span>
+      </view>
+      <view class='ac-pri-price'>
+        <span class='new-price'>￥378.9</span>
+        <span class='old-price'>价格￥90</span>
+      </view>
+      <view class='buy-pro-box'>
+        <button class='buy-pro-btn-green'>立即抢</button>
+      </view>
+    </view>
+  </view>
+ </view>
+
+</view>

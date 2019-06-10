@@ -1,0 +1,153 @@
+page {
+  height: 100%;
+}
+.activity-box {
+  background-color: #f2f2f2;
+  border-top: 1px solid transparent;
+  height: 100%;
+}
+
+.activity-item {
+  background-color: white;
+  margin-top: 30rpx;
+  box-sizing: border-box;
+  padding: 0 20rpx 20rpx;
+}
+
+.ac-title {
+  display: flex;
+  align-items: center;
+  height: 80rpx;
+  
+}
+
+.ac-title-con {
+  font-size: 16px;
+  color: #7ED321;
+  font-weight: bold;
+}
+
+.ac-desc {
+  font-size: 14px;
+  color: #fd5252;
+}
+
+.ac-desc span {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.ac-time {
+}
+
+/* 倒计时样式 start */
+
+.time-con {
+  margin-left: 20rpx;
+  font-size: 12px;
+}
+
+.time-con > span {
+  background: #f95757;
+  color: white;
+  padding: 5rpx;
+  border-radius: 8rpx;
+}
+
+.time-con > label {
+  color: #f95757;
+  margin: 0 10rpx;
+}
+
+.time-hour {
+}
+
+.time-minute {
+}
+
+.time-second {
+}
+
+/* 倒计时样式 end */
+
+.activity-content {
+  display: flex;
+  margin-top: 20rpx;
+}
+
+.ac-con-left {
+  width: 180rpx;
+}
+
+.ac-con-left image {
+  width: 100%;
+}
+
+.ac-con-right {
+  box-sizing: border-box;
+  padding: 0 20rpx;
+  position: relative;
+  flex-grow: 1;
+}
+
+.ac-pro-tag {
+  font-size: 13px;
+}
+
+.ac-pro-tag span {
+  font-weight: bold;
+  margin-right: 15rpx;
+}
+
+.ac-pri-price {
+
+}
+
+.new-price {
+  color: #e65507;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.old-price {
+  font-size: 12px;
+  color: #929292;
+  margin-left: 20rpx;
+  text-decoration: line-through;
+}
+
+.buy-pro-box {
+  position: absolute;
+  bottom: 10rpx;
+  left: 0;
+  width: 100%;
+  
+}
+
+.buy-pro-btn-red {
+  width: 160rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  margin: 0;
+  border: none;
+  outline: none;
+  font-size: 13px;
+  text-align: center;
+  color: white;
+  background-image: linear-gradient(#FA6767, #FF4242); 
+  float: right;
+}
+
+.buy-pro-btn-green {
+  width: 160rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  margin: 0;
+  border: none;
+  outline: none;
+  font-size: 13px;
+  text-align: center;
+  color: white;
+  background-image: linear-gradient(to right, #62BE00, #9ACD22); 
+  float: right;
+}
