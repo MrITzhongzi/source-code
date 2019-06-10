@@ -1,0 +1,144 @@
+<view class='box'>
+  <image style="width: 100%;" src='/images/test1.png' mode='widthFix'></image>
+
+  <view class='pro-info'>
+    <view class='base-info'>
+      <view class='base-top'>
+        <view class='price'>
+          <span>￥</span>
+          <span class="pri-content">89.9</span>
+        </view>
+        <view class='share-box'>
+          <span>分享有惊喜</span>
+          <image src='/images/share.png' mode='widthFix'></image>
+        </view>
+      </view>
+      <view class='base-middle'>
+        <span class='pro-tag'>埃及橙子</span>
+        <span class='pro-tag'>进口生鲜</span>
+        <span class='pro-tag'>水果</span>
+        <span class='pro-tag'>绿色有机</span>
+      </view>
+      <view class='base-bottom'>
+        <view class='sales-volume'>
+          <span class='key'>销量:</span>
+          <span class='value'>922笔</span>
+        </view>
+        <view class='unit'>
+          <span class='key'>单位:</span>
+          <span class='value'>箱</span>
+        </view>
+        <view class='browse'>
+          <span class='key'>浏览:</span>
+          <span class='value'>1822</span>
+        </view>
+      </view>
+    </view>
+
+    <view class='discounts-info'>
+      <view class='discounts-desc'>
+        优惠:
+      </view>
+      <view class='integral'>
+        <span class='integral-key'>积分抵扣</span>
+        <span class='integral-value'>￥3元</span>
+      </view>
+      <view class='can-get'>
+        <view class='can-get-key'>购买可得</view>
+        <view class='can-get-value'>29积分</view>
+      </view>
+    </view>
+
+    <view class='specification'>
+      <view class='specification-desc'>规格:</view>
+      <view class='specification-con'>
+        <view class='choose-specification'>已选标准规格</view>
+        <view class='specifucation-num'>1箱</view>
+      </view>
+    </view>
+
+  </view>
+
+  <image style="width: 100%;display: block;" src='/images/test2.png' mode='widthFix'></image>
+
+  <view class='pro-bottom'>
+    <view class='service-box'>
+      <view class='image-service-box'>
+        <image src='/images/service.png' mode='widthFix'></image>
+      </view>
+      <span>客服</span>
+    </view>
+    <view class='shop-car'>
+      <view class='image-shop-box'>
+        <image src='/images/shop-car.png' mode='widthFix'></image>
+      </view>
+      <span>购物篮</span>
+    </view>
+    <view class='add-to-car'>放购物篮</view>
+    <view class='buy-immediately'>立即下单</view>
+  </view>
+
+  <view class='buy-modal'>
+    <view class='modal-content'>
+      <view class='buy-modal-top'>
+        <view class='pro-image-box'>
+          <image src='/images/test_pro.png' mode='widthFix'></image>
+        </view>
+        <view class='pro-image-desc'>
+          <view class='pro-price'>
+            <span>￥</span>
+            <span>89.9</span>
+          </view>
+          <view class='pro-numnber'>
+            <span>剩余:</span>
+            <span>13件</span>
+          </view>
+          <view class='choose-specification'>
+            <span>请选择</span>
+            <span>规格</span>
+          </view>
+        </view>
+      </view>
+
+      <view class='buy-modal-bottom'>
+        <view class='specification-box'>
+          <h4>规格</h4>
+          <view class='specification-con'>
+            <view class='choose-activity'>500g装</view>
+            <view>1000g装</view>
+            <view>2000g装</view>
+            <view>4000g装</view>
+          </view>
+        </view>
+
+        <view class='kind-box'>
+          <h4>品类</h4>
+          <view class='kind-con'>
+            <view class='choose-activity'>进口</view>
+          </view>
+        </view>
+
+
+        <view class='buy-number'>
+          <view class='buy-number-desc'>购买数量</view>
+          <view class='buy-number-content'>
+            <!-- 主容器 -->
+            <view class="stepper">
+              <!-- 减号 -->
+              <text class="minusStatus" bindtap="bindMinus">-</text>
+              <!-- 数值 -->
+              <input class='pro-num-con' type="number" value="{{num}}" />
+              <!-- 加号 -->
+              <text class="plusStatus" bindtap="bindPlus">+</text>
+            </view>
+          </view>
+        </view>
+
+        <view class='buy-btn'>
+          <button>立即下单</button>
+        </view>
+      </view>
+    </view>
+  </view>
+
+</view>

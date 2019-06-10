@@ -1,0 +1,429 @@
+.box {
+  padding-bottom: 100rpx;
+  position: relative;
+}
+
+.pro-info {
+  background-color: #f2f2f2;
+  padding-bottom: 20rpx;
+}
+
+.base-info {
+  background-color: white;
+  box-sizing: border-box;
+  padding-left: 20rpx;
+  padding-bottom: 40rpx;
+}
+
+.base-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20rpx;
+}
+
+.price {
+  color: #e65507;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.pri-content {
+  font-size: 25px;
+}
+
+.share-box {
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  background-color: #f2f2f2;
+  padding: 10rpx 15rpx;
+}
+
+.share-box image {
+  width: 35rpx;
+  margin: 0 10rpx;
+}
+
+.base-middle {
+  display: flex;
+  margin-top: 20rpx;
+}
+
+.pro-tag {
+  margin: 0 15rpx;
+  font-size: 16px;
+  color: black;
+  font-weight: bold;
+}
+
+.base-bottom {
+  margin-top: 20rpx;
+  font-size: 14px;
+  color: #929292;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 0 20rpx;
+}
+
+.sales-volume {
+}
+
+.sales-volume .key {
+}
+
+.sales-volume .value {
+  margin-left: 18rpx;
+}
+
+.unit {
+}
+
+.unit .key {
+}
+
+.unit .value {
+  margin-left: 18rpx;
+}
+
+.browse {
+}
+
+.browse .key {
+}
+
+.browse .value {
+  margin-left: 18rpx;
+}
+
+.discounts-info {
+  margin-top: 20rpx;
+  background: white;
+  font-size: 16px;
+  display: flex;
+  padding: 30rpx 0 30rpx 20rpx;
+}
+
+.discounts-desc {
+  color: #929292;
+  margin-right: 10rpx;
+}
+
+.integral {
+  display: flex;
+  font-weight: bold;
+}
+
+.integral-key {
+  color: black;
+}
+
+.integral-value {
+  margin-left: 10rpx;
+  color: #e65507;
+}
+
+.can-get {
+  display: flex;
+  margin-left: 50rpx;
+  font-weight: bold;
+}
+
+.can-get-key {
+  color: black;
+}
+
+.can-get-value {
+  margin-left: 10rpx;
+  color: #e65507;
+}
+
+.specification {
+  background-color: white;
+  margin-top: 20rpx;
+  font-size: 16px;
+  display: flex;
+  padding: 30rpx 0;
+}
+
+.specification-desc {
+  color: #929292;
+  margin-left: 20rpx;
+}
+
+.specification-con {
+  display: flex;
+  margin-left: 10rpx;
+  font-weight: bold;
+}
+
+.choose-specification {
+  color: black;
+}
+
+.specifucation-num {
+  color: #e65507;
+  margin-left: 10rpx;
+}
+
+.pro-bottom {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  height: 100rpx;
+  width: 100%;
+  background-color: white;
+}
+
+.service-box, .shop-car {
+  height: 100rpx;
+  width: 120rpx;
+  text-align: center;
+  font-size: 12px;
+  color: #8e8e93;
+}
+
+.service-box image, .shop-car image {
+  width: 40rpx;
+  display: block;
+  margin: 10rpx auto;
+}
+
+.image-service-box {
+  height: 50rpx;
+}
+
+.image-shop-box {
+  height: 50rpx;
+}
+
+.add-to-car, .buy-immediately {
+  flex-grow: 1;
+  height: 100rpx;
+  text-align: center;
+  line-height: 100rpx;
+  background: linear-gradient(to right, #ffb319, #ff9100);
+  color: white;
+  font-size: 18px;
+}
+
+.buy-immediately {
+  background: linear-gradient(to right, #62be00, #9acd22);
+}
+
+/* 弹出模态框 */
+
+.buy-modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  height: 100%;
+}
+
+.modal-content {
+  height: 85%;
+  width: 100%;
+  position: fixed;
+  bottom: 0rpx;
+  background-color: white;
+  border-top-left-radius: 40rpx;
+  border-top-right-radius: 40rpx;
+  box-sizing: border-box;
+  padding: 30rpx;
+}
+
+.buy-modal-top {
+  display: flex;
+}
+
+.pro-image-box {
+  max-width: 50%;
+  flex-grow: 1;
+}
+
+.pro-image-box image {
+  width: 100%;
+}
+
+.pro-image-desc {
+  max-width: 50%;
+  flex-flow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  box-sizing: border-box;
+  padding: 30rpx;
+}
+
+.pro-price {
+  color: #e65507;
+}
+
+.pro-price span:nth-child(1) {
+}
+
+.pro-price span:nth-child(2) {
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.pro-numnber {
+  color: #929292;
+  font-size: 15px;
+  margin: 10rpx 0;
+}
+
+.pro-numnber span:nth-child(1) {
+  margin-right: 15rpx;
+}
+
+.choose-specification {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.choose-specification span:nth-child(1) {
+  margin-right: 15rpx;
+}
+
+.buy-modal-bottom {
+  padding-top: 30rpx;
+}
+
+.specification-box, .kind-box {
+}
+
+.specification-box h4, .kind-box h4 {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.specification-con {
+}
+
+.choose-activity {
+  border: 1px solid #75c30b;
+  color: #75c30b;
+}
+
+.specification-con > view, .kind-con > view {
+  font-weight: normal;
+  padding: 10rpx 20rpx;
+  background-color: #f2f2f2;
+  font-size: 13px;
+  margin: 10rpx 10rpx 0;
+  border-radius: 15rpx;
+}
+
+.kind-box {
+  margin-top: 30rpx;
+}
+
+.kind-con {
+  display: flex;
+}
+
+.kind-con > view {
+  padding: 10rpx 40rpx;
+}
+
+.buy-number {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30rpx;
+}
+
+.buy-number-desc {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.buy-number-content {
+}
+
+.stepper {
+}
+
+.pro-num-con {
+  background-color: #eee;
+}
+
+.minusStatus {
+  background-color: #eee;
+}
+
+.plusStatus {
+  background-color: #eee;
+}
+
+/* 数量选择器 start */
+
+.stepper {
+  width: 100%;
+  height: 50rpx;
+  float: left;
+  margin-top: 18rpx;
+}
+
+.stepper text {
+  width: 60rpx;
+  line-height: 50rpx;
+  height: 60rpx;
+  max-height: 60rpx;
+  text-align: center;
+  float: left;
+  font-size: 24rpx;
+  margin: 0 5rpx;
+  font-weight: bold;
+}
+
+.stepper input {
+  width: 80rpx;
+  height: 60rpx;
+  max-height: 60rpx;
+  float: left;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 24rpx;
+  font-weight: bold;
+}
+
+.stepper .normal {
+  color: black;
+  border: 1rpx solid #ccc;
+  box-sizing: border-box;
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.stepper .disabled {
+  color: gray;
+  border: 1rpx solid #ccc;
+  box-sizing: border-box;
+  width: 50rpx;
+  height: 50rpx;
+  background-color: #f8f8f8;
+}
+
+/* 数量选择器 end */
+
+.buy-btn {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  
+}
+
+.buy-btn button {
+  border: none;
+  outline: none;
+  color: white;
+  border-radius: 0rpx;
+  background: linear-gradient(to left, #62BE00, #9ACD22);
+}
