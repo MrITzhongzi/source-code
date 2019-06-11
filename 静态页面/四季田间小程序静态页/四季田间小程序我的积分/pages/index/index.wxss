@@ -1,0 +1,61 @@
+.my-integral {
+}
+
+.total-integral {
+  font-size: 35px;
+  font-weight: bold;
+  height: 300rpx;
+  line-height: 300rpx;
+  text-align: center;
+}
+
+.total-integral-num {
+  margin-right: 10rpx;
+}
+
+.integral-title {
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 50rpx;
+}
+
+.integral-item {
+  display: flex;
+  align-items: center;
+  padding: 0 40rpx;
+  margin-top: 30rpx;
+}
+
+.integral-item-left {
+  width: 70%;
+  flex-grow: 1;
+}
+
+.get-type {
+  font-size: 16px;
+}
+
+.get-time {
+  font-size: 12px;
+  color: #9B9B9B;
+  margin-top: 10rpx;
+}
+
+.integral-item-right {
+  flex-grow: 1;
+  font-size: 15px;
+  color: #333333;
+}
+
+.add-integral {
+  font-size: 28px;
+  color: #B48B66;
+  font-weight: bold;
+}
+
+.subtract-integral {
+ font-size: 28px;
+  color: #B7B7B7;
+  font-weight: bold;
+}

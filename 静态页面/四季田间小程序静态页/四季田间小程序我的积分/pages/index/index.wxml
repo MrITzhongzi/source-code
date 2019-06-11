@@ -1,0 +1,39 @@
+<view class='my-integral'>
+  <view class='total-integral'>
+    <span class='total-integral-num'>9</span>积分
+  </view>
+
+  <view class='integral-list'>
+
+    <view class='integral-title'>
+      签到记录
+    </view>
+
+    <view class='integral-item'>
+      <view class='integral-item-left'>
+        <view class='get-type'>签到</view>
+        <view class='get-time'>
+          2015-05-24 14:23:37
+        </view>
+      </view>
+      <view class='integral-item-right'>
+         <span class='add-integral'>+5</span>
+        积分
+      </view>
+    </view>
+
+    <view class='integral-item'>
+      <view class='integral-item-left'>
+        <view class='get-type'>积分消耗</view>
+        <view class='get-time'>
+          2015-05-24 14:23:37
+        </view>
+      </view>
+      <view class='integral-item-right'>
+         <span class='subtract-integral'>-5</span>
+        积分
+      </view>
+    </view>
+    
+  </view>
+</view>
