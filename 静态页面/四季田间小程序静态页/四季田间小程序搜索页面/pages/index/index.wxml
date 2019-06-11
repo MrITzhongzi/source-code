@@ -1,0 +1,144 @@
+<!--index.wxml-->
+<view class="pro-list-box">
+  <view class='search-header'>
+    <view class='search-con'>
+      <image src='/images/search_icon.png' mode='widthFix' />
+      <input placeholder="搜索商品"></input>
+    </view>
+    <view class='search-type'>
+      <view class='new-product'>新品</view>
+      <view class='search-sort'>
+        <image src='/images/bottom_green.png' mode='widthFix'></image>
+        <span>销量</span>
+      </view>
+      <view class='search-sort'>
+        <image src='/images/top_grey.png' mode='widthFix'></image>
+        <span>价格</span>
+      </view>
+    </view>
+  </view>
+
+  <view class='product-list-con'>
+
+  <view class='activity-content'>
+    <view class='ac-con-left'>
+      <image src='/images/test_product.png' mode='widthFix'></image>
+    </view>
+    <view class='ac-con-right'>
+      <view class='ac-pro-tag'>
+        <span>埃及橙子</span>
+        <span>进口生鲜</span>
+        <span>水果</span>
+        <span>绿色有机</span>
+      </view>
+      <view class='sell-number'>
+        <span>销量:</span>
+        <span>922笔</span>
+      </view>
+      <view class='ac-pri-price'>
+        <span class='new-price'>￥378.9</span>
+      </view>
+      <view class='buy-pro-box'>
+        <button class='buy-pro-btn-green'>立即购买</button>
+      </view>
+    </view>
+  </view>
+
+   <view class='activity-content'>
+    <view class='ac-con-left'>
+      <image src='/images/test_product.png' mode='widthFix'></image>
+    </view>
+    <view class='ac-con-right'>
+      <view class='ac-pro-tag'>
+        <span>埃及橙子</span>
+        <span>进口生鲜</span>
+        <span>水果</span>
+        <span>绿色有机</span>
+      </view>
+      <view class='sell-number'>
+        <span>销量:</span>
+        <span>922笔</span>
+      </view>
+      <view class='ac-pri-price'>
+        <span class='new-price'>￥378.9</span>
+      </view>
+      <view class='buy-pro-box'>
+        <button class='buy-pro-btn-green'>立即购买</button>
+      </view>
+    </view>
+  </view>
+
+   <view class='activity-content'>
+    <view class='ac-con-left'>
+      <image src='/images/test_product.png' mode='widthFix'></image>
+    </view>
+    <view class='ac-con-right'>
+      <view class='ac-pro-tag'>
+        <span>埃及橙子</span>
+        <span>进口生鲜</span>
+        <span>水果</span>
+        <span>绿色有机</span>
+      </view>
+      <view class='sell-number'>
+        <span>销量:</span>
+        <span>922笔</span>
+      </view>
+      <view class='ac-pri-price'>
+        <span class='new-price'>￥378.9</span>
+      </view>
+      <view class='buy-pro-box'>
+        <button class='buy-pro-btn-green'>立即购买</button>
+      </view>
+    </view>
+  </view>
+
+   <view class='activity-content'>
+    <view class='ac-con-left'>
+      <image src='/images/test_product.png' mode='widthFix'></image>
+    </view>
+    <view class='ac-con-right'>
+      <view class='ac-pro-tag'>
+        <span>埃及橙子</span>
+        <span>进口生鲜</span>
+        <span>水果</span>
+        <span>绿色有机</span>
+      </view>
+      <view class='sell-number'>
+        <span>销量:</span>
+        <span>922笔</span>
+      </view>
+      <view class='ac-pri-price'>
+        <span class='new-price'>￥378.9</span>
+      </view>
+      <view class='buy-pro-box'>
+        <button class='buy-pro-btn-green'>立即购买</button>
+      </view>
+    </view>
+  </view>
+
+   <view class='activity-content'>
+    <view class='ac-con-left'>
+      <image src='/images/test_product.png' mode='widthFix'></image>
+    </view>
+    <view class='ac-con-right'>
+      <view class='ac-pro-tag'>
+        <span>埃及橙子</span>
+        <span>进口生鲜</span>
+        <span>水果</span>
+        <span>绿色有机</span>
+      </view>
+      <view class='sell-number'>
+        <span>销量:</span>
+        <span>922笔</span>
+      </view>
+      <view class='ac-pri-price'>
+        <span class='new-price'>￥378.9</span>
+      </view>
+      <view class='buy-pro-box'>
+        <button class='buy-pro-btn-green'>立即购买</button>
+      </view>
+    </view>
+  </view>
+
+  </view>
+</view>

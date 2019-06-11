@@ -1,0 +1,61 @@
+<view class='upgrade-box'>
+  <view class='tip-header'>
+    <image src='/images/upgrade_tip.png' mode='widthFix'></image>
+  </view>
+
+  <view class='tip-list'>
+
+    <view class='tip-item'>
+      <view class='tip-title'>
+        一、尽享优质产品
+      </view>
+      <view class='tip-desc'>
+        供应链端、平台双管齐下、保证产品品质与新鲜，享受美好生活。
+      </view>
+    </view>
+    <view class='tip-item'>
+      <view class='tip-title'>
+        二、尽享优质产品
+      </view>
+      <view class='tip-desc'>
+        供应链端、平台双管齐下、保证产品品质与新鲜，享受美好生活。
+      </view>
+    </view>
+    <view class='tip-item'>
+      <view class='tip-title'>
+        三、尽享优质产品
+      </view>
+      <view class='tip-desc'>
+        供应链端、平台双管齐下、保证产品品质与新鲜，享受美好生活。
+      </view>
+    </view>
+    <view class='tip-item'>
+      <view class='tip-title'>
+        四、尽享优质产品
+      </view>
+      <view class='tip-desc'>
+        供应链端、平台双管齐下、保证产品品质与新鲜，享受美好生活。
+      </view>
+    </view>
+    <view class='tip-item'>
+      <view class='tip-title'>
+        五、尽享优质产品
+      </view>
+      <view class='tip-desc'>
+        供应链端、平台双管齐下、保证产品品质与新鲜，享受美好生活。
+      </view>
+    </view>
+
+  </view>
+
+  <view class='user-protocol'>
+    <checkbox class='protocol-cb' color='black' checked='{{true}}'/>
+    <span class='protocol-desc'>我已阅读并同意</span>
+    <span class='protocol-con'>《用户协议》</span>
+  </view>
+
+  <view class='upgrade-btn-box'>
+    <button class='upgrade-btn'>立即升级</button>
+  </view>
+
+</view>

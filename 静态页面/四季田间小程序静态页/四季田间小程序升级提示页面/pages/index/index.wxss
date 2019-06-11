@@ -1,0 +1,75 @@
+page {
+  height: 100%;
+}
+
+.upgrade-box {
+  height: 100%;
+  background: #2a2a2c url("http://img.hapem.cn/upgrade_bg.png") center top / 100% no-repeat;
+}
+
+.tip-header {
+}
+
+.tip-header image {
+  width: 90%;
+  margin-left: 5%;
+}
+
+.tip-list {
+  padding: 0 40rpx;
+}
+
+.tip-item {
+  margin-top: 20rpx;
+  font-size: 14px;
+}
+
+.tip-title {
+  color: white;
+  font-weight: bold;
+}
+
+.tip-desc {
+  color: #909090;
+  margin-top: 10rpx;
+}
+
+
+.user-protocol {
+  font-size: 14px;
+  color: #909090;
+  margin-top: 20rpx;
+  padding: 0 40rpx;
+  
+}
+
+.protocol-cb {
+  transform: scale(0.6,0.6);
+}
+
+.protocol-desc {
+  margin-left: 0rpx;
+}
+
+.protocol-con {
+  margin: 0 10rpx;
+  color: white;
+}
+
+.upgrade-btn-box {
+  margin-top: 30rpx;
+  
+}
+
+.upgrade-btn {
+  border: none;
+  outline: none;
+  color: black;
+  width: 70%;
+  height: 90rpx;
+  text-align: center;
+  line-height: 90rpx;
+  border-radius: 45rpx;
+  font-weight: bold;
+  background: linear-gradient(to right, #AE7642, #F3D0AC);
+}
