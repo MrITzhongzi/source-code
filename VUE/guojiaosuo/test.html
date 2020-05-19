@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #app {
+            width: 100%;
+            max-width: 600px;
+            min-width: 450px;
+            margin: 0 auto;
+        }
+
+        .row {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .key {
+            flex-basis: 200px;
+            text-align: right;
+            margin-right: 20px;
+        }
+
+        .value {
+            flex-grow: 1;
+        }
+
+        .tab-box {
+            margin-top: 20px;
+        }
+
+        .my-line {
+            margin: 50px 0;
+        }
+
+        /* 结果卡片 */
+        .text {
+            font-size: 14px;
+        }
+
+        .item {
+            padding: 18px 0;
+        }
+
+        .box-card {
+            width: 480px;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <div class="row">
+            <div class="key">请选择商品</div>
+            <div class="value">
+                <el-select v-model="chooseProduct" @change="productChange" placeholder="请选择">
+                    <el-option v-for="item in productList" :key="item.name" :label="item.name" :value="item">
+                    </el-option>
+                </el-select>
+            </div>
+        </div>
+        <div class="tab-box">
+            <el-tabs v-model="activeName" type="card" @tab-click="handleClick">
+                <el-tab-pane label="方案一" name="first">
+                    <div class="row">
+                        <div class="key">市场价</div>
+                        <div class="value">
+                            <el-input v-model="shichangjia" placeholder="市场价"></el-input>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="key">入金总金额</div>
+                        <div class="value">
+                            <el-input v-model="rujinzongjine" placeholder="入金总金额"></el-input>
+                        </div>
+                    </div>
+
+                    <div class="my-line">
+                        <el-divider content-position="center">计算结果</el-divider>
+                    </div>
+
+                    <el-card class="box-card">
+                        <div class="text item">
+                            交易资金总额：{{jiaoyizongjine}}
+                        </div>
+                        <div class="text item">
+                            可购买数量：{{kegoumaishuliang}}
+                        </div>
+                        <div class="text item">
+                            配售商品数量：{{peishoushangpinshuliang}}
+                        </div>
+                    </el-card>
+
+                </el-tab-pane>
+                <el-tab-pane label="方案二" name="second">
+                    <div class="row">
+                        <div class="key">市场价</div>
+                        <div class="value">
+                            <el-input v-model="shichangjia2" placeholder="市场价"></el-input>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="key">购买数量</div>
+                        <div class="value">
+                            <el-input v-model="inputBuyNum" placeholder="购买数量"></el-input>
+                        </div>
+                    </div>
+
+                    <div class="my-line">
+                        <el-divider content-position="center">计算结果</el-divider>
+                    </div>
+
+                    <el-card class="box-card">
+                        <div class="text item">
+                            入金资金总额：{{rujinzongjine2}}
+                        </div>
+                        <div class="text item">
+                            交易资金总金额：{{jiaoyizijinzongjine2}}
+                        </div>
+                       
+                    </el-card>
+                </el-tab-pane>
+            </el-tabs>
+        </div>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <!-- 引入组件库 -->
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+    <script>
+
+        //数据
+        var productList = [{
+            name: "T+10二级红富士",
+            shouxufeibili: 0.003,
+            peishoushuliangbili: 1,
+            peishoujiagebili: 0.981,
+            rujinshouxufei: 0.002,
+            tag: 0
+        }, {
+            name: "T+90二级红富士",
+            shouxufeibili: 0.027,
+            peishoushuliangbili: 1,
+            peishoujiagebili: 0.835,
+            rujinshouxufei: 0.002,
+            tag: 1
+        }];
+        var data = {
+            productList,
+            activeName: "first",
+            chooseProduct: "",
+            shichangjia: "",
+            rujinzongjine: "",
+
+            //方案2
+            shichangjia2: "",
+            inputBuyNum: ""
+
+        };
+        var app = new Vue({
+            el: "#app",
+            data,
+            methods: {
+                handleClick(tab, event) {
+                    console.log(tab, event);
+                },
+                productChange: function (value) {
+                    // console.log(value)
+                }
+            },
+            computed: {
+                jiaoyizongjine: function () {
+                    if (!this.chooseProduct) {
+                        return 0;
+                    }
+                    if (!this.rujinzongjine) {
+                        return 0;
+                    }
+                    return this.rujinzongjine * (1 - this.chooseProduct.rujinshouxufei);
+                },
+                kegoumaishuliang: function () {
+                    if (!this.chooseProduct) {
+                        return 0;
+                    }
+                    if (!this.shichangjia) {
+                        return 0;
+                    }
+
+                    return parseInt(this.jiaoyizongjine / ((parseFloat(this.shichangjia) + this.shichangjia * this.chooseProduct.peishoujiagebili * this.chooseProduct.peishoushuliangbili) * (1 + this.chooseProduct.shouxufeibili)));
+                },
+                peishoushangpinshuliang: function () {
+                    if (!this.chooseProduct) {
+                        return 0;
+                    }
+                    if (this.kegoumaishuliang === 0) {
+                        return 0;
+                    }
+                    return this.kegoumaishuliang * this.chooseProduct.peishoushuliangbili;
+                },
+                rujinzongjine2: function () {
+                    return Math.ceil(this.inputBuyNum * (parseFloat(this.shichangjia2) + this.shichangjia2 * this.chooseProduct.peishoujiagebili * this.chooseProduct.peishoushuliangbili) * (1 + this.chooseProduct.shouxufeibili) / (1 - this.chooseProduct.rujinshouxufei));
+                },
+                jiaoyizijinzongjine2: function () {
+                    return Math.ceil(this.inputBuyNum * (parseFloat(this.shichangjia2) + this.shichangjia2 * this.chooseProduct.peishoujiagebili * this.chooseProduct.peishoushuliangbili) * (1 + this.chooseProduct.shouxufeibili));
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
